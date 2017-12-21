@@ -1,0 +1,260 @@
+/*----  IMAGES FROM http://www.simonpuschmann.com/portfolio/ 
+        Check out his work! ----*/      
+
+//variables
+$main-font: "Permanent Marker";
+$secondary-font: "Josefin Slab";
+
+$nrf: no-repeat fixed;
+$nrs: no-repeat scroll;
+
+$red: #d60808;
+$white: #fff;
+$green: #30472e;
+
+$arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
+
+//These variable help replace background-size: cover while allowing background animations
+//background-size: 100vw $specs-1-height replicates background-size: cover
+//and allows scrollmagic/gsap to alter background size
+//The multiple is based on each image's proportions. 
+$intro-1-height: 100vw * .6668; 
+$intro-3-height: 120vw * .7492; //Multiple based on image proportions
+$intro-4-height: 100vw * .5625; //Multiple based on image proportions
+$specs-1-height: 100vw * 0.5648;
+$specs-3-height: 100vw * .7492; //Multiple based on image proportions
+
+@keyframes occasional-brightness{
+    20%, 30%	{-webkit-filter: brightness(100%); -moz-filter: brightness(100%);}
+	25%		    {-webkit-filter: brightness(120%); -moz-filter: brightness(120%);}
+}
+
+@keyframes backgroundFlash{
+    0%, 24%, 70%    {opacity: 1;}
+    25%             {opacity: 0.8;}  
+}
+
+@keyframes moveArrows{
+    0% { transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+}
+
+//mixins
+@mixin main-font{
+    font-family: $main-font, cursive;
+}
+
+@mixin secondary-font{
+    font-family: $secondary-font, serif;
+}
+
+@mixin underscore{
+    display:block;
+    content:  '';
+    border-bottom: solid 5px $green;
+    border-radius: 15px;
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+}
+
+@mixin nav-color-change($b-radius: 20px){
+    border-radius: $b-radius;
+    transition: all 0.3s ease-in;
+        
+    &:hover{
+        background: $white;
+        color: $green;
+    }
+}
+
+@mixin occasional-brightness{
+    animation: occasional-brightness 8s infinite;
+}
+
+@mixin global-padding{
+    padding: 0 10vw;
+}
+
+@mixin flex-display{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+@mixin for-small-phone-portrait {
+    @media (max-width: 399px){ @content; }
+}
+
+@mixin for-large-phone-portrait {
+    @media (min-width: 400px) and (max-width: 599px) { @content; }
+}
+
+@mixin for-small-tablet-portrait {
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait){ @content; }
+}
+
+@mixin for-phone-landscape {
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape){ @content; }
+}
+
+@mixin for-large-tablet-portrait {
+    @media (min-width: 900px) and (max-width: 1199px) and (orientation: portrait){ @content; }
+}
+
+@mixin for-tablet-landscape {
+    @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape){ @content; }
+}
+
+@mixin for-small-desktop-or-large-tablet-landscape {
+    @media (min-width: 1200px) and (max-width: 1399px){ @content; }
+}
+
+@mixin for-2K-and-4K-desktop-landscape {
+    @media (min-width: 1921px){ @content; }
+}
+
+/*@mixin for-big-desktop {
+    @media (min-width: 1800px) { @content; }
+}*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+//------------RESET-------------
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    background: $white;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    cursor: default;
+    overflow-x: hidden;  
+}
+
+//modifies text highlight color
+::selection {
+    color: $white;
+    background: $green; /* WebKit/Blink Browsers */
+}
+
+.App{
+    position: relative;
+    width: 100%;
+}
+
+h1{
+    color: #fff;
+}
+
+a:focus{
+    outline: 2px solid $green;
+}
+
+.tooltip-span{
+    font-family: $main-font, Arial, Helvetica, serif;
+    color: $white;
+}
+
+.check{
+    color: $green !important;
+}
+
+.disable-arrows{
+    pointer-events: none;
+}
+
+#App-logo {
+    position: relative;
+    top: 0;
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    //animation: App-logo-spin infinite 20s linear;
+    height: 40px;
+}
+
+/*
+#m-logo{
+    position:relative;
+    top:5px;
+    display:block;
+    margin:auto;
+}*/
+
+.Intro-1 {
+    position: relative;
+    height: 100vh;
+    background: url("./img/finland-ussr-flags.jpg") $nrs 50% 50%;
+    background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
+    @include occasional-brightness;
+    //@include global-padding;
+    z-index: 20;    
+    
+    #intro-video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%; 
+        animation: backgroundFlash 15s infinite 0s;
+    }
+    
+    .text-container{
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+    }
+    
+    #the-winter-war{
+        position: absolute;
+        bottom: 10vh;
+        @include main-font;
+        font-size: 8em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    #the-story{
+        position: absolute;
+        bottom: 7vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+.Intro-2 {
+    position: relative;
+    height: 50vh;
+    background: $white;
+}
