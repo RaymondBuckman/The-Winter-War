@@ -2,7 +2,7 @@
         Check out his work! ----*/      
 
 //variables
-$main-font: "Permanent Marker";
+$main-font: 'Amatic SC';
 $secondary-font: "Josefin Slab";
 
 $nrf: no-repeat fixed;
@@ -189,6 +189,14 @@ a:focus{
     pointer-events: none;
 }
 
+.fade-in{
+    opacity: 1 !important;
+}
+
+.fade-out{
+    opacity: 0 !important;
+}
+
 #App-logo {
     position: relative;
     top: 0;
@@ -232,18 +240,33 @@ a:focus{
     
     #the-winter-war{
         position: absolute;
-        bottom: 10vh;
+        bottom: 40vh;
         @include main-font;
-        font-size: 8em;
+        font-size: 12em;
         color: $white;
         left: 0;
         right: 0;
         margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #talvisota, #zimnyaya-voyna{
+        position: absolute;
+        bottom: 40vh;
+        @include main-font;
+        font-size: 12em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
     }
     
     #the-story{
         position: absolute;
-        bottom: 7vh;
+        bottom: 37vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -253,8 +276,132 @@ a:focus{
     }
 }
 
-.Intro-2 {
+.Buffer-Zone-1 {
     position: relative;
-    height: 50vh;
-    background: $white;
+    height: 190vh;
+    background: $green;
+    
+    #bufernaya-zona{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #buffer-zone{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #buffer-zone-paragraph{
+        position: relative;
+        top: 40vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+    
+    #karelia-map{
+        position: relative;
+        top: 40vh;
+        height: 400px;
+        background: url("img/karelia.png") $nrs center center;
+        border-radius: 10px;
+    }
+}
+
+.Inevitable-War-1 {
+    position: relative;
+    height: 140vh;
+    background: url("img/ussr-wallpaper.jpg") $nrf center center;
+    background-size: cover;
+    
+    #neizbezhnaya-voyna{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #inevitable-war{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #inevitable-war-paragraph{
+        position: relative;
+        top: 40vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+}
+
+.Outnumbered-1 {
+    position: relative;
+    height: 170vh;
+    background: url("img/tanks-red-army.jpg") $nrf center center;
+    background-size: cover;
+    
+    #alakynnessa{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #outnumbered{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #outnumbered-paragraph{
+        position: relative;
+        top: 40vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
 }
