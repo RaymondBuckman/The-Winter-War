@@ -3,7 +3,7 @@ import {findDOMNode} from 'react-dom';
 import ReactTooltip from 'react-tooltip';
 import snowVideo from '../../img/snow-video.mp4';
 
-class Intro extends Component {
+export default class Intro extends Component {
     render() {
         return(
         <div>
@@ -22,5 +22,3 @@ class Intro extends Component {
         );
     }
 }
-
-export default Intro;
