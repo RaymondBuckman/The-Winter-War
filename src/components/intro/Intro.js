@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 import snowVideo from '../../img/snow-video.mp4';
 
 export default class Intro extends Component {
