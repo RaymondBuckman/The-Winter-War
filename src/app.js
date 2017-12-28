@@ -12,6 +12,10 @@ import Intro from './components/intro/Intro';
 import BufferZone from './components/bufferZone/BufferZone';
 import InevitableWar from './components/inevitableWar/InevitableWar';
 import Outnumbered from './components/outnumbered/Outnumbered';
+import HomeFieldAdvantage from './components/homeFieldAdvantage/HomeFieldAdvantage'
+import ItBegins from './components/itBegins/ItBegins'
+import TheWinterFreeze from './components/theWinterFreeze/TheWinterFreeze'
+import TheWhiteDeath from './components/theWhiteDeath/TheWhiteDeath'
 import $ from "jquery";
 
 ReactDOM.render(
@@ -20,6 +24,10 @@ ReactDOM.render(
         <BufferZone/>
         <InevitableWar/>
         <Outnumbered/>
+        <HomeFieldAdvantage/>
+        <ItBegins/>
+        <TheWinterFreeze/>
+        <TheWhiteDeath/>
     </div>,
     document.getElementById('root')
 );
@@ -64,7 +72,7 @@ $(document).ready(function(){
     var kareliaPinScene = new ScrollMagic.Scene({
         triggerElement: "#karelia-map",
         triggerHook: 0.2,
-        duration: "80%"
+        duration: "75%"
     })
     .setPin("#karelia-map")
     .addTo(controller);
@@ -83,6 +91,14 @@ $(document).ready(function(){
     .setClassToggle("#inevitable-war", "fade-in") // add class toggle
     .addTo(controller);
     
+    var stalinPinScene = new ScrollMagic.Scene({
+        triggerElement: "#stalin",
+        triggerHook: 0.2,
+        duration: "40%"
+    })
+    .setPin("#stalin")
+    .addTo(controller);
+    
     var alakynnessaTween = new ScrollMagic.Scene({
         triggerElement: "#alakynnessa",
         triggerHook: 0.6
@@ -95,6 +111,86 @@ $(document).ready(function(){
         triggerHook: 0.6
     })
     .setClassToggle("#outnumbered", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var kotikenttaetuTween = new ScrollMagic.Scene({
+        triggerElement: "#kotikenttaetu",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#kotikenttaetu", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var homeFieldAdvantageTween = new ScrollMagic.Scene({
+        triggerElement: "#kotikenttaetu",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#home-field-advantage", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var kareliaPinScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-soldiers",
+        triggerHook: 0.2,
+        duration: "80%"
+    })
+    .setPin("#finnish-soldiers")
+    .addTo(controller);
+    
+    var nachinayetsyaTween = new ScrollMagic.Scene({
+        triggerElement: "#nachinayetsya",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#nachinayetsya", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var itBeginsTween = new ScrollMagic.Scene({
+        triggerElement: "#nachinayetsya",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#it-begins", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var sovietTroopsPinScene = new ScrollMagic.Scene({
+        triggerElement: "#soviet-troops",
+        triggerHook: 0.2,
+        duration: "65%"
+    })
+    .setPin("#soviet-troops")
+    .addTo(controller);
+    
+    var zimniyeZamorazhivaniyeTween = new ScrollMagic.Scene({
+        triggerElement: "#zimniye-zamorazhivaniye",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#zimniye-zamorazhivaniye", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var theWinterFreezeTween = new ScrollMagic.Scene({
+        triggerElement: "#zimniye-zamorazhivaniye",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#the-winter-freeze", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var valkoinenKuolemaTween = new ScrollMagic.Scene({
+        triggerElement: "#valkoinen-kuolema",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#valkoinen-kuolema", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var theWhiteDeathTween = new ScrollMagic.Scene({
+        triggerElement: "#the-white-death",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#the-white-death", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var simoHayhaScene = new ScrollMagic.Scene({
+        triggerElement: "#simo-hayha",
+        triggerHook: 0.2,
+        duration: "110%"
+    })
+    .setPin("#simo-hayha")
     .addTo(controller);
 /*
     var zimnyayaVoynaTween = new ScrollMagic.Scene({
