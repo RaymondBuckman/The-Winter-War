@@ -215,7 +215,7 @@ a:focus{
     margin:auto;
 }*/
 
-.Intro-1 {
+.Intro-div {
     position: relative;
     height: 100vh;
     background: url("./img/finland-ussr-flags.jpg") $nrs 50% 50%;
@@ -276,7 +276,7 @@ a:focus{
     }
 }
 
-.Buffer-Zone-1 {
+.Buffer-Zone-div {
     position: relative;
     height: 190vh;
     background: $green;
@@ -309,7 +309,7 @@ a:focus{
     
     #buffer-zone-paragraph{
         position: relative;
-        top: 40vh;
+        top: 45vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -320,13 +320,14 @@ a:focus{
         top: 40vh;
         height: 400px;
         background: url("img/karelia.png") $nrs center center;
+        background-size: contain;
         border-radius: 10px;
     }
 }
 
-.Inevitable-War-1 {
+.Inevitable-War-div {
     position: relative;
-    height: 140vh;
+    height: 160vh;
     background: url("img/ussr-wallpaper.jpg") $nrf center center;
     background-size: cover;
     
@@ -356,16 +357,25 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
+    #stalin{
+        position: relative;
+        top: 45vh;
+        height: 400px;
+        background: url("img/stalin.jpg") $nrs center center;
+        background-size: contain;
+        border-radius: 10px;
+    }
+    
     #inevitable-war-paragraph{
         position: relative;
-        top: 40vh;
+        top: -50vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
     }
 }
 
-.Outnumbered-1 {
+.Outnumbered-div {
     position: relative;
     height: 170vh;
     background: url("img/tanks-red-army.jpg") $nrf center center;
@@ -405,3 +415,198 @@ a:focus{
         color: $white;
     }
 }
+
+.Home-Field-Advantage-div {
+    position: relative;
+    height: 190vh;
+    background: url("img/forest.jpeg") $nrf center center;
+    background-size: cover;
+    
+    #kotikenttaetu{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #home-field-advantage{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #home-field-advantage-paragraph{
+        position: relative;
+        top: 40vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+    
+    #finnish-soldiers{
+        position: relative;
+        top: 40vh;
+        height: 400px;
+        background: url("img/finnish-soldiers.jpg") $nrs center center;
+        background-size: contain;
+        border-radius: 10px;
+    }
+}
+
+.It-Begins-div {
+    position: relative;
+    height: 180vh;
+    background: $green;
+    background-size: cover;
+    
+    #nachinayetsya{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #it-begins{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #soviet-troops{
+        position: relative;
+        top: 45vh;
+        height: 400px;
+        background: url("img/soviet-troops.jpg") $nrs center center;
+        background-size: contain;
+        border-radius: 10px;
+    }
+    
+    #it-begins-paragraph{
+        position: relative;
+        top: -75vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+}
+
+.The-Winter-Freeze-div {
+    position: relative;
+    height: 160vh;
+    background: url("img/blizzard.jpg") $nrf 100% 20%;
+    background-size: cover;
+    
+    #zimniye-zamorazhivaniye{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #the-winter-freeze{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #the-winter-freeze-paragraph{
+        position: relative;
+        top: 40vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+}
+
+.The-White-Death-div {
+    position: relative;
+    height: 200vh;
+    background: url("img/sniper.jpg") $nrf center center;
+    background-size: cover;
+    
+    #valkoinen-kuolema{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #the-white-death{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #the-white-death-paragraph{
+        position: relative;
+        top: 45vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
+    }
+    
+    #simo-hayha{
+        position: relative;
+        top: 50vh;
+        height: 400px;
+        background: url("img/simo-hayha.jpg") $nrs center center;
+        background-size: contain;
+        border-radius: 10px;
+    }
+}
+
+
+
+
