@@ -6,7 +6,7 @@ export default class InevitableWar extends Component {
     render() {
         return(
         <div>
-            <div className="Inevitable-War-div">
+            <div className="inevitable-War-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="neizbezhnaya-voyna" className="text-center" tabIndex="0">Неизбежная Война</h1>

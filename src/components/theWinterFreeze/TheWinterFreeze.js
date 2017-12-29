@@ -5,7 +5,7 @@ export default class TheWinterFreeze extends Component {
     render() {
         return(
         <div>
-            <div className="The-Winter-Freeze-div">
+            <div className="the-winter-freeze-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="zimniye-zamorazhivaniye" className="text-center" tabIndex="0">Зимние Замораживание</h1>

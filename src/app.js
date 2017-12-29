@@ -16,6 +16,11 @@ import HomeFieldAdvantage from './components/homeFieldAdvantage/HomeFieldAdvanta
 import ItBegins from './components/itBegins/ItBegins'
 import TheWinterFreeze from './components/theWinterFreeze/TheWinterFreeze'
 import TheWhiteDeath from './components/theWhiteDeath/TheWhiteDeath'
+import Perseverance from './components/perseverance/Perseverance'
+import TheBeginningOfTheEnd from './components/theBeginningOfTheEnd/TheBeginningOfTheEnd'
+import TheTreatyOfMoscow from './components/theTreatyOfMoscow/TheTreatyOfMoscow'
+
+
 import $ from "jquery";
 
 ReactDOM.render(
@@ -28,6 +33,9 @@ ReactDOM.render(
         <ItBegins/>
         <TheWinterFreeze/>
         <TheWhiteDeath/>
+        <Perseverance/>
+        <TheBeginningOfTheEnd/>
+        <TheTreatyOfMoscow/>
     </div>,
     document.getElementById('root')
 );
@@ -188,9 +196,67 @@ $(document).ready(function(){
     var simoHayhaScene = new ScrollMagic.Scene({
         triggerElement: "#simo-hayha",
         triggerHook: 0.2,
-        duration: "110%"
+        duration: "90%"
     })
     .setPin("#simo-hayha")
+    .addTo(controller);
+    
+    var sisuTween = new ScrollMagic.Scene({
+        triggerElement: "#sisu",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#sisu", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var perseveranceTween = new ScrollMagic.Scene({
+        triggerElement: "#sisu",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#perseverance", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var finnishFlagScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-flag",
+        triggerHook: 0.2,
+        duration: "40%"
+    })
+    .setPin("#finnish-flag")
+    .addTo(controller);
+    
+    var nachaloKontsaTween = new ScrollMagic.Scene({
+        triggerElement: "#nachalo-kontsa",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#nachalo-kontsa", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var theBeginningOfTheEndTween = new ScrollMagic.Scene({
+        triggerElement: "#nachalo-kontsa",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#the-beginning-of-the-end", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var dogovorMoskvyTween = new ScrollMagic.Scene({
+        triggerElement: "#dogovor-moskvy",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#dogovor-moskvy", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var theTreatyOfMoscowTween = new ScrollMagic.Scene({
+        triggerElement: "#dogovor-moskvy",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#the-treaty-of-moscow", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    var sovietStarScene = new ScrollMagic.Scene({
+        triggerElement: "#soviet-star",
+        triggerHook: 0.2,
+        duration: "110%"
+    })
+    .setPin("#soviet-star")
     .addTo(controller);
 /*
     var zimnyayaVoynaTween = new ScrollMagic.Scene({

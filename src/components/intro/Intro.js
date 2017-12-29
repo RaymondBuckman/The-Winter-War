@@ -6,7 +6,7 @@ export default class Intro extends Component {
     render() {
         return(
         <div>
-            <div className="Intro-div">
+            <div className="intro-div">
                 <video preload="preload" id="intro-video" autoPlay="autoplay" loop="loop" muted>
                     <source src={snowVideo} type="video/mp4"></source>
                 </video> 
