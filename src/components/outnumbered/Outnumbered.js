@@ -5,7 +5,7 @@ export default class Outnumbered extends Component {
     render() {
         return(
         <div>
-            <div className="Outnumbered-div">
+            <div className="outnumbered-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="alakynnessa" className="text-center" tabIndex="0">Alakynnessä</h1>
