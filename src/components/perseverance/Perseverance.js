@@ -26,3 +26,4 @@ export default class Perseverance extends Component {
         );
     }
 }
+

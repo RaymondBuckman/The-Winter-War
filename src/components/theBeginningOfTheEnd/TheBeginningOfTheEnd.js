@@ -24,4 +24,3 @@ export default class TheBeginningOfTheEnd extends Component {
         );
     }
 }
-
