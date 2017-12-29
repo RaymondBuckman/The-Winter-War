@@ -6,7 +6,7 @@ export default class ItBegins extends Component {
     render() {
         return(
         <div>
-            <div className="It-Begins-div">
+            <div className="it-begins-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="nachinayetsya" className="text-center" tabIndex="0">Начинается</h1>
