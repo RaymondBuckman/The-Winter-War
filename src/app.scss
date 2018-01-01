@@ -159,8 +159,9 @@ body {
 
 //modifies text highlight color
 ::selection {
-    color: $white;
-    background: $green; /* WebKit/Blink Browsers */
+    color: $green;
+    background: $white; /* WebKit/Blink Browsers */
+    opacity: 1;
 }
 
 .App{
@@ -177,8 +178,10 @@ a:focus{
 }
 
 .tooltip-span{
-    font-family: $main-font, Arial, Helvetica, serif;
-    color: $white;
+    font-family: $secondary-font, Arial, Helvetica, serif;
+    font-size: 1.7em;
+    color: $green;
+    
 }
 
 .check{
@@ -220,7 +223,7 @@ a:focus{
     height: 100vh;
     background: url("./img/finland-ussr-flags.jpg") $nrs 50% 50%;
     background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
-    @include occasional-brightness;
+    //@include occasional-brightness;
     //@include global-padding;
     z-index: 20;    
     
@@ -230,6 +233,7 @@ a:focus{
         bottom: 0;
         width: 100%; 
         animation: backgroundFlash 15s infinite 0s;
+        filter: contrast(120%) brightness(85%);
     }
     
     .text-container{
@@ -248,10 +252,11 @@ a:focus{
         right: 0;
         margin: auto;
         opacity: 1;
+        text-shadow: 2px 2px $green;
         transition: opacity 0.2s ease-in;
     }
     
-    #talvisota, #zimnyaya-voyna{
+    #talvisota{
         position: absolute;
         bottom: 40vh;
         @include main-font;
@@ -261,6 +266,7 @@ a:focus{
         right: 0;
         margin: auto;
         opacity: 0;
+        text-shadow: 2px 2px $green;
         transition: opacity 0.2s ease-in;
     }
     
@@ -273,6 +279,7 @@ a:focus{
         left: 0;
         right: 0;
         margin: auto;
+        text-shadow: 2px 2px $green;
     }
 }
 
@@ -319,13 +326,13 @@ a:focus{
         position: relative;
         top: 40vh;
         height: 400px;
-        background: url("img/karelia.png") $nrs center center;
-        background-size: contain;
+        background: url("img/karelia.png") $nrs 0% 100%;
+        background-size: 150%;
         border-radius: 10px;
     }
 }
 
-.inevitable-War-div {
+.inevitable-war-div {
     position: relative;
     height: 160vh;
     background: url("img/ussr-wallpaper.jpg") $nrf center center;
@@ -361,8 +368,8 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
-        background: url("img/stalin.jpg") $nrs center center;
-        background-size: contain;
+        background: url("img/stalin.jpg") $nrs center 0%;
+        background-size: 100% 115.1%;
         border-radius: 10px;
     }
     
@@ -460,8 +467,8 @@ a:focus{
         position: relative;
         top: 40vh;
         height: 400px;
-        background: url("img/finnish-soldiers.jpg") $nrs center center;
-        background-size: contain;
+        background: url("img/finnish-soldiers.jpg") $nrs 100% center;
+        background-size: cover;
         border-radius: 10px;
     }
 }
@@ -502,14 +509,14 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
-        background: url("img/soviet-troops.jpg") $nrs center center;
-        background-size: contain;
+        background: url("img/soviet-troops.jpg") $nrs 10% center;
+        background-size: auto 100%; 
         border-radius: 10px;
     }
     
     #it-begins-paragraph{
         position: relative;
-        top: -75vh;
+        top: -65vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -601,9 +608,10 @@ a:focus{
         position: relative;
         top: 50vh;
         height: 400px;
-        background: url("img/simo-hayha.jpg") $nrs center center;
-        background-size: contain;
+        background: url("img/simo-hayha.jpg") $nrs center 5%;
+        background-size: 100%;
         border-radius: 10px;
+        transition: filter 0.5s ease-in-out;
     }
 }
 
@@ -643,14 +651,14 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
-        background: url("img/finn-flag.jpg") $nrs center center;
-        background-size: contain;
+        background: url("img/finn-flag.jpg") $nrs 80% center;
+        background-size: 137.797% 100%;
         border-radius: 10px;
     }
     
     #perseverance-paragraph{
         position: relative;
-        top: -50vh;
+        top: -80vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -699,7 +707,7 @@ a:focus{
 
 .the-treaty-of-moscow-div {
     position: relative;
-    height: 230vh;
+    height: 240vh;
     background: url("img/paper.jpeg") $nrf center center;
     background-size: cover;
     
@@ -737,13 +745,63 @@ a:focus{
         color: $white;
     }
     
-    #soviet-star{
+    #newspaper{
         position: relative;
         top: 50vh;
         height: 400px;
-        background: url("img/soviet-star.png") $nrs center center;
-        background-size: contain;
+        background: url("img/newspaper.jpg") $nrs 0% 30%;
+        background-size: 170%;
         border-radius: 10px;
+    }
+}
+
+.aftermath-div {
+    position: relative;
+    height: 160vh;
+    background: url("img/ussr-wallpaper.jpg") $nrf center center;
+    background-size: cover;
+    
+    #jalkiseuraukset{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #aftermath{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 10em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #stalin{
+        position: relative;
+        top: 45vh;
+        height: 400px;
+        background: url("img/stalin.jpg") $nrs center 0%;
+        background-size: 100% 115.1%;
+        border-radius: 10px;
+    }
+    
+    #aftermath-paragraph{
+        position: relative;
+        top: -50vh;
+        @include secondary-font;
+        font-size: 2em;
+        color: $white;
     }
 }
 
