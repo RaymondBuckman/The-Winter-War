@@ -19,6 +19,7 @@ import TheWhiteDeath from './components/theWhiteDeath/TheWhiteDeath'
 import Perseverance from './components/perseverance/Perseverance'
 import TheBeginningOfTheEnd from './components/theBeginningOfTheEnd/TheBeginningOfTheEnd'
 import TheTreatyOfMoscow from './components/theTreatyOfMoscow/TheTreatyOfMoscow'
+import Aftermath from './components/aftermath/Aftermath'
 
 
 import $ from "jquery";
@@ -36,6 +37,7 @@ ReactDOM.render(
         <Perseverance/>
         <TheBeginningOfTheEnd/>
         <TheTreatyOfMoscow/>
+    {/*<Aftermath/>*/}
     </div>,
     document.getElementById('root')
 );
@@ -49,6 +51,8 @@ $("#arrow-group > img").click(function() {
 $(document).ready(function(){  
     var controller = new ScrollMagic.Controller();
     
+    
+    /* ----- Finnish/Russian header changing scenes ----- */
     var theWinterWarTween = new ScrollMagic.Scene({
         triggerElement: "#the-winter-war",
         triggerHook: 0.2
@@ -77,14 +81,6 @@ $(document).ready(function(){
     .setClassToggle("#buffer-zone", "fade-in") // add class toggle
     .addTo(controller);
     
-    var kareliaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#karelia-map",
-        triggerHook: 0.2,
-        duration: "75%"
-    })
-    .setPin("#karelia-map")
-    .addTo(controller);
-    
     var neizbezhnayaVoynaTween = new ScrollMagic.Scene({
         triggerElement: "#neizbezhnaya-voyna",
         triggerHook: 0.6
@@ -97,14 +93,6 @@ $(document).ready(function(){
         triggerHook: 0.6
     })
     .setClassToggle("#inevitable-war", "fade-in") // add class toggle
-    .addTo(controller);
-    
-    var stalinPinScene = new ScrollMagic.Scene({
-        triggerElement: "#stalin",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .setPin("#stalin")
     .addTo(controller);
     
     var alakynnessaTween = new ScrollMagic.Scene({
@@ -135,14 +123,6 @@ $(document).ready(function(){
     .setClassToggle("#home-field-advantage", "fade-in") // add class toggle
     .addTo(controller);
     
-    var kareliaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-soldiers",
-        triggerHook: 0.2,
-        duration: "80%"
-    })
-    .setPin("#finnish-soldiers")
-    .addTo(controller);
-    
     var nachinayetsyaTween = new ScrollMagic.Scene({
         triggerElement: "#nachinayetsya",
         triggerHook: 0.6
@@ -155,14 +135,6 @@ $(document).ready(function(){
         triggerHook: 0.6
     })
     .setClassToggle("#it-begins", "fade-in") // add class toggle
-    .addTo(controller);
-    
-    var sovietTroopsPinScene = new ScrollMagic.Scene({
-        triggerElement: "#soviet-troops",
-        triggerHook: 0.2,
-        duration: "65%"
-    })
-    .setPin("#soviet-troops")
     .addTo(controller);
     
     var zimniyeZamorazhivaniyeTween = new ScrollMagic.Scene({
@@ -193,14 +165,6 @@ $(document).ready(function(){
     .setClassToggle("#the-white-death", "fade-in") // add class toggle
     .addTo(controller);
     
-    var simoHayhaScene = new ScrollMagic.Scene({
-        triggerElement: "#simo-hayha",
-        triggerHook: 0.2,
-        duration: "90%"
-    })
-    .setPin("#simo-hayha")
-    .addTo(controller);
-    
     var sisuTween = new ScrollMagic.Scene({
         triggerElement: "#sisu",
         triggerHook: 0.6
@@ -213,14 +177,6 @@ $(document).ready(function(){
         triggerHook: 0.6
     })
     .setClassToggle("#perseverance", "fade-in") // add class toggle
-    .addTo(controller);
-    
-    var finnishFlagScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-flag",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .setPin("#finnish-flag")
     .addTo(controller);
     
     var nachaloKontsaTween = new ScrollMagic.Scene({
@@ -251,12 +207,172 @@ $(document).ready(function(){
     .setClassToggle("#the-treaty-of-moscow", "fade-in") // add class toggle
     .addTo(controller);
     
-    var sovietStarScene = new ScrollMagic.Scene({
-        triggerElement: "#soviet-star",
+    var jalkiseurauksetTween = new ScrollMagic.Scene({
+        triggerElement: "#jalkiseuraukset",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#jalkiseuraukset", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var aftermathTween = new ScrollMagic.Scene({
+        triggerElement: "#jalkiseuraukset",
+        triggerHook: 0.6
+    })
+    .setClassToggle("#aftermath", "fade-in") // add class toggle
+    .addTo(controller);
+    
+    
+    
+    /* ----- Image pinning scenes ----- */
+    var kareliaPinScene = new ScrollMagic.Scene({
+        triggerElement: "#karelia-map",
+        triggerHook: 0.2,
+        duration: "75%"
+    })
+    .setPin("#karelia-map")
+    .addTo(controller);
+    
+    var stalinPinScene = new ScrollMagic.Scene({
+        triggerElement: "#stalin",
+        triggerHook: 0.2,
+        duration: "40%"
+    })
+    .setPin("#stalin")
+    .addTo(controller);
+    
+    var finnishSoldiersPinScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-soldiers",
+        triggerHook: 0.2,
+        duration: "80%"
+    })
+    .setPin("#finnish-soldiers")
+    .addTo(controller);
+    
+    var sovietTroopsPinScene = new ScrollMagic.Scene({
+        triggerElement: "#soviet-troops",
+        triggerHook: 0.2,
+        duration: "55%"
+    })
+    .setPin("#soviet-troops")
+    .addTo(controller);
+    
+    var simoHayhaPinScene = new ScrollMagic.Scene({
+        triggerElement: "#simo-hayha",
+        triggerHook: 0.2,
+        duration: "90%"
+    })
+    .setPin("#simo-hayha")
+    .addTo(controller);
+    
+    var finnishFlagPinScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-flag",
+        triggerHook: 0.2,
+        duration: "70%"
+    })
+    .setPin("#finnish-flag")
+    .addTo(controller);
+    
+    var newspaperPinScene = new ScrollMagic.Scene({
+        triggerElement: "#newspaper",
         triggerHook: 0.2,
         duration: "110%"
     })
-    .setPin("#soviet-star")
+    .setPin("#newspaper")
+    .addTo(controller);
+    
+    
+    /* ----- Image parallaxing tweens ----- */
+    var kareliaParallaxTween = TweenMax.to("#karelia-map", 1, {
+        backgroundPositionX: "+=95%",
+        ease:Power2.easeIn
+    });
+
+    var kareliaParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#karelia-map", 
+        triggerHook: 0.2,
+        duration: "75%"
+    })
+    .setTween(kareliaParallaxTween)
+    .addTo(controller);
+    
+    
+    var stalinParallaxTween = TweenMax.from("#stalin", 1, {
+        backgroundSize: "+=10% +=11.5%",
+        ease:Power0.easeIn
+    });
+    
+    var stalinParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#stalin",
+        triggerHook: 0.2,
+        duration: "40%"
+    })
+    .setTween(stalinParallaxTween)
+    .addTo(controller);
+    
+    var finnishSoldiersParallaxTween = TweenMax.to("#finnish-soldiers", 1, {
+        backgroundPositionX: "-=75%",
+        ease:Power1.easeOut
+    });
+    
+     var finnishSoldiersParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-soldiers",
+        triggerHook: 0.2,
+        duration: "80%"
+    })
+    .setTween(finnishSoldiersParallaxTween)
+    .addTo(controller);
+    
+    var sovietTroopsParallaxTween = TweenMax.to("#soviet-troops", 1, {
+        backgroundPositionX: "50%",
+        ease:Power2.easeIn
+    });
+    
+    var sovietTroopsParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#soviet-troops",
+        triggerHook: 0.2,
+        duration: "55%"
+    })
+    .setTween(sovietTroopsParallaxTween)
+    .addTo(controller);
+    
+    var simoHayhaParallaxTween = TweenMax.to("#simo-hayha", 1, {
+        backgroundPositionY: "+=20%",
+        ease:Power0.easeIn
+    });
+    
+    var simoHayhaParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#simo-hayha",
+        triggerHook: 0.2,
+        duration: "90%"
+    })
+    .setTween(simoHayhaParallaxTween)
+    .addTo(controller);
+    
+    var finnishFlagParallaxTween = TweenMax.to("#finnish-flag", 1, {
+        backgroundSize: "+=34.45% +=25%",
+        backgroundPositionY: "-=50%",
+        ease:Power0.easeIn
+    });
+    
+    var finnishFlagParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#finnish-flag",
+        triggerHook: 0.2,
+        duration: "70%"
+    })
+    .setTween(finnishFlagParallaxTween)
+    .addTo(controller);
+    
+    var newspaperParallaxTween = TweenMax.to("#newspaper", 1, {
+        backgroundPositionX: "+=100%",
+        ease:Power2.easeIn
+    });
+    
+    var newspaperParallaxnScene = new ScrollMagic.Scene({
+        triggerElement: "#newspaper",
+        triggerHook: 0.2,
+        duration: "110%"
+    })
+    .setTween(newspaperParallaxTween)
     .addTo(controller);
 /*
     var zimnyayaVoynaTween = new ScrollMagic.Scene({
