@@ -6,7 +6,7 @@ export default class HomeFieldAdvantage extends Component {
     render() {
         return(
         <div>
-            <div className="home-field-advantage-div">
+            <div id="home-field-advantage-div" className="home-field-advantage-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="kotikenttaetu" className="text-center" tabIndex="0">Kotikenttäetu</h1>
@@ -24,7 +24,7 @@ export default class HomeFieldAdvantage extends Component {
             </div>
             <ReactTooltip id="finnish-soldiers-tooltip" place="bottom" type="light"
             effect="float" role="tooltip">
-                <span className="tooltip-span">Joseph Stalin</span>
+                <span className="tooltip-span">The Finns' mobility & knowledge<br/> of the terrain gave the Soviets<br/> a hard time.</span>
             </ReactTooltip>
         </div>
         );
