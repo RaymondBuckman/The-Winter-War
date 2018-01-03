@@ -8,6 +8,7 @@ import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugin
 import ReactTooltip from 'react-tooltip'; 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import BufferZone from './components/bufferZone/BufferZone';
 import InevitableWar from './components/inevitableWar/InevitableWar';
@@ -20,35 +21,53 @@ import Perseverance from './components/perseverance/Perseverance'
 import TheBeginningOfTheEnd from './components/theBeginningOfTheEnd/TheBeginningOfTheEnd'
 import TheTreatyOfMoscow from './components/theTreatyOfMoscow/TheTreatyOfMoscow'
 import Aftermath from './components/aftermath/Aftermath'
+import Footer from './components/footer/Footer'
 
 
 import $ from "jquery";
 
 ReactDOM.render(
     <div className="App">
-        <Intro />
-        <BufferZone/>
-        <InevitableWar/>
-        <Outnumbered/>
-        <HomeFieldAdvantage/>
-        <ItBegins/>
-        <TheWinterFreeze/>
-        <TheWhiteDeath/>
-        <Perseverance/>
-        <TheBeginningOfTheEnd/>
-        <TheTreatyOfMoscow/>
-    {/*<Aftermath/>*/}
+        <img id="menu-white" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>  
+        <Navbar/>
+        <div className="main-content">
+            <Intro />
+            <BufferZone/>
+            <InevitableWar/>
+            <Outnumbered/>
+            <HomeFieldAdvantage/>
+            <ItBegins/>
+            <TheWinterFreeze/>
+            <TheWhiteDeath/>
+            <Perseverance/>
+            <TheBeginningOfTheEnd/>
+            <TheTreatyOfMoscow/>
+            <Aftermath/>
+            <Footer/>
+        </div>
     </div>,
     document.getElementById('root')
 );
 
-$("#arrow-group > img").click(function() {
-    $('html, body').animate({
-        scrollTop: $(".Intro-2").offset().top
-    }, 2000);
-});
-
-$(document).ready(function(){  
+$(document).ready(function(){ 
+    $('#menu-white').click(function(){
+        $('.navbar').addClass('navbar-displayed');
+        $('#menu-white').addClass('fade-out');
+        $('#menu-green').addClass('fade-in');
+    });
+    
+    $('.main-content').click(function(){
+        $('.navbar').removeClass('navbar-displayed');
+        $('#menu-white').removeClass('fade-out');
+        $('#menu-green').removeClass('fade-in');
+    });
+    
+    $('#menu-green').click(function(){
+        $('.navbar').removeClass('navbar-displayed');
+        $('#menu-white').removeClass('fade-out');
+        $('#menu-green').removeClass('fade-in');
+    });
+    
     var controller = new ScrollMagic.Controller();
     
     
@@ -267,7 +286,7 @@ $(document).ready(function(){
     var finnishFlagPinScene = new ScrollMagic.Scene({
         triggerElement: "#finnish-flag",
         triggerHook: 0.2,
-        duration: "70%"
+        duration: "80%"
     })
     .setPin("#finnish-flag")
     .addTo(controller);
@@ -278,6 +297,14 @@ $(document).ready(function(){
         duration: "110%"
     })
     .setPin("#newspaper")
+    .addTo(controller);
+    
+    var vyborgPinScene = new ScrollMagic.Scene({
+        triggerElement: "#vyborg",
+        triggerHook: 0.2,
+        duration: "30%"
+    })
+    .setPin("#vyborg")
     .addTo(controller);
     
     
@@ -373,6 +400,19 @@ $(document).ready(function(){
         duration: "110%"
     })
     .setTween(newspaperParallaxTween)
+    .addTo(controller);
+    
+    var vyborgParallaxTween = TweenMax.to("#vyborg", 1, {
+        backgroundPositionX: "+=80%",
+        ease:Power0.easeIn
+    });
+    
+    var vyborgParallaxnScene = new ScrollMagic.Scene({
+        triggerElement: "#vyborg",
+        triggerHook: 0.2,
+        duration: "30%"
+    })
+    .setTween(vyborgParallaxTween)
     .addTo(controller);
 /*
     var zimnyayaVoynaTween = new ScrollMagic.Scene({
