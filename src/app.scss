@@ -1,6 +1,3 @@
-/*----  IMAGES FROM http://www.simonpuschmann.com/portfolio/ 
-        Check out his work! ----*/      
-
 //variables
 $main-font: 'Amatic SC';
 $secondary-font: "Josefin Slab";
@@ -159,8 +156,8 @@ body {
 
 //modifies text highlight color
 ::selection {
-    color: $green;
-    background: $white; /* WebKit/Blink Browsers */
+    color: $white;
+    background: $green; /* WebKit/Blink Browsers */
     opacity: 1;
 }
 
@@ -175,6 +172,10 @@ h1{
 
 a:focus{
     outline: 2px solid $green;
+}
+
+*:focus{
+    outline: none !important;
 }
 
 .tooltip-span{
@@ -217,6 +218,87 @@ a:focus{
     display:block;
     margin:auto;
 }*/
+
+#menu-white{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 98;
+    transition: opacity 0.2s ease-in;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.navbar{
+    position: fixed;
+    top: -58px !important;
+    height: 55px;
+    width: 100vw;
+    background: $white;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    box-shadow: 0px 3px rgba(0,0,0,0.3);
+    z-index: 99;
+    transition: all 0.2s ease-in;
+    
+    .navbar-nav{
+        width: 100vw !important;
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 17.5px 10px;
+    //margin: 0px 10px;
+    color: $green;
+    @include main-font;
+    font-size: 1.5em;
+    transition: all 0.2s ease-in;
+    
+    &:hover{
+        color: $white;
+        background-color: $green;
+    }
+}
+
+.navbar-default .navbar-nav > li:first-child{
+    margin-left: 3vw;
+}
+    
+.navbar-default .navbar-nav>.active > a {
+    color: blue;
+    background: transparent;
+}
+
+.navbar-default .navbar-nav> li:nth-child(n+2) > a:focus{
+    color: $white !important;
+    background: $green;
+}
+
+.navbar-default .navbar-nav>.active > a:hover{
+     color: blue;
+     background: transparent;
+}
+
+.navbar-displayed{
+    top: 0px !important;
+}
+
+#menu-green{
+    position: absolute;
+    top: 10px;
+    right: 37px;
+    transition: opacity 0.2s ease-in;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
 
 .intro-div {
     position: relative;
@@ -426,7 +508,7 @@ a:focus{
 .home-field-advantage-div {
     position: relative;
     height: 190vh;
-    background: url("img/forest.jpeg") $nrf center center;
+    background: url("img/forest.jpg") $nrf center 90%;
     background-size: cover;
     
     #kotikenttaetu{
@@ -526,7 +608,7 @@ a:focus{
 .the-winter-freeze-div {
     position: relative;
     height: 160vh;
-    background: url("img/blizzard.jpg") $nrf 100% 20%;
+    background: url("img/forest-2.jpg") $nrf 100% 100%;
     background-size: cover;
     
     #zimniye-zamorazhivaniye{
@@ -617,8 +699,8 @@ a:focus{
 
 .perseverance-div {
     position: relative;
-    height: 190vh;
-    background: url("img/northern-lights.jpg") $nrf center 90%;
+    height: 200vh;
+    background: url("img/northern-lights.jpg") $nrf center 0%;
     background-size: cover;
     
     #sisu{
@@ -658,7 +740,7 @@ a:focus{
     
     #perseverance-paragraph{
         position: relative;
-        top: -80vh;
+        top: -90vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -758,7 +840,7 @@ a:focus{
 .aftermath-div {
     position: relative;
     height: 160vh;
-    background: url("img/ussr-wallpaper.jpg") $nrf center center;
+    background: url("img/luftwaffe.jpg") $nrf center 30%;
     background-size: cover;
     
     #jalkiseuraukset{
@@ -787,22 +869,28 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #stalin{
+    #vyborg{
         position: relative;
         top: 45vh;
         height: 400px;
-        background: url("img/stalin.jpg") $nrs center 0%;
-        background-size: 100% 115.1%;
+        background: url("img/vyborg.jpg") $nrs 0% 0%;
+        background-size: cover;
         border-radius: 10px;
     }
     
     #aftermath-paragraph{
         position: relative;
-        top: -50vh;
+        top: -40vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
     }
+}
+
+.footer-div{
+    position: relative;
+    height: 20vh;
+    background: $green;
 }
 
 
