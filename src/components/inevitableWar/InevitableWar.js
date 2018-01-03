@@ -6,7 +6,7 @@ export default class InevitableWar extends Component {
     render() {
         return(
         <div>
-            <div className="inevitable-war-div">
+            <div id="inevitable-war-div" className="inevitable-war-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="neizbezhnaya-voyna" className="text-center" tabIndex="0">Неизбежная Война</h1>
@@ -23,7 +23,7 @@ export default class InevitableWar extends Component {
             </div>
             <ReactTooltip id="stalin-tooltip" place="bottom" type="light"
             effect="float" role="tooltip">
-                <span className="tooltip-span">Joseph Stalin</span>
+                <span className="tooltip-span">Joseph Stalin, General Secretary<br/> of the Communist Party of the<br/> Soviet Union from 1922-1952</span>
             </ReactTooltip>
         </div>
         );
