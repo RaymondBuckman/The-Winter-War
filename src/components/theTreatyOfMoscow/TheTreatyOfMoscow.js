@@ -6,7 +6,7 @@ export default class TheTreatyOfMoscow extends Component {
     render() {
         return(
         <div>
-            <div className="the-treaty-of-moscow-div">
+            <div id="the-treaty-of-moscow-div" className="the-treaty-of-moscow-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="dogovor-moskvy" className="text-center" tabIndex="0">Договор Москвы</h1>

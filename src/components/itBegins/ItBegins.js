@@ -6,7 +6,7 @@ export default class ItBegins extends Component {
     render() {
         return(
         <div>
-            <div className="it-begins-div">
+            <div id="it-begins-div" className="it-begins-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="nachinayetsya" className="text-center" tabIndex="0">Начинается</h1>
@@ -23,7 +23,7 @@ export default class ItBegins extends Component {
             </div>
             <ReactTooltip id="soviet-troops-tooltip" place="bottom" type="light"
             effect="float" role="tooltip">
-                <span className="tooltip-span">The Soviets had great difficulty traversing through Finnish territory</span>
+                <span className="tooltip-span">The Soviets had great difficulty<br/> traversing through Finnish territory</span>
             </ReactTooltip>
         </div>
         );

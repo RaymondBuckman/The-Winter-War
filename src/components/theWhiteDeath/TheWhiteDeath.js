@@ -6,7 +6,7 @@ export default class TheWhiteDeath extends Component {
     render() {
         return(
         <div>
-            <div className="the-white-death-div">
+            <div id="the-white-death-div" className="the-white-death-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="valkoinen-kuolema" className="text-center" tabIndex="0">Valkoinen Kuolema</h1>
@@ -24,7 +24,7 @@ export default class TheWhiteDeath extends Component {
             </div>
             <ReactTooltip id="simo-hayha-tooltip" place="bottom" type="light"
             effect="float" role="tooltip">
-                <span className="tooltip-span">Simo Häyhä, the greatest sniper of all time</span>
+                <span className="tooltip-span">Simo Häyhä, widely considered to<br/> be the greatest sniper of all time</span>
             </ReactTooltip>
         </div>
         );

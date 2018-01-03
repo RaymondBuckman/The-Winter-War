@@ -5,7 +5,7 @@ export default class TheBeginningOfTheEnd extends Component {
     render() {
         return(
         <div>
-            <div className="the-beginning-of-the-end-div">
+            <div id="the-beginning-of-the-end-div" className="the-beginning-of-the-end-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="nachalo-kontsa" className="text-center" tabIndex="0">Начало Конца</h1>

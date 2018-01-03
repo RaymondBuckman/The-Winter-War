@@ -6,7 +6,7 @@ export default class BufferZone extends Component {
     render() {
         return(
         <div>
-            <div className="buffer-zone-div">
+            <div id="buffer-zone-div" className="buffer-zone-div">
                 <div className="container">
                     <div className="row">
                         <h1 id="bufernaya-zona" className="text-center" tabIndex="0">Буферная Зона</h1>
