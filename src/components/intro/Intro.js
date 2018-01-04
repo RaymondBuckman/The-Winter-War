@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import snowVideo from '../../img/snow-video.mp4';
+import forestVideo from '../../img/forest-video.mp4';
 
 export default class Intro extends Component {
     render() {
@@ -8,7 +8,7 @@ export default class Intro extends Component {
         <div>
             <div className="intro-div">
                 <video preload="preload" id="intro-video" autoPlay="autoplay" loop="loop" muted>
-                    <source src={snowVideo} type="video/mp4"></source>
+                    <source src={forestVideo} type="video/mp4"></source>
                 </video> 
                 <div className="text-container">
                     <h1 id="the-winter-war" className="text-center">The Winter War</h1>
