@@ -240,13 +240,27 @@ $(document).ready(function(){
     .setClassToggle("#aftermath", "fade-in") // add class toggle
     .addTo(controller);
     
+    var linkitTween = new ScrollMagic.Scene({
+        triggerElement: "#linkit",
+        triggerHook: 0.7
+    })
+    .setClassToggle("#linkit", "fade-out") // add class toggle
+    .addTo(controller);
+
+    var linksTween = new ScrollMagic.Scene({
+        triggerElement: "#linkit",
+        triggerHook: 0.7
+    })
+    .setClassToggle("#links", "fade-in") // add class toggle
+    .addTo(controller);
+    
     
     
     /* ----- Image pinning scenes ----- */
     var kareliaPinScene = new ScrollMagic.Scene({
         triggerElement: "#karelia-map",
         triggerHook: 0.2,
-        duration: "75%"
+        duration: "60%"
     })
     .setPin("#karelia-map")
     .addTo(controller);
@@ -262,7 +276,7 @@ $(document).ready(function(){
     var finnishSoldiersPinScene = new ScrollMagic.Scene({
         triggerElement: "#finnish-soldiers",
         triggerHook: 0.2,
-        duration: "80%"
+        duration: "60%"
     })
     .setPin("#finnish-soldiers")
     .addTo(controller);
@@ -270,7 +284,7 @@ $(document).ready(function(){
     var sovietTroopsPinScene = new ScrollMagic.Scene({
         triggerElement: "#soviet-troops",
         triggerHook: 0.2,
-        duration: "55%"
+        duration: "40%"
     })
     .setPin("#soviet-troops")
     .addTo(controller);

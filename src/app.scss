@@ -27,7 +27,7 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
 }
 
 @keyframes backgroundFlash{
-    0%, 24%, 70%    {opacity: 1;}
+    0%, 20%, 70%    {opacity: 1;}
     25%             {opacity: 0.8;}  
 }
 
@@ -249,6 +249,15 @@ a:focus{
     }
 }
 
+#logo{
+    position: relative;
+    top: 6px;
+    //padding-left: 5vw;
+    height: 40px;
+    color: transparent;
+    border-radius: 5px;
+}
+
 .navbar-default .navbar-nav > li > a {
     position: relative;
     text-decoration: none;
@@ -315,7 +324,7 @@ a:focus{
         bottom: 0;
         width: 100%; 
         animation: backgroundFlash 15s infinite 0s;
-        filter: contrast(120%) brightness(85%);
+        filter: contrast(110%);
     }
     
     .text-container{
@@ -363,11 +372,24 @@ a:focus{
         margin: auto;
         text-shadow: 2px 2px $green;
     }
+    
+    #scroll-down{
+        position: absolute;
+        bottom: 5vh;
+        @include main-font;
+        font-size: 2em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-shadow: 2px 2px $green;
+        z-index: 99;
+    }
 }
 
 .buffer-zone-div {
     position: relative;
-    height: 190vh;
+    height: 185vh;
     background: $green;
     
     #bufernaya-zona{
@@ -406,7 +428,7 @@ a:focus{
     
     #karelia-map{
         position: relative;
-        top: 40vh;
+        top: 50vh;
         height: 400px;
         background: url("img/karelia.png") $nrs 0% 100%;
         background-size: 150%;
@@ -547,7 +569,7 @@ a:focus{
     
     #finnish-soldiers{
         position: relative;
-        top: 40vh;
+        top: 45vh;
         height: 400px;
         background: url("img/finnish-soldiers.jpg") $nrs 100% center;
         background-size: cover;
@@ -557,7 +579,7 @@ a:focus{
 
 .it-begins-div {
     position: relative;
-    height: 180vh;
+    height: 160vh;
     background: $green;
     background-size: cover;
     
@@ -598,7 +620,7 @@ a:focus{
     
     #it-begins-paragraph{
         position: relative;
-        top: -65vh;
+        top: -50vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -839,7 +861,7 @@ a:focus{
 
 .aftermath-div {
     position: relative;
-    height: 160vh;
+    height: 155vh;
     background: url("img/luftwaffe.jpg") $nrf center 30%;
     background-size: cover;
     
@@ -889,8 +911,77 @@ a:focus{
 
 .footer-div{
     position: relative;
-    height: 20vh;
+    height: 85vh;
     background: $green;
+    
+    #linkit{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 8em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    #links{
+        position: absolute;
+        top: 10vh;
+        @include main-font;
+        font-size: 8em;
+        color: $white;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+    
+    ul{
+       position: relative;
+       top: 35vh;
+        
+        li:first-child{
+            color: $white;
+            list-style-type: none;
+            @include main-font;
+            font-size: 4em;
+        }
+        
+        li:nth-child(n+2){
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px; 
+            margin: 5px 0;
+            @include secondary-font;
+            font-size: 1.5em;
+            border-radius: 10px;
+            transition: background 0.2s ease-in;
+            
+            a{
+                color: $white;
+                transition: color 0.2s ease-in;
+            }
+            
+            &:hover{
+                background: $white;
+                
+                a{
+                    color: $green;
+                }
+            }
+            
+            a:hover,
+            a:active,
+            a:visited,
+            a:link{
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 
