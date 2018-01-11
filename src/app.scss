@@ -5,9 +5,9 @@ $secondary-font: "Josefin Slab";
 $nrf: no-repeat fixed;
 $nrs: no-repeat scroll;
 
-$red: #d60808;
 $white: #fff;
 $green: #30472e;
+$blue: #0061ff;
 
 $arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
 
@@ -26,14 +26,19 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
 	25%		    {-webkit-filter: brightness(120%); -moz-filter: brightness(120%);}
 }
 
-@keyframes backgroundFlash{
+@keyframes background-flash{
     0%, 20%, 70%    {opacity: 1;}
     25%             {opacity: 0.8;}  
 }
 
-@keyframes moveArrows{
-    0% { transform: translateY(0px);}
-    50% {transform: translateY(10px);}
+@keyframes blinking-text-white{
+    0%      {text-shadow: 1px 1px transparent;}
+    50%     {text-shadow: 1px 1px $white;}
+}
+
+@keyframes blinking-text-green{
+    0%      {text-shadow: 1px 1px transparent;}
+    50%     {text-shadow: 1px 1px $green;}
 }
 
 //mixins
@@ -45,13 +50,15 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     font-family: $secondary-font, serif;
 }
 
-@mixin underscore{
-    display:block;
-    content:  '';
-    border-bottom: solid 5px $green;
-    border-radius: 15px;
-    transform: scaleX(0);
-    transition: transform 500ms ease-in-out;
+@mixin a-tag-styling{
+    color: $white;
+    text-decoration: none;
+    @include main-font;
+    text-shadow: 1px 1px transparent;
+    
+    &:hover{
+        animation: blinking-text-white 2s infinite;
+    }
 }
 
 @mixin nav-color-change($b-radius: 20px){
@@ -270,8 +277,9 @@ a:focus{
     transition: all 0.2s ease-in;
     
     &:hover{
-        color: $white;
-        background-color: $green;
+        color: $green;
+        background-color: $white;
+        animation: blinking-text-green 2s infinite;
     }
 }
 
@@ -279,9 +287,10 @@ a:focus{
     margin-left: 3vw;
 }
     
-.navbar-default .navbar-nav>.active > a {
-    color: blue;
-    background: transparent;
+.navbar-default .navbar-nav >.active > a {
+    color: $white;
+    background: $green;
+    //animation: blinking-text-green 2s infinite;
 }
 
 .navbar-default .navbar-nav> li:nth-child(n+2) > a:focus{
@@ -289,9 +298,10 @@ a:focus{
     background: $green;
 }
 
-.navbar-default .navbar-nav>.active > a:hover{
-     color: blue;
-     background: transparent;
+.navbar-default .navbar-nav >.active > a:hover{
+    color: $white;
+    background: $green;
+    animation: blinking-text-white 2s infinite;
 }
 
 .navbar-displayed{
@@ -323,7 +333,7 @@ a:focus{
         right: 0;
         bottom: 0;
         width: 100%; 
-        animation: backgroundFlash 15s infinite 0s;
+        animation: background-flash 15s infinite 0s;
         filter: contrast(110%);
     }
     
@@ -483,6 +493,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
 }
 
@@ -624,6 +638,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
 }
 
@@ -906,6 +924,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
 }
 
@@ -914,7 +936,7 @@ a:focus{
     height: 85vh;
     background: $green;
     
-    #linkit{
+    #lisaa-linkkeja{
         position: absolute;
         top: 10vh;
         @include main-font;
@@ -927,7 +949,7 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #links{
+    #more-links{
         position: absolute;
         top: 10vh;
         @include main-font;
@@ -954,23 +976,23 @@ a:focus{
         li:nth-child(n+2){
             list-style-type: none;
             text-decoration: none;
-            padding: 10px; 
-            margin: 5px 0;
-            @include secondary-font;
-            font-size: 1.5em;
-            border-radius: 10px;
-            transition: background 0.2s ease-in;
+            
             
             a{
                 color: $white;
                 transition: color 0.2s ease-in;
-            }
-            
-            &:hover{
-                background: $white;
+                display: block;
+                padding: 10px; 
+                margin: 5px 0;
+                @include secondary-font;
+                font-size: 1.5em;
+                border-radius: 10px;
+                transition: all 0.2s ease-in;
                 
-                a{
+                &:hover{
                     color: $green;
+                    background: $white;
+                    animation: blinking-text-green 2s infinite;
                 }
             }
             

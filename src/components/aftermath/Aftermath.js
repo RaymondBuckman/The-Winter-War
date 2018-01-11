@@ -17,7 +17,7 @@ export default class Aftermath extends Component {
                         <p id="aftermath-paragraph" className="col-xs-7 col-xs-offset-5 text-right">
                             By the terms of the treaty, Finland lost almost 10% of its national territory. However, Finland also avoided being absorbed into the Soviet Union. On July 31, 1940, Adolf Hitler gave the order to start planning an assault on the Soviet Union.  One month later the Germans allowed the secret sale of weapons to Finland. German and Finnish military authorities made an agreement on September 12, and an official exchange of diplomatic notes was sent on September 22.<br/><br/>
                             
-                            Despite several Soviet attempts improve relations & reduce German influence, Finland became allies with Nazi Germany & invaded the Soviet Union together in the Continuation war. During this war Finland was able to temporarily recapture Karelia for 3 years until the Soviets drove out Nazi Germany & its allies. Today, the formerly Finnish terrority is under control of the Russian Federation. 
+                            Despite several Soviet attempts improve relations & reduce German influence, Finland became allies with Nazi Germany & invaded the Soviet Union together in The Continuation War <a href="http://media.wfyi.org/fireandice/history/continuation40.htm" target="_blank">(read more...)</a>. During this war Finland was able to temporarily recapture Karelia for 3 years until the Soviets drove out Nazi Germany & its allies. Today, the formerly Finnish terrority is under control of the Russian Federation. 
                         </p>
                     </div>
                 </div>

@@ -8,8 +8,8 @@ export default class Footer extends Component {
             <div className="container">
                 
                 <div className="row">
-                    <h1 id="linkit" className="text-center" tabIndex="0">Linkit</h1>
-                    <h1 id="links" className="text-center" tabIndex="0">Links</h1>
+                    <h1 id="lisaa-linkkeja" className="text-center" tabIndex="0">Lisää Linkkejä</h1>
+                    <h1 id="more-links" className="text-center" tabIndex="0">More Links</h1>
                 </div>
                 <div className="row">
                     <ul id="videos-list" className="col-xs-4 col-xs-offset-0 text-center">
