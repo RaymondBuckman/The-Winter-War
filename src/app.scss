@@ -277,9 +277,9 @@ a:focus{
     transition: all 0.2s ease-in;
     
     &:hover{
-        color: $white;
-        background-color: $green;
-        animation: blinking-text-white 2s infinite;
+        color: $green;
+        background-color: $white;
+        animation: blinking-text-green 2s infinite;
     }
 }
 
