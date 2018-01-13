@@ -41,6 +41,13 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     50%     {text-shadow: 1px 1px $green;}
 }
 
+@keyframes down-arrow-animation{
+    0%          {transform: translateY(0); opacity: 1;}
+    50%         {transform: translateY(30px); opacity: 1;}
+    65%         {transform: translateY(30px); opacity: 0;}
+    70%,95%     {transform: translateY(0); opacity: 0;}
+}
+
 //mixins
 @mixin main-font{
     font-family: $main-font, cursive;
@@ -383,16 +390,20 @@ a:focus{
         text-shadow: 2px 2px $green;
     }
     
-    #scroll-down{
+    #down-arrow{
         position: absolute;
-        bottom: 5vh;
+        bottom: 7vh;
         @include main-font;
-        font-size: 2em;
+        font-size: 2.5em;
         color: $white;
         left: 0;
         right: 0;
+        width: 30px;
         margin: auto;
+        cursor: pointer;
+        line-height: 25px;
         text-shadow: 2px 2px $green;
+        animation: down-arrow-animation 3s infinite;
         z-index: 99;
     }
 }
@@ -434,6 +445,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
     
     #karelia-map{
@@ -784,6 +799,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
 }
 
