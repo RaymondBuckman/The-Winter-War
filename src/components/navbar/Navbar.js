@@ -21,7 +21,7 @@ export default class Navbar extends Component {
                         <li><a href="#the-treaty-of-moscow-div">The Treaty of Moscow</a></li>
                         <li><a href="#aftermath-div">Aftermath</a></li>
                     </ul>
-                    <img id="menu-green" src="https://png.icons8.com/ios/50/30472e/menu.png" height="35px" width="35px" tabIndex="0" alt="closes navigation"></img>   
+                    <img id="menu-green" src="https://png.icons8.com/ios/50/30472e/delete-sign.png" height="35px" width="35px" tabIndex="0" alt="closes navigation"></img>   
                 </div>
             </nav>
         </div>

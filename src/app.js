@@ -62,6 +62,12 @@ $(document).ready(function(){
         $('#menu-green').removeClass('fade-in');
     });
     
+    $("#down-arrow").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#buffer-zone-div").offset().top
+        }, 1000);
+    });
+    
     var controller = new ScrollMagic.Controller();
     
     var heightOfBufferZone = $('.inevitable-war-div').offset().top - $('.buffer-zone-div').offset().top;
@@ -338,15 +344,15 @@ $(document).ready(function(){
     .addTo(controller);
     
     var lisaaLinkkejaScene = new ScrollMagic.Scene({
-        triggerElement: "#lisaa-linkkeja",
-        triggerHook: 0.7
+        triggerElement: ".footer-div",
+        triggerHook: 0.5
     })
     .setClassToggle("#lisaa-linkkeja", "fade-out") // add class toggle
     .addTo(controller);
 
     var moreLinksScene = new ScrollMagic.Scene({
-        triggerElement: "#lisaa-linkkeja",
-        triggerHook: 0.7
+        triggerElement: ".footer-div",
+        triggerHook: 0.5
     })
     .setClassToggle("#more-links", "fade-in") // add class toggle
     .addTo(controller);
