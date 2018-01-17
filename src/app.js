@@ -53,13 +53,13 @@ $(document).ready(function(){
     $('#menu-white').click(function(){
         $('.navbar').addClass('navbar-displayed');
         $('#menu-white').addClass('fade-out');
-        $('#menu-green').addClass('fade-in');
+        $('#up-arrow-green').addClass('fade-in');
     });
     
-    $('.main-content, #menu-green').click(function(){
+    $('.main-content, #up-arrow-green').click(function(){
         $('.navbar').removeClass('navbar-displayed');
         $('#menu-white').removeClass('fade-out');
-        $('#menu-green').removeClass('fade-in');
+        $('#up-arrow-green').removeClass('fade-in');
     });
     
     $("#down-arrow").click(function() {
@@ -365,64 +365,65 @@ $(document).ready(function(){
         triggerHook: 0.2,
         duration: "60%"
     })
-    .setPin("#karelia-map")
     .addTo(controller);
+    kareliaPinScene.setPin("#karelia-map", {pushFollowers: false});
     
     var stalinPinScene = new ScrollMagic.Scene({
         triggerElement: "#stalin",
         triggerHook: 0.2,
         duration: "40%"
     })
-    .setPin("#stalin")
     .addTo(controller);
+    stalinPinScene.setPin("#stalin", {pushFollowers: false});
     
     var finnishSoldiersPinScene = new ScrollMagic.Scene({
         triggerElement: "#finnish-soldiers",
         triggerHook: 0.2,
         duration: "60%"
     })
-    .setPin("#finnish-soldiers")
     .addTo(controller);
+    finnishSoldiersPinScene.setPin("#finnish-soldiers", {pushFollowers: false});
     
     var sovietTroopsPinScene = new ScrollMagic.Scene({
         triggerElement: "#soviet-troops",
         triggerHook: 0.2,
         duration: "40%"
     })
-    .setPin("#soviet-troops")
     .addTo(controller);
+    sovietTroopsPinScene.setPin("#soviet-troops", {pushFollowers: false});
+    
     
     var simoHayhaPinScene = new ScrollMagic.Scene({
         triggerElement: "#simo-hayha",
         triggerHook: 0.2,
         duration: "90%"
     })
-    .setPin("#simo-hayha")
     .addTo(controller);
+    simoHayhaPinScene.setPin("#simo-hayha", {pushFollowers: false});
     
     var finnishFlagPinScene = new ScrollMagic.Scene({
         triggerElement: "#finnish-flag",
         triggerHook: 0.2,
         duration: "80%"
     })
-    .setPin("#finnish-flag")
     .addTo(controller);
+    finnishFlagPinScene.setPin("#finnish-flag", {pushFollowers: false});
     
     var newspaperPinScene = new ScrollMagic.Scene({
         triggerElement: "#newspaper",
         triggerHook: 0.2,
         duration: "110%"
     })
-    .setPin("#newspaper")
     .addTo(controller);
+    newspaperPinScene.setPin("#newspaper", {pushFollowers: false});
     
     var vyborgPinScene = new ScrollMagic.Scene({
         triggerElement: "#vyborg",
         triggerHook: 0.2,
         duration: "30%"
     })
-    .setPin("#vyborg")
     .addTo(controller);
+    vyborgPinScene.setPin("#vyborg", {pushFollowers: false});
     
     
     /* ----- Image parallaxing tweens ----- */
@@ -520,7 +521,7 @@ $(document).ready(function(){
     .addTo(controller);
     
     var vyborgParallaxTween = TweenMax.to("#vyborg", 1, {
-        backgroundPositionX: "+=80%",
+        backgroundPositionX: "+=40%",
         ease:Power0.easeIn
     });
     
