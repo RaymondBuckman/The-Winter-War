@@ -315,7 +315,7 @@ a:focus{
     top: 0px !important;
 }
 
-#menu-green{
+#up-arrow-green{
     position: absolute;
     top: 10px;
     right: 37px;
@@ -455,6 +455,7 @@ a:focus{
         position: relative;
         top: 50vh;
         height: 400px;
+        width: 400px;
         background: url("img/karelia.png") $nrs 0% 100%;
         background-size: 150%;
         border-radius: 10px;
@@ -497,6 +498,7 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
+        width: 400px;
         background: url("img/stalin.jpg") $nrs center 0%;
         background-size: 100% 115.1%;
         border-radius: 10px;
@@ -504,7 +506,7 @@ a:focus{
     
     #inevitable-war-paragraph{
         position: relative;
-        top: -50vh;
+        top: -10vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -553,6 +555,10 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        
+        a{
+            @include a-tag-styling;
+        }
     }
 }
 
@@ -600,6 +606,7 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
+        width: 400px;
         background: url("img/finnish-soldiers.jpg") $nrs 100% center;
         background-size: cover;
         border-radius: 10px;
@@ -642,6 +649,7 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
+        width: 400px;
         background: url("img/soviet-troops.jpg") $nrs 10% center;
         background-size: auto 100%; 
         border-radius: 10px;
@@ -649,7 +657,7 @@ a:focus{
     
     #it-begins-paragraph{
         position: relative;
-        top: -50vh;
+        top: -10vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -745,6 +753,7 @@ a:focus{
         position: relative;
         top: 50vh;
         height: 400px;
+        width: 400px;
         background: url("img/simo-hayha.jpg") $nrs center 5%;
         background-size: 100%;
         border-radius: 10px;
@@ -788,6 +797,7 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
+        width: 400px;
         background: url("img/finn-flag.jpg") $nrs 80% center;
         background-size: 137.797% 100%;
         border-radius: 10px;
@@ -795,7 +805,7 @@ a:focus{
     
     #perseverance-paragraph{
         position: relative;
-        top: -90vh;
+        top: -10vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -890,6 +900,7 @@ a:focus{
         position: relative;
         top: 50vh;
         height: 400px;
+        width: 400px;
         background: url("img/newspaper.jpg") $nrs 0% 30%;
         background-size: 170%;
         border-radius: 10px;
@@ -932,6 +943,7 @@ a:focus{
         position: relative;
         top: 45vh;
         height: 400px;
+        width: 400px;
         background: url("img/vyborg.jpg") $nrs 0% 0%;
         background-size: cover;
         border-radius: 10px;
@@ -939,7 +951,7 @@ a:focus{
     
     #aftermath-paragraph{
         position: relative;
-        top: -40vh;
+        top: -10vh;
         @include secondary-font;
         font-size: 2em;
         color: $white;
