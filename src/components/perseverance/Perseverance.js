@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class Perseverance extends Component {
     render() {
@@ -13,7 +12,12 @@ export default class Perseverance extends Component {
                         <h1 id="perseverance" className="text-center" tabIndex="0">Perseverance & Guts</h1>
                     </div>
                     <div className="row">
-                        <div id="finnish-flag" className="col-xs-4 col-xs-offset-0" data-tip data-for="finnish-flag-tooltip"></div>
+                        <div id="perseverance-image" className="col-xs-4 col-xs-offset-0">
+                            <div id="finnish-flag"></div>
+                            <span className="text-container">
+                                <p>Soldiers raising the Finnish Flag</p>
+                            </span>
+                        </div>
                         <p id="perseverance-paragraph" className="col-xs-7 col-xs-offset-5 text-right">
                             The exact meaning of sisu is hard to describe. There isn’t a single word in English with a literal parallel, and even in Finland the idiom stands in for a cluster of traits. That cluster includes stoic determination, hardihood, grit, bravery, willpower, tenacity, guts, and resilience. Perseverance, one might say. Sisu is an action-oriented mindset; it is manifested in the decision to grapple with an endeavor with long odds; to take on a challenge seemingly above one’s mental and physical capacities. It is called upon when adversity and opposition push you to give up, and your white-knuckled courage allows you to hold on.<br/><br/>
                             The Finnish people feel that sisu constitutes the heart of their national culture <a href="http://www.finlandia.edu/about/our-finnish-heritage/" target="_blank">(click to read more...)</a>. It was certainly the heart of their resistance during the Winter War. Sisu is what allowed Finnish soldiers to creep close to Soviet tanks to throw grenades, plant charges, and even attempt to crow bar off their treads. It’s what inspired them to keep volunteering for the job, despite its 70% casualty rate.<br/><br/>
@@ -24,10 +28,6 @@ export default class Perseverance extends Component {
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="finnish-flag-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">Soldiers raising the Finnish Flag</span>
-            </ReactTooltip>
         </div>
         );
     }
