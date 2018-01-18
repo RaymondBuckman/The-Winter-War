@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class BufferZone extends Component {
     render() {
@@ -18,14 +17,15 @@ export default class BufferZone extends Component {
                             To defend a possible approach to Leningrad by the Nazis, Stalin wanted Karelia as well as several Finnish islands in the Gulf of Finland as a buffer zone. Throughout its history, Russia has always had a problem defending its western cities from invasion & has used conquered areas as buffer zones <a href="https://www.youtube.com/watch?v=HE6rSljTwdU" target="_blank">(click to view more on Russia's historical need of buffer zones...)</a>.  He also wanted to lease Hanko as a military base and to establish a garrison of 5,000 men there and he demanded more Finnish land on the Soviet border to be ceded to the U.S.S.R. In return, Stalin offered Finland land in Soviet Karelia and the right for Finland to fortify the Aaland Islands.<br/><br/>    
                             Finland was highly suspicious of anything required by Stalin. Relations between Russia and Finland had been fraught for many decades and nearly everyone in Finland saw Stalin’s demands as an attempt by Russia to re-establish her authority over Finland once again. 
                         </p>
-                        <div id="karelia-map" className="col-xs-4 col-xs-offset-8" data-tip data-for="karelia-tooltip"></div>
+                        <div id="buffer-zone-image" className="col-xs-4 col-xs-offset-8">
+                            <div id="karelia-map"></div>
+                            <span className="text-container">
+                                <p>Map of Karelia & its proximity to Leningrad</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="karelia-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">Map of Karelia & its proximity to Leningrad</span>
-            </ReactTooltip>
         </div>
         );
     }
