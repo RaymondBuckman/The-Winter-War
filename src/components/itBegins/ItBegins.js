@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class ItBegins extends Component {
     render() {
@@ -13,7 +12,12 @@ export default class ItBegins extends Component {
                         <h1 id="it-begins" className="text-center" tabIndex="0">It Begins</h1>
                     </div>
                     <div className="row">
-                        <div id="soviet-troops" className="col-xs-4 col-xs-offset-0" data-tip data-for="soviet-troops-tooltip"></div>
+                        <div id="it-begins-image" className="col-xs-4 col-xs-offset-0">
+                            <div id="soviet-troops"></div>
+                            <span className="text-container">
+                                <p>The Soviets had great difficulty traversing through Finnish territory.</p>
+                            </span>
+                        </div>
                         <p id="it-begins-paragraph" className="col-xs-7 col-xs-offset-5 text-right affix-top">
                             The war started on November 30th. The initial stages went to the Finns' plan as they held up the first advances of the Red Army in the Karelian Isthmus. Being massively undersupplied in weaponry compared to the Soviets, the Finns made use of home-made incendiary & explosive weapons. 
                             <br/><br/>
@@ -22,10 +26,6 @@ export default class ItBegins extends Component {
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="soviet-troops-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">The Soviets had great difficulty<br/> traversing through Finnish territory</span>
-            </ReactTooltip>
         </div>
         );
     }
