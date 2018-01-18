@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class Aftermath extends Component {
     render() {
@@ -13,7 +12,12 @@ export default class Aftermath extends Component {
                         <h1 id="aftermath" className="text-center" tabIndex="0">Aftermath</h1>
                     </div>
                     <div className="row">
-                        <div id="vyborg" className="col-xs-4 col-xs-offset-0" data-tip data-for="vyborg-tooltip"></div>
+                        <div id="aftermath-image" className="col-xs-4 col-xs-offset-0">
+                            <div id="vyborg"></div>
+                            <span className="text-container">
+                                <p>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia.</p>
+                            </span>
+                        </div>
                         <p id="aftermath-paragraph" className="col-xs-7 col-xs-offset-5 text-right">
                             By the terms of the treaty, Finland lost almost 10% of its national territory. However, Finland also avoided being absorbed into the Soviet Union. On July 31, 1940, Adolf Hitler gave the order to start planning an assault on the Soviet Union.  One month later the Germans allowed the secret sale of weapons to Finland. German and Finnish military authorities made an agreement on September 12, and an official exchange of diplomatic notes was sent on September 22.<br/><br/>
                             
@@ -22,10 +26,6 @@ export default class Aftermath extends Component {
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="vyborg-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">Vyborg (formerly Viipuri, Finland),<br/> located in Leningrad Oblast, Russia.</span>
-            </ReactTooltip>
         </div>
         );
     }
