@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class TheTreatyOfMoscow extends Component {
     render() {
@@ -18,14 +17,15 @@ export default class TheTreatyOfMoscow extends Component {
                             The Finnish government was unwilling to negotiate on these terms. However, the declining military situation meant that they were not in a position to do so. The hope of military assistance from Britain and France failed to materialise. In all senses, the Finns were by themselves. Sweden urged Finland to accept the Soviet demands. The Soviets had set March 1st as a deadline for negotiations. With the ever decreasing military situation confronting them, the Finnish government saw no alternative to acceptance.<br/><br/>
                             The March 1st deadline passed but the Finnish government was assured that the terms still stood and that the deadline had been extended. On March 6th, a Finnish delegation left for Moscow. Talks opened on March 8th. The U.S.S.R., led by Molotov, now demanded more land than their earlier terms. The Finns were outraged but could do little about this because of their poor military situation. On March 12th, the Finnish government gave its permission for the delegation to accept the terms. On March 13th, the Treaty of Moscow was signed and hostilities ceased at 11 a.m.
                         </p>
-                        <div id="newspaper" className="col-xs-4 col-xs-offset-8" data-tip data-for="newspaper-tooltip"></div>
+                        <div id="the-treaty-of-moscow-image" className="col-xs-4 col-xs-offset-8">
+                            <div id="newspaper"></div>
+                            <span className="text-container">
+                                <p>The Treaty of Moscow makes the front page in the local paper</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="newspaper-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">The Treaty of Moscow makes the front page</span>
-            </ReactTooltip>
         </div>
         );
     }
