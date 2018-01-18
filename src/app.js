@@ -361,69 +361,69 @@ $(document).ready(function(){
     
     /* ----- Image pinning scenes ----- */
     var kareliaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#karelia-map",
+        triggerElement: "#buffer-zone-image",
         triggerHook: 0.2,
         duration: "60%"
     })
     .addTo(controller);
-    kareliaPinScene.setPin("#karelia-map", {pushFollowers: false});
+    kareliaPinScene.setPin("#buffer-zone-image", {pushFollowers: false});
     
     var stalinPinScene = new ScrollMagic.Scene({
-        triggerElement: "#stalin",
+        triggerElement: "#inevitable-war-image",
         triggerHook: 0.2,
         duration: "40%"
     })
     .addTo(controller);
-    stalinPinScene.setPin("#stalin", {pushFollowers: false});
+    stalinPinScene.setPin("#inevitable-war-image", {pushFollowers: false});
     
     var finnishSoldiersPinScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-soldiers",
+        triggerElement: "#home-field-advantage-image",
         triggerHook: 0.2,
         duration: "60%"
     })
     .addTo(controller);
-    finnishSoldiersPinScene.setPin("#finnish-soldiers", {pushFollowers: false});
+    finnishSoldiersPinScene.setPin("#home-field-advantage-image", {pushFollowers: false});
     
     var sovietTroopsPinScene = new ScrollMagic.Scene({
-        triggerElement: "#soviet-troops",
+        triggerElement: "#it-begins-image",
         triggerHook: 0.2,
         duration: "40%"
     })
     .addTo(controller);
-    sovietTroopsPinScene.setPin("#soviet-troops", {pushFollowers: false});
+    sovietTroopsPinScene.setPin("#it-begins-image", {pushFollowers: false});
     
     
     var simoHayhaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#simo-hayha",
+        triggerElement: "#the-white-death-image",
         triggerHook: 0.2,
         duration: "90%"
     })
     .addTo(controller);
-    simoHayhaPinScene.setPin("#simo-hayha", {pushFollowers: false});
+    simoHayhaPinScene.setPin("#the-white-death-image", {pushFollowers: false});
     
     var finnishFlagPinScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-flag",
+        triggerElement: "#perseverance-image",
         triggerHook: 0.2,
         duration: "80%"
     })
     .addTo(controller);
-    finnishFlagPinScene.setPin("#finnish-flag", {pushFollowers: false});
+    finnishFlagPinScene.setPin("#perseverance-image", {pushFollowers: false});
     
     var newspaperPinScene = new ScrollMagic.Scene({
-        triggerElement: "#newspaper",
+        triggerElement: "#the-treaty-of-moscow-image",
         triggerHook: 0.2,
         duration: "110%"
     })
     .addTo(controller);
-    newspaperPinScene.setPin("#newspaper", {pushFollowers: false});
+    newspaperPinScene.setPin("#the-treaty-of-moscow-image", {pushFollowers: false});
     
     var vyborgPinScene = new ScrollMagic.Scene({
-        triggerElement: "#vyborg",
+        triggerElement: "#aftermath-image",
         triggerHook: 0.2,
         duration: "30%"
     })
     .addTo(controller);
-    vyborgPinScene.setPin("#vyborg", {pushFollowers: false});
+    vyborgPinScene.setPin("#aftermath-image", {pushFollowers: false});
     
     
     /* ----- Image parallaxing tweens ----- */
@@ -433,9 +433,9 @@ $(document).ready(function(){
     });
 
     var kareliaParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#karelia-map", 
+        triggerElement: "#buffer-zone-image", 
         triggerHook: 0.2,
-        duration: "75%"
+        duration: "60%"
     })
     .setTween(kareliaParallaxTween)
     .addTo(controller);
@@ -447,7 +447,7 @@ $(document).ready(function(){
     });
     
     var stalinParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#stalin",
+        triggerElement: "#inevitable-war-image",
         triggerHook: 0.2,
         duration: "40%"
     })
@@ -459,8 +459,8 @@ $(document).ready(function(){
         ease:Power1.easeOut
     });
     
-     var finnishSoldiersParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-soldiers",
+    var finnishSoldiersParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#home-field-advantage-image",
         triggerHook: 0.2,
         duration: "80%"
     })
@@ -473,7 +473,7 @@ $(document).ready(function(){
     });
     
     var sovietTroopsParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#soviet-troops",
+        triggerElement: "#it-begins-image",
         triggerHook: 0.2,
         duration: "55%"
     })
@@ -486,7 +486,7 @@ $(document).ready(function(){
     });
     
     var simoHayhaParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#simo-hayha",
+        triggerElement: "#the-white-death-image",
         triggerHook: 0.2,
         duration: "90%"
     })
@@ -500,7 +500,7 @@ $(document).ready(function(){
     });
     
     var finnishFlagParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#finnish-flag",
+        triggerElement: "#perseverance-image",
         triggerHook: 0.2,
         duration: "70%"
     })
@@ -512,8 +512,8 @@ $(document).ready(function(){
         ease:Power2.easeIn
     });
     
-    var newspaperParallaxnScene = new ScrollMagic.Scene({
-        triggerElement: "#newspaper",
+    var newspaperParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#the-treaty-of-moscow-image",
         triggerHook: 0.2,
         duration: "110%"
     })
@@ -525,8 +525,8 @@ $(document).ready(function(){
         ease:Power0.easeIn
     });
     
-    var vyborgParallaxnScene = new ScrollMagic.Scene({
-        triggerElement: "#vyborg",
+    var vyborgParallaxScene = new ScrollMagic.Scene({
+        triggerElement: "#aftermath-image",
         triggerHook: 0.2,
         duration: "30%"
     })

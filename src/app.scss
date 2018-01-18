@@ -68,6 +68,16 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     }
 }
 
+@mixin image-hover{
+    div{
+        transition: filter 0.2s ease-in;
+    }
+
+    &:hover div{
+        filter: brightness(50%);
+    }    
+}
+
 @mixin nav-color-change($b-radius: 20px){
     border-radius: $b-radius;
     transition: all 0.3s ease-in;
@@ -451,14 +461,44 @@ a:focus{
         }
     }
     
-    #karelia-map{
+    #buffer-zone-image{
         position: relative;
         top: 50vh;
         height: 400px;
         width: 400px;
-        background: url("img/karelia.png") $nrs 0% 100%;
-        background-size: 150%;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #karelia-map{
+            height: 100%;
+            width: 100%;
+            background: url("img/karelia.png") $nrs 0% 100%;
+            background-size: 150%;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
 }
 
@@ -494,14 +534,44 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #stalin{
+    #inevitable-war-image{
         position: relative;
         top: 45vh;
         height: 400px;
         width: 400px;
-        background: url("img/stalin.jpg") $nrs center 0%;
-        background-size: 100% 115.1%;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #stalin{
+            height: 100%;
+            width: 100%;
+            background: url("img/stalin.jpg") $nrs center 0%;
+            background-size: 100% 115.1%;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
     
     #inevitable-war-paragraph{
@@ -602,14 +672,44 @@ a:focus{
         color: $white;
     }
     
-    #finnish-soldiers{
+    #home-field-advantage-image{
         position: relative;
         top: 45vh;
         height: 400px;
         width: 400px;
-        background: url("img/finnish-soldiers.jpg") $nrs 100% center;
-        background-size: cover;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #finnish-soldiers{
+            height: 100%;
+            width: 100%;
+            background: url("img/finnish-soldiers.jpg") $nrs 100% center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
 }
 
@@ -645,14 +745,44 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #soviet-troops{
+    #it-begins-image{
         position: relative;
         top: 45vh;
         height: 400px;
         width: 400px;
-        background: url("img/soviet-troops.jpg") $nrs 10% center;
-        background-size: auto 100%; 
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #soviet-troops{
+            height: 100%;
+            width: 100%;
+            background: url("img/soviet-troops.jpg") $nrs 10% center;
+            background-size: auto 100%; 
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
     
     #it-begins-paragraph{
@@ -749,15 +879,44 @@ a:focus{
         color: $white;
     }
     
-    #simo-hayha{
+    #the-white-death-image{
         position: relative;
         top: 50vh;
         height: 400px;
         width: 400px;
-        background: url("img/simo-hayha.jpg") $nrs center 5%;
-        background-size: 100%;
         border-radius: 10px;
-        transition: filter 0.5s ease-in-out;
+        padding: 0;
+        @include image-hover;
+        
+        #simo-hayha{
+            height: 100%;
+            width: 100%;
+            background: url("img/simo-hayha.jpg") $nrs center 5%;
+            background-size: 100%;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
 }
 
@@ -793,14 +952,44 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #finnish-flag{
+    #perseverance-image{
         position: relative;
         top: 45vh;
         height: 400px;
         width: 400px;
-        background: url("img/finn-flag.jpg") $nrs 80% center;
-        background-size: 137.797% 100%;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #finnish-flag{
+            height: 100%;
+            width: 100%;
+            background: url("img/finn-flag.jpg") $nrs 80% center;
+            background-size: 137.797% 100%;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
     
     #perseverance-paragraph{
@@ -896,14 +1085,44 @@ a:focus{
         color: $white;
     }
     
-    #newspaper{
+    #the-treaty-of-moscow-image{
         position: relative;
         top: 50vh;
         height: 400px;
         width: 400px;
-        background: url("img/newspaper.jpg") $nrs 0% 30%;
-        background-size: 170%;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #newspaper{
+            height: 100%;
+            width: 100%;
+            background: url("img/newspaper.jpg") $nrs 0% 30%;
+            background-size: 170%;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
 }
 
@@ -939,14 +1158,44 @@ a:focus{
         transition: opacity 0.2s ease-in;
     }
     
-    #vyborg{
+    #aftermath-image{
         position: relative;
-        top: 45vh;
+        top: 50vh;
         height: 400px;
         width: 400px;
-        background: url("img/vyborg.jpg") $nrs 0% 0%;
-        background-size: cover;
         border-radius: 10px;
+        padding: 0;
+        @include image-hover;
+        
+        #vyborg{
+            height: 100%;
+            width: 100%;
+            background: url("img/vyborg.jpg") $nrs 0% 0%;
+            background-size: cover;
+            border-radius: 10px;
+        }
+        
+        .text-container{
+            position: absolute;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            p{
+                position: relative;
+                color: $white;
+                @include secondary-font;
+                font-size: 1.5em;
+                opacity: 0;
+                text-align: center;
+                transition: opacity 0.2s ease-in;
+            } 
+        }
+        
+        &:hover p{
+            opacity: 1;
+        }
     }
     
     #aftermath-paragraph{

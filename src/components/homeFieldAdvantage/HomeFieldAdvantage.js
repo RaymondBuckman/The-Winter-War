@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class HomeFieldAdvantage extends Component {
     render() {
@@ -18,14 +17,15 @@ export default class HomeFieldAdvantage extends Component {
                             For the Soviet Union it was completely different. It was used to war games on large expanses of open ground. The snow covered forests of Finland were a different matter and the Soviets were to find that they were frequently confined to the area around roads as many of their men were unused to Finland’s terrain and the majority of their vehicles were unable to go off road. Their tactics developed during training did not include such terrain.<br/><br/>
                             The Red Army was ill-equipped for a winter war. Whereas the army was well supplied with standard military equipment, it had little that was required for the snow-covered forests of Finland. White camouflage clothing was not issued and vehicles simply could not cope with the cold. The winter of 1939-40 was particularly severe.
                         </p>
-                        <div id="finnish-soldiers" className="col-xs-4 col-xs-offset-8" data-tip data-for="finnish-soldiers-tooltip"></div>
+                        <div id="home-field-advantage-image" className="col-xs-4 col-xs-offset-8">
+                            <div id="finnish-soldiers"></div>
+                            <span className="text-container">
+                                <p>The Finns' mobility & knowledge of the terrain gave the Soviets a hard time.</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <ReactTooltip id="finnish-soldiers-tooltip" place="bottom" type="light"
-            effect="float" role="tooltip">
-                <span className="tooltip-span">The Finns' mobility & knowledge<br/> of the terrain gave the Soviets<br/> a hard time.</span>
-            </ReactTooltip>
         </div>
         );
     }
