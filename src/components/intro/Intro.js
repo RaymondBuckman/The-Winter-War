@@ -19,7 +19,7 @@ export default class Intro extends Component {
                 </div>
             </div>
             <ReactTooltip id="down-arrow-tooltip" place="top" type="light"
-            effect="float" role="tooltip">
+            effect="solid" role="tooltip">
                 <span className="tooltip-span">Scroll down</span>
             </ReactTooltip>
         </div>
