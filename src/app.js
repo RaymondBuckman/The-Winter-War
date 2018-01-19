@@ -475,7 +475,7 @@ $(document).ready(function(){
     var sovietTroopsParallaxScene = new ScrollMagic.Scene({
         triggerElement: "#it-begins-image",
         triggerHook: 0.2,
-        duration: "55%"
+        duration: "40%"
     })
     .setTween(sovietTroopsParallaxTween)
     .addTo(controller);
