@@ -15,7 +15,7 @@ export default class ItBegins extends Component {
                         <div id="it-begins-image" className="col-xs-4 col-xs-offset-0">
                             <div id="soviet-troops"></div>
                             <span className="text-container">
-                                <p>The Soviets had great difficulty traversing through Finnish territory.</p>
+                                <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
                             </span>
                         </div>
                         <p id="it-begins-paragraph" className="col-xs-7 col-xs-offset-5 text-right affix-top">

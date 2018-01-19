@@ -20,7 +20,7 @@ export default class TheWhiteDeath extends Component {
                         <div id="the-white-death-image" className="col-xs-4 col-xs-offset-8">
                             <div id="simo-hayha"></div>
                             <span className="text-container">
-                                <p>Simo Häyhä, widely considered to be the greatest sniper of all time.</p>
+                                <p>Simo Häyhä, widely considered to be the greatest sniper of all time <a href="https://www.youtube.com/watch?v=pkKVhqsYva4" target="_blank">(click to view more on Simo Häyhä...)</a></p>
                             </span>
                         </div>
                     </div>

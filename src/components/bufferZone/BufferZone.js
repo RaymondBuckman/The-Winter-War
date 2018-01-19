@@ -20,10 +20,10 @@ export default class BufferZone extends Component {
                         <div id="buffer-zone-image" className="col-xs-4 col-xs-offset-8">
                             <div id="karelia-map"></div>
                             <span className="text-container">
-                                <p>Map of Karelia & its proximity to Leningrad</p>
+                                <p>Map of Karelia & its proximity to Leningrad <a href="http://helyla.onego.ru/history_eng.html" target="_blank">(click to read more on the history of Karelia...)</a></p>
                             </span>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>

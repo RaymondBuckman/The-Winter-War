@@ -20,7 +20,7 @@ export default class HomeFieldAdvantage extends Component {
                         <div id="home-field-advantage-image" className="col-xs-4 col-xs-offset-8">
                             <div id="finnish-soldiers"></div>
                             <span className="text-container">
-                                <p>The Finns' mobility & knowledge of the terrain gave the Soviets a hard time.</p>
+                                <p>The Finns' mobility & knowledge of the terrain allowed them to use Motti tactics against the Soviets <a href="https://www.youtube.com/watch?v=yHrndb0oZEc" target="_blank">(click to view more on Motti tactics...)</a></p>
                             </span>
                         </div>
                     </div>

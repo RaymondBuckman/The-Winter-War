@@ -15,7 +15,7 @@ export default class Aftermath extends Component {
                         <div id="aftermath-image" className="col-xs-4 col-xs-offset-0">
                             <div id="vyborg"></div>
                             <span className="text-container">
-                                <p>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia.</p>
+                                <p>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia</p>
                             </span>
                         </div>
                         <p id="aftermath-paragraph" className="col-xs-7 col-xs-offset-5 text-right">

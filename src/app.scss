@@ -74,7 +74,7 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     }
 
     &:hover div{
-        filter: brightness(50%);
+        filter: brightness(30%);
     }    
 }
 
@@ -493,6 +493,10 @@ a:focus{
                 opacity: 0;
                 text-align: center;
                 transition: opacity 0.2s ease-in;
+                
+                a{
+                    @include a-tag-styling;
+                }
             } 
         }
         
@@ -566,6 +570,10 @@ a:focus{
                 opacity: 0;
                 text-align: center;
                 transition: opacity 0.2s ease-in;
+                
+                a{
+                    @include a-tag-styling;
+                }
             } 
         }
         
@@ -704,6 +712,10 @@ a:focus{
                 opacity: 0;
                 text-align: center;
                 transition: opacity 0.2s ease-in;
+                
+                a{
+                    @include a-tag-styling;
+                }
             } 
         }
         
@@ -911,6 +923,10 @@ a:focus{
                 opacity: 0;
                 text-align: center;
                 transition: opacity 0.2s ease-in;
+                
+                a{
+                    @include a-tag-styling;
+                }
             } 
         }
         
@@ -984,6 +1000,10 @@ a:focus{
                 opacity: 0;
                 text-align: center;
                 transition: opacity 0.2s ease-in;
+                
+                a{
+                    @include a-tag-styling;
+                }
             } 
         }
         
