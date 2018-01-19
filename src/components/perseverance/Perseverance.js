@@ -15,7 +15,7 @@ export default class Perseverance extends Component {
                         <div id="perseverance-image" className="col-xs-4 col-xs-offset-0">
                             <div id="finnish-flag"></div>
                             <span className="text-container">
-                                <p>Soldiers raising the Finnish Flag</p>
+                                <p>Soldiers raising the Finnish Flag <a href="https://finland.fi/facts-stats-and-info/the-finnish-flag/" target="_blank">(click to read more about the Finnish flag...)</a></p>
                             </span>
                         </div>
                         <p id="perseverance-paragraph" className="col-xs-7 col-xs-offset-5 text-right">
