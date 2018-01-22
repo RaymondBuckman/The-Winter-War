@@ -31,6 +31,11 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     25%             {opacity: 0.8;}  
 }
 
+@keyframes blinking-image{
+    0%      {opacity: 0;}
+    50%     {opacity: 1;}
+}
+
 @keyframes blinking-text-white{
     0%      {text-shadow: 1px 1px transparent;}
     50%     {text-shadow: 1px 1px $white;}
@@ -92,8 +97,8 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     animation: occasional-brightness 8s infinite;
 }
 
-@mixin global-padding{
-    padding: 0 10vw;
+@mixin div-padding{
+    padding: 10vh 0;
 }
 
 @mixin flex-display{
@@ -103,7 +108,6 @@ $specs-3-height: 100vw * .7492; //Multiple based on image proportions
     display: -webkit-flex;
     display: flex;
 }
-
 
 @mixin for-small-phone-portrait {
     @media (max-width: 399px){ @content; }
@@ -235,18 +239,27 @@ a:focus{
     height: 40px;
 }
 
-/*
-#m-logo{
-    position:relative;
-    top:5px;
-    display:block;
-    margin:auto;
-}*/
+.blinking-image-class{
+    animation: blinking-image 2s infinite;
+}
 
 #menu-white{
     position: fixed;
     top: 10px;
     right: 20px;
+    z-index: 97;
+    transition: opacity 0.2s ease-in;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#menu-white-clone{
+    position: fixed;
+    top: 11px;
+    right: 19px;
+    opacity: 0;
     z-index: 98;
     transition: opacity 0.2s ease-in;
     
@@ -271,15 +284,6 @@ a:focus{
     .navbar-nav{
         width: 100vw !important;
     }
-}
-
-#logo{
-    position: relative;
-    top: 6px;
-    //padding-left: 5vw;
-    height: 40px;
-    color: transparent;
-    border-radius: 5px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -336,6 +340,18 @@ a:focus{
     }
 }
 
+#up-arrow-green-clone{
+    position: absolute;
+    top: 11px;
+    right: 36px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .intro-div {
     position: relative;
     height: 100vh;
@@ -343,7 +359,7 @@ a:focus{
     background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
     //@include occasional-brightness;
     //@include global-padding;
-    z-index: 20;    
+    z-index: 50;    
     
     #intro-video {
         position: absolute;
@@ -455,6 +471,7 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        z-index: 25;
         
         a{
             @include a-tag-styling;
@@ -468,6 +485,7 @@ a:focus{
         width: 400px;
         border-radius: 10px;
         padding: 0;
+        z-index: 25;
         @include image-hover;
         
         #karelia-map{
@@ -511,6 +529,7 @@ a:focus{
     height: 160vh;
     background: url("img/ussr-wallpaper.jpg") $nrf center center;
     background-size: cover;
+    z-index: 50;
     
     #neizbezhnaya-voyna{
         position: absolute;
@@ -600,6 +619,7 @@ a:focus{
     height: 170vh;
     background: url("img/tanks-red-army.jpg") $nrf center center;
     background-size: cover;
+    z-index: 50;
     
     #alakynnessa{
         position: absolute;
@@ -645,6 +665,7 @@ a:focus{
     height: 190vh;
     background: url("img/forest.jpg") $nrf center 90%;
     background-size: cover;
+    z-index: 50;
     
     #kotikenttaetu{
         position: absolute;
@@ -764,6 +785,7 @@ a:focus{
         width: 400px;
         border-radius: 10px;
         padding: 0;
+        z-index: 50;
         @include image-hover;
         
         #soviet-troops{
@@ -772,6 +794,7 @@ a:focus{
             background: url("img/soviet-troops.jpg") $nrs 10% center;
             background-size: auto 100%; 
             border-radius: 10px;
+            z-index: 50;
         }
         
         .text-container{
@@ -803,6 +826,7 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        z-index: 50;
         
         a{
             @include a-tag-styling;
@@ -815,6 +839,7 @@ a:focus{
     height: 160vh;
     background: url("img/forest-2.jpg") $nrf 100% 100%;
     background-size: cover;
+    z-index: 50;
     
     #zimniye-zamorazhivaniye{
         position: absolute;
@@ -856,6 +881,7 @@ a:focus{
     height: 210vh;
     background: url("img/sniper.jpg") $nrf center center;
     background-size: cover;
+    z-index: 50;
     
     #valkoinen-kuolema{
         position: absolute;
@@ -941,6 +967,7 @@ a:focus{
     height: 200vh;
     background: url("img/northern-lights.jpg") $nrf center 0%;
     background-size: cover;
+    z-index: 50;
     
     #sisu{
         position: absolute;
@@ -1062,6 +1089,7 @@ a:focus{
         @include secondary-font;
         font-size: 2em;
         color: $white;
+        z-index: 50;
     }
 }
 
@@ -1070,6 +1098,7 @@ a:focus{
     height: 240vh;
     background: url("img/paper.jpeg") $nrf center center;
     background-size: cover;
+    z-index: 50;
     
     #dogovor-moskvy{
         position: absolute;
@@ -1151,6 +1180,7 @@ a:focus{
     height: 155vh;
     background: url("img/luftwaffe.jpg") $nrf center 30%;
     background-size: cover;
+    z-index: 50;
     
     #jalkiseuraukset{
         position: absolute;
@@ -1263,8 +1293,9 @@ a:focus{
     }
     
     ul{
-       position: relative;
-       top: 35vh;
+        position: relative;
+        top: 35vh;
+        z-index: 50;
         
         li:first-child{
             color: $white;
@@ -1306,6 +1337,13 @@ a:focus{
     }
 }
 
+.snow-background canvas{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: transparent;
+    z-index: 20;
+}
 
 
 

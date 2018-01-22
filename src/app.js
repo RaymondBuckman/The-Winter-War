@@ -3,9 +3,9 @@ require('./img/favicon.ico');
 import {TweenMax, Power2, TimelineLite} from "gsap";
 import scrollTo from '../node_modules/gsap/ScrollToPlugin';
 import ScrollMagic from 'scrollmagic';
+import Particles from 'react-particles-js';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js';
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js';
-import ReactTooltip from 'react-tooltip'; 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/navbar/Navbar';
@@ -28,7 +28,8 @@ import $ from "jquery";
 
 ReactDOM.render(
     <div className="App">
-        <img id="menu-white" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>  
+        <img id="menu-white" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
+        <img id="menu-white-clone" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
         <Navbar/>
         <div className="main-content">
             <Intro />
@@ -44,23 +45,89 @@ ReactDOM.render(
             <TheTreatyOfMoscow/>
             <Aftermath/>
             <Footer/>
+            <Particles 
+                params={{
+            		particles: {
+                        number: {
+                            value: 50,
+                        },
+                        size: {
+                            value: 7,
+                            random: true,
+                        },
+            			line_linked: {
+            				enable: false
+            			},
+                        move: {
+                            enable: true,
+                            speed: 6,
+                            direction: "bottom",
+                            random: false,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        },
+                        interactivity: {
+                            detect_on: "canvas",
+                            events: {
+                                onhover: {
+                                    enable: true,
+                                    mode: "repulse"
+                                },
+                                onclick: {
+                                    enable: true,
+                                    mode: "repulse"
+                                },
+                            }
+                        }
+            		}
+            	}}
+            className="snow-background"
+            />
         </div>
     </div>,
     document.getElementById('root')
 );
+/*
+particlesJS.load('particles-js', '../particles.json', function() {
+  console.log('callback - particles-js config loaded');
+});*/
 
 $(document).ready(function(){ 
-    $('#menu-white').click(function(){
+    $('#menu-white, #menu-white-clone').click(function(){
         $('.navbar').addClass('navbar-displayed');
-        $('#menu-white').addClass('fade-out');
-        $('#up-arrow-green').addClass('fade-in');
+        $(this).addClass('fade-out');
     });
     
-    $('.main-content, #up-arrow-green').click(function(){
+    $('.main-content, #up-arrow-green, #up-arrow-green-clone').click(function(){
         $('.navbar').removeClass('navbar-displayed');
-        $('#menu-white').removeClass('fade-out');
-        $('#up-arrow-green').removeClass('fade-in');
+        $('#menu-white, #menu-white-clone').removeClass('fade-out');
     });
+    
+    //Replicates the white text-shadow text animation for images
+    $('#menu-white, #menu-white-clone').hover(
+        function(){
+            $('#menu-white-clone').addClass('blinking-image-class');
+        },  
+        function(){
+            $('#menu-white-clone').removeClass('blinking-image-class');
+        }
+    );
+    
+    //Replicates the white text-shadow text animation for images
+    $('#up-arrow-green, #up-arrow-green-clone').hover(
+        function(){
+            $('#up-arrow-green-clone').addClass('blinking-image-class');
+        },  
+        function(){
+            $('#up-arrow-green-clone').removeClass('blinking-image-class');
+        }
+    );
     
     $("#down-arrow").click(function() {
         $('html, body').animate({
@@ -428,8 +495,8 @@ $(document).ready(function(){
     
     /* ----- Image parallaxing tweens ----- */
     var kareliaParallaxTween = TweenMax.to("#karelia-map", 1, {
-        backgroundPositionX: "+=95%",
-        ease:Power2.easeIn
+        backgroundPositionX: "+=75%",
+        ease:Power2.easeInOut
     });
 
     var kareliaParallaxScene = new ScrollMagic.Scene({
@@ -494,7 +561,7 @@ $(document).ready(function(){
     .addTo(controller);
     
     var finnishFlagParallaxTween = TweenMax.to("#finnish-flag", 1, {
-        backgroundSize: "+=34.45% +=25%",
+        backgroundSize: "+=17.225% +=12.5%",
         backgroundPositionY: "-=50%",
         ease:Power0.easeIn
     });
