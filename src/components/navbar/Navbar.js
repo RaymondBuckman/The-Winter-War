@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
-import ReactTooltip from 'react-tooltip';
 
 export default class Navbar extends Component {
     render() {
@@ -22,6 +21,7 @@ export default class Navbar extends Component {
                         <li><a href="#aftermath-div">Aftermath</a></li>
                     </ul>
                     <img id="up-arrow-green" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" tabIndex="0" alt="closes navigation"></img>   
+                    <img id="up-arrow-green-clone" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" tabIndex="0" alt="closes navigation"></img>
                 </div>
             </nav>
         </div>
