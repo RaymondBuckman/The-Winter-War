@@ -53,7 +53,7 @@ export default class Footer extends Component {
             />
             <div className="container">  
                 <div className="row">
-                    <h1 id="lisaa-linkkeja" className="text-center" tabIndex="0">Lisää Linkkejä</h1>
+                    <h1 id="lisaa-linkkeja" className="text-center">Lisää Linkkejä</h1>
                     <h1 id="more-links" className="text-center" tabIndex="0">More Links</h1>
                 </div>
                 <div className="row">
