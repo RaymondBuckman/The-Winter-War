@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
+import newspaperImage from '../../img/newspaper.jpg';
 
 export default class TheTreatyOfMoscow extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class TheTreatyOfMoscow extends Component {
             <div id="the-treaty-of-moscow-div" className="the-treaty-of-moscow-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="dogovor-moskvy" className="text-center" tabIndex="0">Договор Москвы</h1>
+                        <h1 id="dogovor-moskvy" className="text-center">Договор Москвы</h1>
                         <h1 id="the-treaty-of-moscow" className="text-center" tabIndex="0">The Treaty Of Moscow</h1>
                     </div>
                     <div className="row">
@@ -20,7 +21,7 @@ export default class TheTreatyOfMoscow extends Component {
                             The March 1st deadline passed but the Finnish government was assured that the terms still stood and that the deadline had been extended. On March 6th, a Finnish delegation left for Moscow. Talks opened on March 8th. The U.S.S.R., led by Molotov, now demanded more land than their earlier terms. The Finns were outraged but could do little about this because of their poor military situation. On March 12th, the Finnish government gave its permission for the delegation to accept the terms. On March 13th, the Treaty of Moscow was signed and hostilities ceased at 11 a.m.
                         </p>
                         <div id="the-treaty-of-moscow-image" className="col-lg-4 col-lg-offset-8">
-                            <div id="newspaper"></div>
+                            <img id="newspaper" src={newspaperImage} alt="Image of a newspaper reporting on the Winter War"></img>
                             <span className="text-container">
                                 <p>The Treaty of Moscow makes the front page in the local paper</p>
                             </span>
