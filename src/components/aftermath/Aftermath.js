@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
+import vyborgImage from '../../img/vyborg.jpg';
 
 export default class Aftermath extends Component {
     render() {
@@ -8,12 +9,12 @@ export default class Aftermath extends Component {
             <div id="aftermath-div" className="aftermath-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="jalkiseuraukset" className="text-center" tabIndex="0">Jälkiseuraukset</h1>
+                        <h1 id="jalkiseuraukset" className="text-center">Jälkiseuraukset</h1>
                         <h1 id="aftermath" className="text-center" tabIndex="0">Aftermath</h1>
                     </div>
                     <div className="row">
                         <div id="aftermath-image" className="col-lg-4 col-lg-offset-0">
-                            <div id="vyborg"></div>
+                            <img id="vyborg" src={vyborgImage} alt="Image of Vyborg, Russia"></img>
                             <span className="text-container">
                                 <p>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia</p>
                             </span>
