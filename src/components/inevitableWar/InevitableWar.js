@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
+import stalinImage from '../../img/stalin.jpg';
 
 export default class InevitableWar extends Component {
     render() {
@@ -8,12 +9,12 @@ export default class InevitableWar extends Component {
             <div id="inevitable-war-div" className="inevitable-war-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="neizbezhnaya-voyna" className="text-center" tabIndex="0">Неизбежная Война</h1>
+                        <h1 id="neizbezhnaya-voyna" className="text-center">Неизбежная Война</h1>
                         <h1 id="inevitable-war" className="text-center" tabIndex="0">Inevitable War</h1>
                     </div>
                     <div className="row">
                         <div id="inevitable-war-image" className="col-lg-4 col-lg-offset-0">
-                            <div id="stalin"></div>
+                            <img id="stalin" src={stalinImage} alt="A photo of Joseph Stalin"></img>
                             <span className="text-container">
                                 <p>Joseph Stalin, General Secretary of the Communist Party of the Soviet Union from 1922-1952 <a href="http://www.history.com/topics/joseph-stalin" target="_blank">(read more on Stalin...)</a></p>
                             </span>
