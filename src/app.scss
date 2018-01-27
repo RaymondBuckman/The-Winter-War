@@ -83,11 +83,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162115', end
 }
 
 @mixin image-hover{
-    div{
+    img{
+        padding-left: 400px;
         transition: filter 0.2s ease-in;
     }
 
-    &:hover div{
+    &:hover img{
         filter: brightness(30%);
     }    
 }
@@ -319,8 +320,7 @@ a:focus{
 }
 
 .navbar-default .navbar-nav> li:nth-child(n+2) > a:focus{
-    color: $white !important;
-    background: $green;
+    animation: blinking-text-green 2s infinite;
 }
 
 .navbar-default .navbar-nav >.active > a:hover{
@@ -665,7 +665,7 @@ a:focus{
 .home-field-advantage-div {
     position: relative;
     height: 190vh;
-    background: url("img/pexels-photo-47722.jpg") $nrf center 100%;
+    background: url("img/forest-1.jpg") $nrf center 100%;
     background-size: cover;
     
     #kotikenttaetu{
@@ -787,10 +787,10 @@ a:focus{
         padding: 0;
         @include image-hover;
         
-        #soviet-troops{
+        #soviet-tanks{
             height: 100%;
             width: 100%;
-            background: url("img/soviet-troops.jpg") $nrs 10% center;
+            background: url("img/soviet-tanks.jpg") $nrs 10% center;
             background-size: auto 100%; 
             border-radius: 10px;
         }
@@ -1767,10 +1767,10 @@ a:focus{
             padding: 0;
             @include image-hover;
 
-            #soviet-troops{
+            #soviet-tanks{
                 height: 100%;
                 width: 100%;
-                background: url("img/soviet-troops.jpg") $nrs 10% center;
+                background: url("img/soviet-tanks.jpg") $nrs 10% center;
                 background-size: auto 100%; 
                 border-radius: 10px;
             }

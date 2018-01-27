@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
+import finnishSoldiersImage from '../../img/finnish-soldiers.jpg';
 
 export default class HomeFieldAdvantage extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class HomeFieldAdvantage extends Component {
             <div id="home-field-advantage-div" className="home-field-advantage-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="kotikenttaetu" className="text-center" tabIndex="0">Kotikenttäetu</h1>
+                        <h1 id="kotikenttaetu" className="text-center">Kotikenttäetu</h1>
                         <h1 id="home-field-advantage" className="text-center" tabIndex="0">Home-Field Advantage</h1>
                     </div>
                     <div className="row">
@@ -18,7 +19,7 @@ export default class HomeFieldAdvantage extends Component {
                             The Red Army was ill-equipped for a winter war. Whereas the army was well supplied with standard military equipment, it had little that was required for the snow-covered forests of Finland. White camouflage clothing was not issued and vehicles simply could not cope with the cold. The winter of 1939-40 was particularly severe.
                         </p>
                         <div id="home-field-advantage-image" className="col-lg-4 col-lg-offset-8">
-                            <div id="finnish-soldiers"></div>
+                            <img id="finnish-soldiers" src={finnishSoldiersImage} alt="Image of several Finnish ski soldiers"></img>
                             <span className="text-container">
                                 <p>The Finns' mobility & knowledge of the terrain allowed them to use Motti tactics against the Soviets <a href="https://www.youtube.com/watch?v=yHrndb0oZEc" target="_blank">(view more on Motti tactics...)</a></p>
                             </span>

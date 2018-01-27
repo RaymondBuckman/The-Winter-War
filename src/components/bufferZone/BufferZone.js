@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import Particles from 'react-particles-js';
+import KareliaImage from '../../img/karelia.png';
 
 export default class BufferZone extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class BufferZone extends Component {
                     params={{
                         particles: {
                             number: {
-                                value: 110,
+                                value: 80,
                             },
                             size: {
                                 value: 7,
@@ -79,7 +80,7 @@ export default class BufferZone extends Component {
             />
                 <div className="container">
                     <div className="row">
-                        <h1 id="bufernaya-zona" className="text-center" tabIndex="0">Буферная Зона</h1>
+                        <h1 id="bufernaya-zona" className="text-center">Буферная Зона</h1>
                         <h1 id="buffer-zone" className="text-center" tabIndex="0">Buffer Zone</h1>
                     </div>
                     <div className="row">
@@ -89,7 +90,7 @@ export default class BufferZone extends Component {
                             Finland was highly suspicious of anything required by Stalin. Relations between Russia and Finland had been fraught for many decades and nearly everyone in Finland saw Stalin’s demands as an attempt by Russia to re-establish her authority over Finland once again. 
                         </p>
                         <div id="buffer-zone-image" className="col-lg-4 col-lg-offset-8">
-                            <div id="karelia-map"></div>
+                            <img id="karelia-map" src={KareliaImage} alt="Map of Soviet-Finnish border region"></img>
                             <span className="text-container">
                                 <p>Map of Karelia & its proximity to Leningrad <a href="http://helyla.onego.ru/history_eng.html" target="_blank">(read more on the history of Karelia...)</a></p>
                             </span>

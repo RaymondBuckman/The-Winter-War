@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
+import finnishFlagImage from '../../img/finn-flag.jpg';
 
 export default class Perseverance extends Component {
     render() {
@@ -8,12 +9,12 @@ export default class Perseverance extends Component {
             <div id="perseverance-div" className="perseverance-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="sisu" className="text-center" tabIndex="0">Sisu</h1>
+                        <h1 id="sisu" className="text-center">Sisu</h1>
                         <h1 id="perseverance" className="text-center" tabIndex="0">Perseverance & Guts</h1>
                     </div>
                     <div className="row">
                         <div id="perseverance-image" className="col-lg-4 col-lg-offset-0">
-                            <div id="finnish-flag"></div>
+                            <img id="finnish-flag" src={finnishFlagImage} alt="Image of soldiers holding up the Finnish flag"></img>
                             <span className="text-container">
                                 <p>Soldiers raising the Finnish Flag <a href="https://finland.fi/facts-stats-and-info/the-finnish-flag/" target="_blank">(read more about the Finnish flag...)</a></p>
                             </span>

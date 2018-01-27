@@ -11,7 +11,7 @@ export default class TheBeginningOfTheEnd extends Component {
                     params={{
                         particles: {
                             number: {
-                                value: 110,
+                                value: 80,
                             },
                             size: {
                                 value: 7,
@@ -53,7 +53,7 @@ export default class TheBeginningOfTheEnd extends Component {
             />
                 <div className="container">
                     <div className="row">
-                        <h1 id="nachalo-kontsa" className="text-center" tabIndex="0">Начало Конца</h1>
+                        <h1 id="nachalo-kontsa" className="text-center">Начало Конца</h1>
                         <h1 id="the-beginning-of-the-end" className="text-center" tabIndex="0">The Beginning Of The End</h1>                        
                     </div>
                     <div className="row">

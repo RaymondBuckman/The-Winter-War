@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import Particles from 'react-particles-js';
+import sovietTanksImage from '../../img/soviet-tanks.jpg';
 
 export default class ItBegins extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class ItBegins extends Component {
                     params={{
                         particles: {
                             number: {
-                                value: 110,
+                                value: 80,
                             },
                             size: {
                                 value: 7,
@@ -53,12 +54,12 @@ export default class ItBegins extends Component {
             />
                 <div className="container">
                     <div className="row">
-                        <h1 id="nachinayetsya" className="text-center" tabIndex="0">Начинается</h1>
+                        <h1 id="nachinayetsya" className="text-center">Начинается</h1>
                         <h1 id="it-begins" className="text-center" tabIndex="0">It Begins</h1>
                     </div>
                     <div className="row">
                         <div id="it-begins-image" className="col-lg-4 col-lg-offset-0">
-                            <div id="soviet-troops"></div>
+                            <img id="soviet-tanks" src={sovietTanksImage} alt="Image of soviet tanks struggling with the Finnish terrain"></img>
                             <span className="text-container">
                                 <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
                             </span>

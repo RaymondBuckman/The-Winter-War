@@ -8,7 +8,7 @@ export default class TheWinterFreeze extends Component {
             <div id="the-winter-freeze-div" className="the-winter-freeze-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="zimniye-zamorazhivaniye" className="text-center" tabIndex="0">Зимние Замораживание</h1>
+                        <h1 id="zimniye-zamorazhivaniye" className="text-center">Зимние Замораживание</h1>
                         <h1 id="the-winter-freeze" className="text-center" tabIndex="0">The Winter Freeze</h1>                        
                     </div>
                     <div className="row">

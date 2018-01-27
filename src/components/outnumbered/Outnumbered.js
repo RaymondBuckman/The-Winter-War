@@ -8,7 +8,7 @@ export default class Outnumbered extends Component {
             <div id="outnumbered-div" className="outnumbered-div">
                 <div className="container">
                     <div className="row">
-                        <h1 id="alakynnessa" className="text-center" tabIndex="0">Alakynnessä</h1>
+                        <h1 id="alakynnessa" className="text-center">Alakynnessä</h1>
                         <h1 id="outnumbered" className="text-center" tabIndex="0">Outnumbered</h1>                        
                     </div>
                     <div className="row">
