@@ -49,12 +49,14 @@ ReactDOM.render(
     </div>,
     document.getElementById('root')
 );
-/*
-particlesJS.load('particles-js', '../particles.json', function() {
-  console.log('callback - particles-js config loaded');
-});*/
 
 $(document).ready(function(){ 
+    //Brings down nav menu when <a> tags are on focus
+    $('.nav li a').focus(function(){
+        $('.navbar').addClass('navbar-displayed');
+        $('#menu-white, #menu-white-clone').addClass('fade-out');
+    })
+    
     $('#menu-white, #menu-white-clone').click(function(){
         $('.navbar').addClass('navbar-displayed');
         $(this).addClass('fade-out');
@@ -496,7 +498,7 @@ $(document).ready(function(){
     .setTween(finnishSoldiersParallaxTween)
     .addTo(controller);
     
-    var sovietTroopsParallaxTween = TweenMax.to("#soviet-troops", 1, {
+    var sovietTroopsParallaxTween = TweenMax.to("#soviet-tanks", 1, {
         backgroundPositionX: "50%",
         ease:Power2.easeIn
     });
