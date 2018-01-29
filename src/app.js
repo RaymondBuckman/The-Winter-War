@@ -31,7 +31,7 @@ ReactDOM.render(
         <img id="menu-white" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
         <img id="menu-white-clone" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
         <Navbar/>
-        <div className="main-content">
+        <div className="main-content" role="main">
             <Intro />
             <BufferZone/>
             <InevitableWar/>
