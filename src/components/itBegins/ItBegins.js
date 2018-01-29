@@ -59,7 +59,7 @@ export default class ItBegins extends Component {
                     </div>
                     <div className="row">
                         <div id="it-begins-image" className="col-lg-4 col-lg-offset-0">
-                            <img id="soviet-tanks" src={sovietTanksImage} alt="Image of soviet tanks struggling with the Finnish terrain"></img>
+                            <img id="soviet-tanks" src={sovietTanksImage} alt="Military green Soviet tanks struggling with the Finnish terrain"></img>
                             <span className="text-container">
                                 <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
                             </span>
