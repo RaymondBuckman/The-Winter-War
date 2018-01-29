@@ -19,7 +19,7 @@ export default class HomeFieldAdvantage extends Component {
                             The Red Army was ill-equipped for a winter war. Whereas the army was well supplied with standard military equipment, it had little that was required for the snow-covered forests of Finland. White camouflage clothing was not issued and vehicles simply could not cope with the cold. The winter of 1939-40 was particularly severe.
                         </p>
                         <div id="home-field-advantage-image" className="col-lg-4 col-lg-offset-8">
-                            <img id="finnish-soldiers" src={finnishSoldiersImage} alt="Image of several Finnish ski soldiers"></img>
+                            <img id="finnish-soldiers" src={finnishSoldiersImage} alt="Several Finnish ski soldiers dressed in white"></img>
                             <span className="text-container">
                                 <p>The Finns' mobility & knowledge of the terrain allowed them to use Motti tactics against the Soviets <a href="https://www.youtube.com/watch?v=yHrndb0oZEc" target="_blank">(view more on Motti tactics...)</a></p>
                             </span>
