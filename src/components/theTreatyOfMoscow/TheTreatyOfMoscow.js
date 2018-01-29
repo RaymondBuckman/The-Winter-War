@@ -21,7 +21,7 @@ export default class TheTreatyOfMoscow extends Component {
                             The March 1st deadline passed but the Finnish government was assured that the terms still stood and that the deadline had been extended. On March 6th, a Finnish delegation left for Moscow. Talks opened on March 8th. The U.S.S.R., led by Molotov, now demanded more land than their earlier terms. The Finns were outraged but could do little about this because of their poor military situation. On March 12th, the Finnish government gave its permission for the delegation to accept the terms. On March 13th, the Treaty of Moscow was signed and hostilities ceased at 11 a.m.
                         </p>
                         <div id="the-treaty-of-moscow-image" className="col-lg-4 col-lg-offset-8">
-                            <img id="newspaper" src={newspaperImage} alt="Image of a newspaper reporting on the Winter War"></img>
+                            <img id="newspaper" src={newspaperImage} alt="A newspaper reporting on the Winter War"></img>
                             <span className="text-container">
                                 <p>The Treaty of Moscow makes the front page in the local paper</p>
                             </span>

@@ -14,7 +14,7 @@ export default class InevitableWar extends Component {
                     </div>
                     <div className="row">
                         <div id="inevitable-war-image" className="col-lg-4 col-lg-offset-0">
-                            <img id="stalin" src={stalinImage} alt="A photo of Joseph Stalin"></img>
+                            <img id="stalin" src={stalinImage} alt="Grayscale portrait of Joseph Stalin"></img>
                             <span className="text-container">
                                 <p>Joseph Stalin, General Secretary of the Communist Party of the Soviet Union from 1922-1952 <a href="http://www.history.com/topics/joseph-stalin" target="_blank">(read more on Stalin...)</a></p>
                             </span>
