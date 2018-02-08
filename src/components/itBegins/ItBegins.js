@@ -50,15 +50,14 @@ export default class ItBegins extends Component {
                             }
                         }
                     }}
-                className="snow-background"
-            />
+                className="snow-background"/>
                 <div className="container">
                     <div className="row">
                         <h1 id="nachinayetsya" className="text-center">Начинается</h1>
                         <h1 id="it-begins" className="text-center" tabIndex="0">It Begins</h1>
                     </div>
                     <div className="row">
-                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0">
+                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0 hidden-xs">
                             <img id="soviet-tanks" src={sovietTanksImage} alt="Military green Soviet tanks struggling with the Finnish terrain"></img>
                             <span className="text-container">
                                 <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
