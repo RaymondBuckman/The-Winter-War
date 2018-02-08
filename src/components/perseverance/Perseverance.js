@@ -13,7 +13,7 @@ export default class Perseverance extends Component {
                         <h1 id="perseverance" className="text-center" tabIndex="0">Perseverance & Guts</h1>
                     </div>
                     <div className="row">
-                        <div id="perseverance-image" className="col-lg-4 col-lg-offset-0">
+                        <div id="perseverance-image" className="col-lg-4 col-lg-offset-0 hidden-xs">
                             <img id="finnish-flag" src={finnishFlagImage} alt="Image of soldiers holding up the Finnish flag"></img>
                             <span className="text-container">
                                 <p>Soldiers raising the Finnish Flag <a href="https://finland.fi/facts-stats-and-info/the-finnish-flag/" target="_blank">(read more about the Finnish flag...)</a></p>

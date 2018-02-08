@@ -23,15 +23,26 @@ import TheTreatyOfMoscow from './components/theTreatyOfMoscow/TheTreatyOfMoscow'
 import Aftermath from './components/aftermath/Aftermath'
 import Footer from './components/footer/Footer'
 
-
 import $ from "jquery";
+
+function openNavigation(e){
+        e.preventDefault();
+        $('.navbar').addClass('navbar-displayed');
+        $(this).addClass('fade-out');
+}
+
+function closeNavigation(e){
+        e.preventDefault();
+        $('.navbar').removeClass('navbar-displayed');
+        //$('#menu, #menu-clone').removeClass('fade-out');
+}
 
 ReactDOM.render(
     <div className="App">
-        <img id="menu-white" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
-        <img id="menu-white-clone" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation"></img>
+        <img id="menu" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation" onClick={openNavigation}></img>
+        <img id="menu-clone" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
         <Navbar/>
-        <div className="main-content" role="main">
+        <div className="main-content" role="main" onClick={closeNavigation}>
             <Intro />
             <BufferZone/>
             <InevitableWar/>
@@ -51,47 +62,33 @@ ReactDOM.render(
 );
 
 $(document).ready(function(){ 
+    var laptopsAndDesktops = window.matchMedia( "(min-width: 1420px)" );
+    
     //Brings down nav menu when <a> tags are on focus
     $('.nav li a').focus(function(){
         $('.navbar').addClass('navbar-displayed');
-        $('#menu-white, #menu-white-clone').addClass('fade-out');
+        $('#menu, #menu-clone').addClass('fade-out');
     })
     
-    $('#menu-white, #menu-white-clone').click(function(){
-        $('.navbar').addClass('navbar-displayed');
-        $(this).addClass('fade-out');
-    });
-    
-    $('.main-content, #up-arrow-green, #up-arrow-green-clone').click(function(){
-        $('.navbar').removeClass('navbar-displayed');
-        $('#menu-white, #menu-white-clone').removeClass('fade-out');
-    });
-    
     //Replicates the white text-shadow text animation for images
-    $('#menu-white, #menu-white-clone').hover(
+    $('#menu, #menu-clone').hover(
         function(){
-            $('#menu-white-clone').addClass('blinking-image-class');
+            $('#menu-clone').addClass('blinking-image-class');
         },  
         function(){
-            $('#menu-white-clone').removeClass('blinking-image-class');
+            $('#menu-clone').removeClass('blinking-image-class');
         }
     );
     
     //Replicates the white text-shadow text animation for images
-    $('#up-arrow-green, #up-arrow-green-clone').hover(
+    $('#up-arrow, #up-arrow-clone').hover(
         function(){
-            $('#up-arrow-green-clone').addClass('blinking-image-class');
+            $('#up-arrow-clone').addClass('blinking-image-class');
         },  
         function(){
-            $('#up-arrow-green-clone').removeClass('blinking-image-class');
+            $('#up-arrow-clone').removeClass('blinking-image-class');
         }
     );
-    
-    $("#down-arrow").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#buffer-zone-div").offset().top
-        }, 1000);
-    });
     
     var controller = new ScrollMagic.Controller();
     
@@ -108,12 +105,12 @@ $(document).ready(function(){
     var heightOfAftermath = $('.footer-div').offset().top - $('.aftermath-div').offset().top;
     
     
-    
+    /*
     console.log(window.innerHeight);
     console.log($('#buffer-zone-paragraph').height());
     
     console.log($('#buffer-zone-paragraph').height() / window.innerHeight);
-    var heightOfBufferZoneParagraph = (($('#buffer-zone-paragraph').height() / window.innerHeight) * 100).toString();   
+    var heightOfBufferZoneParagraph = (($('#buffer-zone-paragraph').height() / window.innerHeight) * 100).toString();   */
         
     /* ----- Navbar Highlighting scenes ----- */    
     var navBufferZoneScene = new ScrollMagic.Scene({
@@ -205,21 +202,7 @@ $(document).ready(function(){
     .addTo(controller);
     
     
-    /* ----- Finnish/Russian header changing scenes ----- */
-    var theWinterWarScene = new ScrollMagic.Scene({
-        triggerElement: "#the-winter-war",
-        triggerHook: 0.2
-    })
-    .setClassToggle("#the-winter-war", "fade-out")
-    .addTo(controller);
-
-    var talvisotaScene = new ScrollMagic.Scene({
-        triggerElement: "#the-winter-war",
-        triggerHook: 0.2
-    })
-    .setClassToggle("#talvisota", "fade-in")
-    .addTo(controller);
-    
+    /* ----- Finnish/Russian header changing scenes ----- */    
     var bufernayaZonaScene = new ScrollMagic.Scene({
         triggerElement: ".buffer-zone-div",
         triggerHook: 0.5
@@ -391,176 +374,182 @@ $(document).ready(function(){
     
     
     /* ----- Image pinning scenes ----- */
-    var kareliaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#buffer-zone-image",
-        triggerHook: 0.2,
-        duration: "60%"
-    })
-    .addTo(controller);
-    kareliaPinScene.setPin("#buffer-zone-image", {pushFollowers: false});
-    
-    var stalinPinScene = new ScrollMagic.Scene({
-        triggerElement: "#inevitable-war-image",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .addTo(controller);
-    stalinPinScene.setPin("#inevitable-war-image", {pushFollowers: false});
-    
-    var finnishSoldiersPinScene = new ScrollMagic.Scene({
-        triggerElement: "#home-field-advantage-image",
-        triggerHook: 0.2,
-        duration: "60%"
-    })
-    .addTo(controller);
-    finnishSoldiersPinScene.setPin("#home-field-advantage-image", {pushFollowers: false});
-    
-    var sovietTroopsPinScene = new ScrollMagic.Scene({
-        triggerElement: "#it-begins-image",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .addTo(controller);
-    sovietTroopsPinScene.setPin("#it-begins-image", {pushFollowers: false});
-    
-    
-    var simoHayhaPinScene = new ScrollMagic.Scene({
-        triggerElement: "#the-white-death-image",
-        triggerHook: 0.2,
-        duration: "90%"
-    })
-    .addTo(controller);
-    simoHayhaPinScene.setPin("#the-white-death-image", {pushFollowers: false});
-    
-    var finnishFlagPinScene = new ScrollMagic.Scene({
-        triggerElement: "#perseverance-image",
-        triggerHook: 0.2,
-        duration: "80%"
-    })
-    .addTo(controller);
-    finnishFlagPinScene.setPin("#perseverance-image", {pushFollowers: false});
-    
-    var newspaperPinScene = new ScrollMagic.Scene({
-        triggerElement: "#the-treaty-of-moscow-image",
-        triggerHook: 0.2,
-        duration: "110%"
-    })
-    .addTo(controller);
-    newspaperPinScene.setPin("#the-treaty-of-moscow-image", {pushFollowers: false});
-    
-    var vyborgPinScene = new ScrollMagic.Scene({
-        triggerElement: "#aftermath-image",
-        triggerHook: 0.2,
-        duration: "30%"
-    })
-    .addTo(controller);
-    vyborgPinScene.setPin("#aftermath-image", {pushFollowers: false});
-    
+    //Only active on laptop & desktop screens
+    if(laptopsAndDesktops.matches){
+        var kareliaPinScene = new ScrollMagic.Scene({
+            triggerElement: "#buffer-zone-image",
+            triggerHook: 0.2,
+            duration: "60%"
+        })
+        .addTo(controller);
+        kareliaPinScene.setPin("#buffer-zone-image", {pushFollowers: false});
+
+        var stalinPinScene = new ScrollMagic.Scene({
+            triggerElement: "#inevitable-war-image",
+            triggerHook: 0.2,
+            duration: "40%"
+        })
+        .addTo(controller);
+        stalinPinScene.setPin("#inevitable-war-image", {pushFollowers: false});
+
+        var finnishSoldiersPinScene = new ScrollMagic.Scene({
+            triggerElement: "#home-field-advantage-image",
+            triggerHook: 0.2,
+            duration: "60%"
+        })
+        .addTo(controller);
+        finnishSoldiersPinScene.setPin("#home-field-advantage-image", {pushFollowers: false});
+
+        var sovietTroopsPinScene = new ScrollMagic.Scene({
+            triggerElement: "#it-begins-image",
+            triggerHook: 0.2,
+            duration: "40%"
+        })
+        .addTo(controller);
+        sovietTroopsPinScene.setPin("#it-begins-image", {pushFollowers: false});
+
+
+        var simoHayhaPinScene = new ScrollMagic.Scene({
+            triggerElement: "#the-white-death-image",
+            triggerHook: 0.2,
+            duration: "90%"
+        })
+        .addTo(controller);
+        simoHayhaPinScene.setPin("#the-white-death-image", {pushFollowers: false});
+
+        var finnishFlagPinScene = new ScrollMagic.Scene({
+            triggerElement: "#perseverance-image",
+            triggerHook: 0.2,
+            duration: "80%"
+        })
+        .addTo(controller);
+        finnishFlagPinScene.setPin("#perseverance-image", {pushFollowers: false});
+
+        var newspaperPinScene = new ScrollMagic.Scene({
+            triggerElement: "#the-treaty-of-moscow-image",
+            triggerHook: 0.2,
+            duration: "110%"
+        })
+        .addTo(controller);
+        newspaperPinScene.setPin("#the-treaty-of-moscow-image", {pushFollowers: false});
+
+        var vyborgPinScene = new ScrollMagic.Scene({
+            triggerElement: "#aftermath-image",
+            triggerHook: 0.2,
+            duration: "30%"
+        })
+        .addTo(controller);
+        vyborgPinScene.setPin("#aftermath-image", {pushFollowers: false});
+        
+    }   
     
     /* ----- Image parallaxing tweens ----- */
-    var kareliaParallaxTween = TweenMax.to("#karelia-map", 1, {
-        backgroundPositionX: "+=75%",
-        ease:Power2.easeInOut
-    });
+    //Only active on laptop & desktop screens
+    if(laptopsAndDesktops.matches){
+        var kareliaParallaxTween = TweenMax.to("#karelia-map", 1, {
+            backgroundPositionX: "+=75%",
+            ease:Power2.easeInOut
+        });
 
-    var kareliaParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#buffer-zone-image", 
-        triggerHook: 0.2,
-        duration: "60%"
-    })
-    .setTween(kareliaParallaxTween)
-    .addTo(controller);
-    
-    
-    var stalinParallaxTween = TweenMax.from("#stalin", 1, {
-        backgroundSize: "+=10% +=11.5%",
-        ease:Power0.easeIn
-    });
-    
-    var stalinParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#inevitable-war-image",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .setTween(stalinParallaxTween)
-    .addTo(controller);
-    
-    var finnishSoldiersParallaxTween = TweenMax.to("#finnish-soldiers", 1, {
-        backgroundPositionX: "-=75%",
-        ease:Power1.easeOut
-    });
-    
-    var finnishSoldiersParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#home-field-advantage-image",
-        triggerHook: 0.2,
-        duration: "80%"
-    })
-    .setTween(finnishSoldiersParallaxTween)
-    .addTo(controller);
-    
-    var sovietTroopsParallaxTween = TweenMax.to("#soviet-tanks", 1, {
-        backgroundPositionX: "50%",
-        ease:Power2.easeIn
-    });
-    
-    var sovietTroopsParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#it-begins-image",
-        triggerHook: 0.2,
-        duration: "40%"
-    })
-    .setTween(sovietTroopsParallaxTween)
-    .addTo(controller);
-    
-    var simoHayhaParallaxTween = TweenMax.to("#simo-hayha", 1, {
-        backgroundPositionY: "+=20%",
-        ease:Power0.easeIn
-    });
-    
-    var simoHayhaParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#the-white-death-image",
-        triggerHook: 0.2,
-        duration: "90%"
-    })
-    .setTween(simoHayhaParallaxTween)
-    .addTo(controller);
-    
-    var finnishFlagParallaxTween = TweenMax.to("#finnish-flag", 1, {
-        backgroundSize: "+=17.225% +=12.5%",
-        backgroundPositionY: "-=50%",
-        ease:Power0.easeIn
-    });
-    
-    var finnishFlagParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#perseverance-image",
-        triggerHook: 0.2,
-        duration: "70%"
-    })
-    .setTween(finnishFlagParallaxTween)
-    .addTo(controller);
-    
-    var newspaperParallaxTween = TweenMax.to("#newspaper", 1, {
-        backgroundPositionX: "+=100%",
-        ease:Power2.easeIn
-    });
-    
-    var newspaperParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#the-treaty-of-moscow-image",
-        triggerHook: 0.2,
-        duration: "110%"
-    })
-    .setTween(newspaperParallaxTween)
-    .addTo(controller);
-    
-    var vyborgParallaxTween = TweenMax.to("#vyborg", 1, {
-        backgroundPositionX: "+=40%",
-        ease:Power0.easeIn
-    });
-    
-    var vyborgParallaxScene = new ScrollMagic.Scene({
-        triggerElement: "#aftermath-image",
-        triggerHook: 0.2,
-        duration: "30%"
-    })
-    .setTween(vyborgParallaxTween)
-    .addTo(controller);
+        var kareliaParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#buffer-zone-image", 
+            triggerHook: 0.2,
+            duration: "60%"
+        })
+        .setTween(kareliaParallaxTween)
+        .addTo(controller);
+
+
+        var stalinParallaxTween = TweenMax.from("#stalin", 1, {
+            backgroundSize: "+=10% +=11.5%",
+            ease:Power0.easeIn
+        });
+
+        var stalinParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#inevitable-war-image",
+            triggerHook: 0.2,
+            duration: "40%"
+        })
+        .setTween(stalinParallaxTween)
+        .addTo(controller);
+
+        var finnishSoldiersParallaxTween = TweenMax.to("#finnish-soldiers", 1, {
+            backgroundPositionX: "-=75%",
+            ease:Power1.easeOut
+        });
+
+        var finnishSoldiersParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#home-field-advantage-image",
+            triggerHook: 0.2,
+            duration: "80%"
+        })
+        .setTween(finnishSoldiersParallaxTween)
+        .addTo(controller);
+
+        var sovietTroopsParallaxTween = TweenMax.to("#soviet-tanks", 1, {
+            backgroundPositionX: "50%",
+            ease:Power2.easeIn
+        });
+
+        var sovietTroopsParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#it-begins-image",
+            triggerHook: 0.2,
+            duration: "40%"
+        })
+        .setTween(sovietTroopsParallaxTween)
+        .addTo(controller);
+
+        var simoHayhaParallaxTween = TweenMax.to("#simo-hayha", 1, {
+            backgroundPositionY: "+=20%",
+            ease:Power0.easeIn
+        });
+
+        var simoHayhaParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#the-white-death-image",
+            triggerHook: 0.2,
+            duration: "90%"
+        })
+        .setTween(simoHayhaParallaxTween)
+        .addTo(controller);
+
+        var finnishFlagParallaxTween = TweenMax.to("#finnish-flag", 1, {
+            backgroundSize: "+=17.225% +=12.5%",
+            backgroundPositionY: "-=50%",
+            ease:Power0.easeIn
+        });
+
+        var finnishFlagParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#perseverance-image",
+            triggerHook: 0.2,
+            duration: "70%"
+        })
+        .setTween(finnishFlagParallaxTween)
+        .addTo(controller);
+
+        var newspaperParallaxTween = TweenMax.to("#newspaper", 1, {
+            backgroundPositionX: "+=100%",
+            ease:Power2.easeIn
+        });
+
+        var newspaperParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#the-treaty-of-moscow-image",
+            triggerHook: 0.2,
+            duration: "110%"
+        })
+        .setTween(newspaperParallaxTween)
+        .addTo(controller);
+
+        var vyborgParallaxTween = TweenMax.to("#vyborg", 1, {
+            backgroundPositionX: "+=40%",
+            ease:Power0.easeIn
+        });
+
+        var vyborgParallaxScene = new ScrollMagic.Scene({
+            triggerElement: "#aftermath-image",
+            triggerHook: 0.2,
+            duration: "30%"
+        })
+        .setTween(vyborgParallaxTween)
+        .addTo(controller);
+    }
 })

@@ -49,8 +49,7 @@ export default class TheBeginningOfTheEnd extends Component {
                             }
                         }
                     }}
-                className="snow-background"
-            />
+                className="snow-background"/>
                 <div className="container">
                     <div className="row">
                         <h1 id="nachalo-kontsa" className="text-center">Начало Конца</h1>

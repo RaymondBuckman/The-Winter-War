@@ -11,7 +11,7 @@ export default class Footer extends Component {
                     params={{
                         particles: {
                             number: {
-                                value: 80,
+                                value: 40,
                             },
                             size: {
                                 value: 7,
@@ -49,8 +49,7 @@ export default class Footer extends Component {
                             }
                         }
                     }}
-                className="snow-background"
-            />
+                className="snow-background"/>
             <div className="container">  
                 <div className="row">
                     <h1 id="lisaa-linkkeja" className="text-center">Lisää Linkkejä</h1>
