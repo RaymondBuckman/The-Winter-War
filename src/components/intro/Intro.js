@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import forestVideo from '../../img/forest-video.mp4';
+import $ from "jquery";
 
 export default class Intro extends Component {
     render() {
+        function movePageDown(e){
+            e.preventDefault();            
+            $('html, body').animate({
+                scrollTop: $("#buffer-zone-div").offset().top
+            }, 1000);
+        }
+        
         return(
         <div>
             <div className="intro-div">
@@ -12,9 +20,8 @@ export default class Intro extends Component {
                 </video> 
                 <div className="text-container">
                     <h1 id="the-winter-war" className="text-center" role="banner" tabIndex="0">The Winter War</h1>
-                    <h1 id="talvisota" className="text-center">Talvisota</h1>
                     <h2 id="the-story" className="text-center">The story of how Finland held its own against the Soviet Union</h2>
-                    <h1 id="down-arrow" className="text-center" tabIndex="0">|<br/>v</h1>
+                    <h1 id="down-arrow" className="text-center" tabIndex="0" onClick={movePageDown}>|<br/>v</h1>
                 </div>
             </div>
         </div>
