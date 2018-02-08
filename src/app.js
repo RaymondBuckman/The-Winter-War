@@ -31,16 +31,15 @@ function openNavigation(e){
         $(this).addClass('fade-out');
 }
 
-function closeNavigation(e){
-        e.preventDefault();
+function closeNavigation(){
+        //e.preventDefault();
         $('.navbar').removeClass('navbar-displayed');
-        //$('#menu, #menu-clone').removeClass('fade-out');
 }
 
 ReactDOM.render(
     <div className="App">
-        <img id="menu" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation" onClick={openNavigation}></img>
-        <img id="menu-clone" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
+        <img id="menu" className="hidden-xs" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation" onClick={openNavigation}></img>
+        <img id="menu-clone" className="hidden-xs" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
         <Navbar/>
         <div className="main-content" role="main" onClick={closeNavigation}>
             <Intro />
@@ -63,6 +62,13 @@ ReactDOM.render(
 
 $(document).ready(function(){ 
     var laptopsAndDesktops = window.matchMedia( "(min-width: 1420px)" );
+    var triggerHook;
+    
+    if(laptopsAndDesktops.matches){
+        triggerHook = 0.5;
+    }else{
+        triggerHook = 0.7;
+    }
     
     //Brings down nav menu when <a> tags are on focus
     $('.nav li a').focus(function(){
@@ -219,154 +225,154 @@ $(document).ready(function(){
     
     var neizbezhnayaVoynaScene = new ScrollMagic.Scene({
         triggerElement: ".inevitable-war-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#neizbezhnaya-voyna", "fade-out")
     .addTo(controller);
 
     var inevitableWarScene = new ScrollMagic.Scene({
         triggerElement: ".inevitable-war-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#inevitable-war", "fade-in")
     .addTo(controller);
     
     var alakynnessaScene = new ScrollMagic.Scene({
         triggerElement: ".outnumbered-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#alakynnessa", "fade-out")
     .addTo(controller);
 
     var outnumberedScene = new ScrollMagic.Scene({
         triggerElement: ".outnumbered-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#outnumbered", "fade-in")
     .addTo(controller);
     
     var kotikenttaetuScene = new ScrollMagic.Scene({
         triggerElement: ".home-field-advantage-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#kotikenttaetu", "fade-out")
     .addTo(controller);
 
     var homeFieldAdvantageScene = new ScrollMagic.Scene({
         triggerElement: ".home-field-advantage-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#home-field-advantage", "fade-in")
     .addTo(controller);
     
     var nachinayetsyaScene = new ScrollMagic.Scene({
         triggerElement: ".it-begins-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#nachinayetsya", "fade-out")
     .addTo(controller);
 
     var itBeginsScene = new ScrollMagic.Scene({
         triggerElement: ".it-begins-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#it-begins", "fade-in")
     .addTo(controller);
     
     var zimniyeZamorazhivaniyeScene = new ScrollMagic.Scene({
         triggerElement: ".the-winter-freeze-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#zimniye-zamorazhivaniye", "fade-out")
     .addTo(controller);
 
     var theWinterFreezeScene = new ScrollMagic.Scene({
         triggerElement: ".the-winter-freeze-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#the-winter-freeze", "fade-in")
     .addTo(controller);
     
     var valkoinenKuolemaScene = new ScrollMagic.Scene({
         triggerElement: ".the-white-death-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#valkoinen-kuolema", "fade-out")
     .addTo(controller);
 
     var theWhiteDeathScene = new ScrollMagic.Scene({
         triggerElement: ".the-white-death-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#the-white-death", "fade-in")
     .addTo(controller);
     
     var sisuScene = new ScrollMagic.Scene({
         triggerElement: ".perseverance-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#sisu", "fade-out")
     .addTo(controller);
 
     var perseveranceScene = new ScrollMagic.Scene({
         triggerElement: ".perseverance-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#perseverance", "fade-in")
     .addTo(controller);
     
     var nachaloKontsaScene = new ScrollMagic.Scene({
         triggerElement: ".the-beginning-of-the-end-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#nachalo-kontsa", "fade-out")
     .addTo(controller);
 
     var theBeginningOfTheEndScene = new ScrollMagic.Scene({
         triggerElement: ".the-beginning-of-the-end-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#the-beginning-of-the-end", "fade-in")
     .addTo(controller);
     
     var dogovorMoskvyScene = new ScrollMagic.Scene({
         triggerElement: ".the-treaty-of-moscow-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#dogovor-moskvy", "fade-out")
     .addTo(controller);
 
     var theTreatyOfMoscowScene = new ScrollMagic.Scene({
         triggerElement: ".the-treaty-of-moscow-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#the-treaty-of-moscow", "fade-in")
     .addTo(controller);
     
     var jalkiseurauksetScene = new ScrollMagic.Scene({
         triggerElement: ".aftermath-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#jalkiseuraukset", "fade-out")
     .addTo(controller);
 
     var aftermathScene = new ScrollMagic.Scene({
         triggerElement: ".aftermath-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#aftermath", "fade-in")
     .addTo(controller);
     
     var lisaaLinkkejaScene = new ScrollMagic.Scene({
         triggerElement: ".footer-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#lisaa-linkkeja", "fade-out")
     .addTo(controller);
 
     var moreLinksScene = new ScrollMagic.Scene({
         triggerElement: ".footer-div",
-        triggerHook: 0.5
+        triggerHook: triggerHook
     })
     .setClassToggle("#more-links", "fade-in")
     .addTo(controller);
@@ -552,5 +558,14 @@ $(document).ready(function(){
         .setTween(vyborgParallaxTween)
         .addTo(controller);
     }
+    
+    /*
+    var particlesJSBufferZoneScene = new ScrollMagic.Scene({
+        triggerElement: ".buffer-zone-div",
+        triggerHook: 0.5,
+        duration: heightOfBufferZone
+    })
+    .setClassToggle(".buffer-zone-div > .snow-background > canvas", "fade-in")
+    .addTo(controller);*/
 })
 
