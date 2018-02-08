@@ -1318,13 +1318,13 @@ a:focus{
     top: 0;
     height: 100vh;
     background: transparent;
-    //z-index: 20;
+    //opacity: 0;
 }
 
 @include for-phone-portrait{
     .intro-div {
         position: relative;
-        height: 100vh;
+        height: 50vh;
         background: url("./img/finland-ussr-flags.jpg") $nrs 50% 50%;
         background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
         //@include occasional-brightness;
@@ -1334,7 +1334,7 @@ a:focus{
         #intro-video {
             position: absolute;
             right: 0;
-            bottom: 0;
+            top: 0;
             width: 100%; 
             animation: background-flash 15s infinite 0s;
             filter: contrast(110%);
@@ -1348,7 +1348,7 @@ a:focus{
 
         #the-winter-war{
             position: absolute;
-            bottom: 40vh;
+            top: 40vh;
             @include main-font;
             font-size: 5em;
             color: $white;
@@ -1362,7 +1362,7 @@ a:focus{
 
         #the-story{
             position: absolute;
-            bottom: 37vh;
+            top: 50vh;
             @include secondary-font;
             font-size: 2em;
             color: $white;
@@ -1392,7 +1392,7 @@ a:focus{
 
     .buffer-zone-div {
         position: relative;
-        height: 250vh;
+        height: 190vh;
         @include green-gradient-background;
 
         #bufernaya-zona, #buffer-zone{
@@ -1401,7 +1401,7 @@ a:focus{
         }
 
         #buffer-zone-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1418,7 +1418,7 @@ a:focus{
         }
 
         #inevitable-war-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1426,7 +1426,7 @@ a:focus{
     .outnumbered-div {
         position: relative;
         height: 250vh;
-        background: url("img/tanks-red-army.jpg") $nrf center center;
+        background: url("img/tanks-red-army.jpg") $nrf 80% center;
         background-size: cover;
 
         #alakynnessa, #outnumbered{
@@ -1435,7 +1435,7 @@ a:focus{
         }
 
         #outnumbered-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1443,7 +1443,7 @@ a:focus{
     .home-field-advantage-div {
         position: relative;
         height: 190vh;
-        background: url("img/forest-1.jpg") $nrf center 100%;
+        background: url("img/forest-1.jpg") $nrf 70% 100%;
         background-size: cover;
 
         #kotikenttaetu, #home-field-advantage{
@@ -1452,14 +1452,14 @@ a:focus{
         }
 
         #home-field-advantage-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
 
     .it-begins-div {
         position: relative;
-        height: 160vh;
+        height: 130vh;
         @include green-gradient-background;
 
         #nachinayetsya, #it-begins{
@@ -1468,7 +1468,7 @@ a:focus{
         }
 
         #it-begins-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1485,7 +1485,7 @@ a:focus{
         }
 
         #the-winter-freeze-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1493,7 +1493,7 @@ a:focus{
     .the-white-death-div {
         position: relative;
         height: 210vh;
-        background: url("img/sniper.jpg") $nrf center center;
+        background: url("img/sniper.jpg") $nrf 60% center;
         background-size: cover;
 
         #valkoinen-kuolema, #the-white-death{
@@ -1502,7 +1502,7 @@ a:focus{
         }
         
         #the-white-death-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1510,7 +1510,7 @@ a:focus{
     .perseverance-div {
         position: relative;
         height: 200vh;
-        background: url("img/northern-lights.jpg") $nrf center 0%;
+        background: url("img/northern-lights.jpg") $nrf 60% 0%;
         background-size: cover;
 
         #sisu, #perseverance{
@@ -1519,7 +1519,7 @@ a:focus{
         }
 
         #perseverance-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1535,7 +1535,7 @@ a:focus{
         }
         
         #the-beginning-of-the-end-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1543,7 +1543,7 @@ a:focus{
     .the-treaty-of-moscow-div {
         position: relative;
         height: 240vh;
-        background: url("img/paper.jpeg") $nrf center center;
+        background: url("img/paper.jpeg") $nrf 40% center;
         background-size: cover;
 
         #dogovor-moskvy, #the-treaty-of-moscow{
@@ -1552,7 +1552,7 @@ a:focus{
         }
 
         #the-treaty-of-moscow-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
@@ -1569,51 +1569,32 @@ a:focus{
         }
 
         #aftermath-paragraph{
-            top: 30vh;
+            top: 25vh;
             font-size: 1.5em;
         }
     }
 
     .footer-div{
         position: relative;
-        height: 85vh;
+        height: 130vh;
         @include green-gradient-background;
 
         #lisaa-linkkeja{
-            position: absolute;
             top: 10vh;
-            @include main-font;
-            font-size: 8em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #more-links{
-            position: absolute;
             top: 10vh;
-            @include main-font;
-            font-size: 8em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         ul{
             position: relative;
-            top: 35vh;
+            top: 25vh;
 
             li:first-child{
-                color: $white;
-                list-style-type: none;
-                @include main-font;
-                font-size: 4em;
+                font-size: 3em;
             }
 
             li:nth-child(n+2){
