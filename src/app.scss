@@ -120,7 +120,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162115', end
 }
 
 @mixin for-phone-portrait {
-    @media (max-width: 599px) and (orientation: portrait){ @content; }
+    @media (max-width: 9999px) and (orientation: portrait){ @content; }
 }
 
 @mixin for-small-tablet-portrait {
@@ -249,7 +249,7 @@ a:focus{
     animation: blinking-image 2s infinite;
 }
 
-#menu-white{
+#menu{
     position: fixed;
     top: 10px;
     right: 20px;
@@ -261,7 +261,7 @@ a:focus{
     }
 }
 
-#menu-white-clone{
+#menu-clone{
     position: fixed;
     top: 11px;
     right: 19px;
@@ -333,7 +333,7 @@ a:focus{
     top: 0px !important;
 }
 
-#up-arrow-green{
+#up-arrow{
     position: absolute;
     top: 10px;
     right: 37px;
@@ -344,7 +344,7 @@ a:focus{
     }
 }
 
-#up-arrow-green-clone{
+#up-arrow-clone{
     position: absolute;
     top: 11px;
     right: 36px;
@@ -390,20 +390,6 @@ a:focus{
         right: 0;
         margin: auto;
         opacity: 1;
-        text-shadow: 2px 2px $green;
-        transition: opacity 0.2s ease-in;
-    }
-    
-    #talvisota{
-        position: absolute;
-        bottom: 40vh;
-        @include main-font;
-        font-size: 12em;
-        color: $white;
-        left: 0;
-        right: 0;
-        margin: auto;
-        opacity: 0;
         text-shadow: 2px 2px $green;
         transition: opacity 0.2s ease-in;
     }
@@ -1335,7 +1321,7 @@ a:focus{
     //z-index: 20;
 }
 
-@mixin for-phone-portrait {
+@include for-phone-portrait{
     .intro-div {
         position: relative;
         height: 100vh;
@@ -1348,7 +1334,7 @@ a:focus{
         #intro-video {
             position: absolute;
             right: 0;
-            top: 0;
+            bottom: 0;
             width: 100%; 
             animation: background-flash 15s infinite 0s;
             filter: contrast(110%);
@@ -1364,26 +1350,12 @@ a:focus{
             position: absolute;
             bottom: 40vh;
             @include main-font;
-            font-size: 8em;
-            color: red !important;
+            font-size: 5em;
+            color: $white;
             left: 0;
             right: 0;
             margin: auto;
             opacity: 1;
-            text-shadow: 2px 2px $green;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #talvisota{
-            position: absolute;
-            bottom: 40vh;
-            @include main-font;
-            font-size: 8em;
-            color: red !important;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
             text-shadow: 2px 2px $green;
             transition: opacity 0.2s ease-in;
         }
@@ -1420,310 +1392,68 @@ a:focus{
 
     .buffer-zone-div {
         position: relative;
-        height: 185vh;
+        height: 250vh;
         @include green-gradient-background;
 
-        #bufernaya-zona{
-            position: absolute;
+        #bufernaya-zona, #buffer-zone{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #buffer-zone{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #buffer-zone-paragraph{
-            position: relative;
-            top: 45vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-            //z-index: 25;
-
-            a{
-                @include a-tag-styling;
-            }
-        }
-
-        #buffer-zone-image{
-            position: relative;
-            top: 50vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            //z-index: 25;
-            @include image-hover;
-
-            #karelia-map{
-                height: 100%;
-                width: 100%;
-                background: url("img/karelia.png") $nrs 0% 100%;
-                background-size: 150%;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-
-                    a{
-                        @include a-tag-styling;
-                    }
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
     .inevitable-war-div {
         position: relative;
-        height: 160vh;
+        height: 210vh;
         background: url("img/ussr-wallpaper.jpg") $nrf center center;
         background-size: cover;
 
-        #neizbezhnaya-voyna{
-            position: absolute;
+        #neizbezhnaya-voyna, #inevitable-war{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #inevitable-war{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #inevitable-war-image{
-            position: relative;
-            top: 45vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #stalin{
-                height: 100%;
-                width: 100%;
-                background: url("img/stalin.jpg") $nrs center 0%;
-                background-size: 100% 115.1%;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-
-                    a{
-                        @include a-tag-styling;
-                    }
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            font-size: 3.5em;
         }
 
         #inevitable-war-paragraph{
-            position: relative;
-            top: -10vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-
-            a{
-                @include a-tag-styling;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
     .outnumbered-div {
         position: relative;
-        height: 170vh;
+        height: 250vh;
         background: url("img/tanks-red-army.jpg") $nrf center center;
         background-size: cover;
 
-        #alakynnessa{
-            position: absolute;
+        #alakynnessa, #outnumbered{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #outnumbered{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #outnumbered-paragraph{
-            position: relative;
-            top: 40vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-
-            a{
-                @include a-tag-styling;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
     .home-field-advantage-div {
         position: relative;
         height: 190vh;
-        background: url("img/pexels-photo-47722.jpg") $nrf center 100%;
+        background: url("img/forest-1.jpg") $nrf center 100%;
         background-size: cover;
 
-        #kotikenttaetu{
-            position: absolute;
+        #kotikenttaetu, #home-field-advantage{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #home-field-advantage{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #home-field-advantage-paragraph{
-            position: relative;
-            top: 40vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-        }
-
-        #home-field-advantage-image{
-            position: relative;
-            top: 45vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #finnish-soldiers{
-                height: 100%;
-                width: 100%;
-                background: url("img/finnish-soldiers.jpg") $nrs 100% center;
-                background-size: cover;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-
-                    a{
-                        @include a-tag-styling;
-                    }
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -1732,82 +1462,14 @@ a:focus{
         height: 160vh;
         @include green-gradient-background;
 
-        #nachinayetsya{
-            position: absolute;
+        #nachinayetsya, #it-begins{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #it-begins{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #it-begins-image{
-            position: relative;
-            top: 45vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #soviet-tanks{
-                height: 100%;
-                width: 100%;
-                background: url("img/soviet-tanks.jpg") $nrs 10% center;
-                background-size: auto 100%; 
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            font-size: 3.5em;
         }
 
         #it-begins-paragraph{
-            position: relative;
-            top: -10vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-
-            a{
-                @include a-tag-styling;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -1817,38 +1479,14 @@ a:focus{
         background: url("img/forest-2.jpg") $nrf 100% 100%;
         background-size: cover;
 
-        #zimniye-zamorazhivaniye{
-            position: absolute;
+        #zimniye-zamorazhivaniye, #the-winter-freeze{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #the-winter-freeze{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #the-winter-freeze-paragraph{
-            position: relative;
-            top: 40vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -1858,82 +1496,14 @@ a:focus{
         background: url("img/sniper.jpg") $nrf center center;
         background-size: cover;
 
-        #valkoinen-kuolema{
-            position: absolute;
+        #valkoinen-kuolema, #the-white-death{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
-
-        #the-white-death{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
+        
         #the-white-death-paragraph{
-            position: relative;
-            top: 45vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-        }
-
-        #the-white-death-image{
-            position: relative;
-            top: 50vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #simo-hayha{
-                height: 100%;
-                width: 100%;
-                background: url("img/simo-hayha.jpg") $nrs center 5%;
-                background-size: 100%;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-
-                    a{
-                        @include a-tag-styling;
-                    }
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -1943,86 +1513,14 @@ a:focus{
         background: url("img/northern-lights.jpg") $nrf center 0%;
         background-size: cover;
 
-        #sisu{
-            position: absolute;
+        #sisu, #perseverance{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #perseverance{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #perseverance-image{
-            position: relative;
-            top: 45vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #finnish-flag{
-                height: 100%;
-                width: 100%;
-                background: url("img/finn-flag.jpg") $nrs 80% center;
-                background-size: 137.797% 100%;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-
-                    a{
-                        @include a-tag-styling;
-                    }
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            font-size: 3.5em;
         }
 
         #perseverance-paragraph{
-            position: relative;
-            top: -10vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-
-            a{
-                @include a-tag-styling;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -2031,38 +1529,14 @@ a:focus{
         height: 215vh;
         @include green-gradient-background;
 
-        #nachalo-kontsa{
-            position: absolute;
+        #nachalo-kontsa, #the-beginning-of-the-end{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
-
-        #the-beginning-of-the-end{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
+        
         #the-beginning-of-the-end-paragraph{
-            position: relative;
-            top: 40vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -2072,78 +1546,14 @@ a:focus{
         background: url("img/paper.jpeg") $nrf center center;
         background-size: cover;
 
-        #dogovor-moskvy{
-            position: absolute;
+        #dogovor-moskvy, #the-treaty-of-moscow{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #the-treaty-of-moscow{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
+            font-size: 3.5em;
         }
 
         #the-treaty-of-moscow-paragraph{
-            position: relative;
-            top: 45vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-        }
-
-        #the-treaty-of-moscow-image{
-            position: relative;
-            top: 50vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #newspaper{
-                height: 100%;
-                width: 100%;
-                background: url("img/newspaper.jpg") $nrs 0% 30%;
-                background-size: 170%;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -2153,82 +1563,14 @@ a:focus{
         background: url("img/luftwaffe.jpg") $nrf center 30%;
         background-size: cover;
 
-        #jalkiseuraukset{
-            position: absolute;
+        #jalkiseuraukset, #aftermath{
             top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 1;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #aftermath{
-            position: absolute;
-            top: 10vh;
-            @include main-font;
-            font-size: 10em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.2s ease-in;
-        }
-
-        #aftermath-image{
-            position: relative;
-            top: 50vh;
-            height: 400px;
-            width: 400px;
-            border-radius: 10px;
-            padding: 0;
-            @include image-hover;
-
-            #vyborg{
-                height: 100%;
-                width: 100%;
-                background: url("img/vyborg.jpg") $nrs 0% 0%;
-                background-size: cover;
-                border-radius: 10px;
-            }
-
-            .text-container{
-                position: absolute;
-                width: 80%;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-
-                p{
-                    position: relative;
-                    color: $white;
-                    @include secondary-font;
-                    font-size: 1.5em;
-                    opacity: 0;
-                    text-align: center;
-                    transition: opacity 0.2s ease-in;
-                } 
-            }
-
-            &:hover p{
-                opacity: 1;
-            }
+            font-size: 3.5em;
         }
 
         #aftermath-paragraph{
-            position: relative;
-            top: -10vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-
-            a{
-                @include a-tag-styling;
-            }
+            top: 30vh;
+            font-size: 1.5em;
         }
     }
 
@@ -2306,8 +1648,15 @@ a:focus{
             }
         }
     }
-}
 
+    .snow-background canvas{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background: transparent;
+        display: none;
+    }
+}
 
 
 
