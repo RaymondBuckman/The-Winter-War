@@ -264,7 +264,7 @@ a:focus{
 #menu-clone{
     position: fixed;
     top: 11px;
-    right: 19px;
+    right: 19.5px;
     opacity: 0;
     z-index: 98;
     transition: opacity 0.2s ease-in;
@@ -1324,8 +1324,9 @@ a:focus{
 @include for-phone-portrait{
     .intro-div {
         position: relative;
-        height: 50vh;
-        background: url("./img/finland-ussr-flags.jpg") $nrs 50% 50%;
+        top: 0vh;
+        height: 47vh;
+        background: none;
         background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
         //@include occasional-brightness;
         //@include global-padding;
@@ -1335,8 +1336,8 @@ a:focus{
             position: absolute;
             right: 0;
             top: 0;
-            width: 100%; 
-            animation: background-flash 15s infinite 0s;
+            width: 150%; 
+            animation: none;
             filter: contrast(110%);
         }
 
@@ -1348,7 +1349,7 @@ a:focus{
 
         #the-winter-war{
             position: absolute;
-            top: 40vh;
+            top: 15vh;
             @include main-font;
             font-size: 5em;
             color: $white;
@@ -1361,29 +1362,23 @@ a:focus{
         }
 
         #the-story{
-            position: absolute;
-            top: 50vh;
-            @include secondary-font;
-            font-size: 2em;
-            color: $white;
-            left: 0;
-            right: 0;
-            margin: auto;
-            text-shadow: 2px 2px $green;
+            top: 28vh;
+            font-size: 1.2em;
+            width: 80%;
         }
 
         #down-arrow{
             position: absolute;
-            bottom: 7vh;
+            bottom: 5vh;
             @include main-font;
-            font-size: 2.5em;
+            font-size: 1.5em;
             color: $white;
             left: 0;
             right: 0;
             width: 30px;
             margin: auto;
             cursor: pointer;
-            line-height: 25px;
+            line-height: 15px;
             text-shadow: 2px 2px $green;
             animation: down-arrow-animation 3s infinite;
             z-index: 99;
@@ -1408,8 +1403,8 @@ a:focus{
 
     .inevitable-war-div {
         position: relative;
-        height: 210vh;
-        background: url("img/ussr-wallpaper.jpg") $nrf center center;
+        height: 160vh;
+        background: url("img/ussr-wallpaper-mini.jpg") $nrf center center;
         background-size: cover;
 
         #neizbezhnaya-voyna, #inevitable-war{
@@ -1425,25 +1420,28 @@ a:focus{
 
     .outnumbered-div {
         position: relative;
-        height: 250vh;
-        background: url("img/tanks-red-army.jpg") $nrf 80% center;
+        height: 220vh;
+        background: url("img/tanks-red-army-mini.jpg") $nrf 80% center;
         background-size: cover;
 
         #alakynnessa, #outnumbered{
             top: 10vh;
             font-size: 3.5em;
+            //display: none;
         }
 
         #outnumbered-paragraph{
             top: 25vh;
             font-size: 1.5em;
+            //marign-top: 10vh;
+            //margin-bottom: 10vh;
         }
     }
 
     .home-field-advantage-div {
         position: relative;
-        height: 190vh;
-        background: url("img/forest-1.jpg") $nrf 70% 100%;
+        height: 180vh;
+        background: url("img/forest-1-mini.jpg") $nrf 70% 100%;
         background-size: cover;
 
         #kotikenttaetu, #home-field-advantage{
@@ -1459,7 +1457,7 @@ a:focus{
 
     .it-begins-div {
         position: relative;
-        height: 130vh;
+        height: 150vh;
         @include green-gradient-background;
 
         #nachinayetsya, #it-begins{
@@ -1475,8 +1473,8 @@ a:focus{
 
     .the-winter-freeze-div {
         position: relative;
-        height: 160vh;
-        background: url("img/forest-2.jpg") $nrf 100% 100%;
+        height: 235vh;
+        background: url("img/forest-2-mini.jpg") $nrf 100% 100%;
         background-size: cover;
 
         #zimniye-zamorazhivaniye, #the-winter-freeze{
@@ -1492,8 +1490,8 @@ a:focus{
 
     .the-white-death-div {
         position: relative;
-        height: 210vh;
-        background: url("img/sniper.jpg") $nrf 60% center;
+        height: 220vh;
+        background: url("img/sniper-mini.jpg") $nrf 60% center;
         background-size: cover;
 
         #valkoinen-kuolema, #the-white-death{
@@ -1510,7 +1508,7 @@ a:focus{
     .perseverance-div {
         position: relative;
         height: 200vh;
-        background: url("img/northern-lights.jpg") $nrf 60% 0%;
+        background: url("img/northern-lights-mini.jpg") $nrf 60% 0%;
         background-size: cover;
 
         #sisu, #perseverance{
@@ -1526,7 +1524,7 @@ a:focus{
 
     .the-beginning-of-the-end-div {
         position: relative;
-        height: 215vh;
+        height: 325vh;
         @include green-gradient-background;
 
         #nachalo-kontsa, #the-beginning-of-the-end{
@@ -1542,8 +1540,8 @@ a:focus{
 
     .the-treaty-of-moscow-div {
         position: relative;
-        height: 240vh;
-        background: url("img/paper.jpeg") $nrf 40% center;
+        height: 250vh;
+        background: url("img/paper-mini.jpg") $nrf 40% center;
         background-size: cover;
 
         #dogovor-moskvy, #the-treaty-of-moscow{
@@ -1559,8 +1557,8 @@ a:focus{
 
     .aftermath-div {
         position: relative;
-        height: 155vh;
-        background: url("img/luftwaffe.jpg") $nrf center 30%;
+        height: 150vh;
+        background: url("img/luftwaffe-mini.jpg") $nrf center 30%;
         background-size: cover;
 
         #jalkiseuraukset, #aftermath{
@@ -1576,7 +1574,7 @@ a:focus{
 
     .footer-div{
         position: relative;
-        height: 130vh;
+        height: 120vh;
         @include green-gradient-background;
 
         #lisaa-linkkeja{
@@ -1609,7 +1607,7 @@ a:focus{
                     padding: 10px; 
                     margin: 5px 0;
                     @include secondary-font;
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     border-radius: 10px;
                     transition: all 0.2s ease-in;
 

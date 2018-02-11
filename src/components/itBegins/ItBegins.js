@@ -63,7 +63,7 @@ export default class ItBegins extends Component {
                                 <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
                             </span>
                         </div>
-                        <p id="it-begins-paragraph" className="col-lg-7 col-lg-offset-5 text-right affix-top">
+                        <p id="it-begins-paragraph" className="col-xs-10 col-xs-offset-1 col-lg-7 col-lg-offset-5 text-right affix-top">
                             The war started on November 30th. The initial stages went to the Finns' plan as they held up the first advances of the Red Army in the Karelian Isthmus. Being massively undersupplied in weaponry compared to the Soviets, the Finns made use of home-made incendiary & explosive weapons. 
                             <br/><br/>
                             The most famous creation was the Molotov cocktail. Named after Soviet foreign minister Vyacheslav Molotov, a Molotov cocktail is a breakable glass bottle containing a flammable substance such as gasoline or alcohol, and usually a source of ignition such as a burning cloth wick held in place by the bottle's stopper. Finnish ski troopers would toss Molotov cocktails through the exhaust opening into the tanks’ bellows, causing the vehicles to explode from the inside out. Many instances, a Finnish ski trooper would get close enough to demobilize the tank, allowing other soldiers to throw Molotov cocktails inside <a href="https://youtu.be/_M8_hS0gqU8?t=107" target="_blank">(view a Molotov cocktail attack...)</a>.
