@@ -39,7 +39,7 @@ function closeNavigation(){
 ReactDOM.render(
     <div className="App">
         <img id="menu" className="hidden-xs" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation" onClick={openNavigation}></img>
-        <img id="menu-clone" className="hidden-xs" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
+        <img id="menu-clone" className="hidden-xs"src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
         <Navbar/>
         <div className="main-content" role="main" onClick={closeNavigation}>
             <Intro />
