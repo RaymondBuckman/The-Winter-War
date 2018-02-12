@@ -107,8 +107,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162115', end
     animation: occasional-brightness 8s infinite;
 }
 
-@mixin div-padding{
-    padding: 10vh 0;
+@mixin paragraph-margin($margin-top: 45vh, $margin-bottom: 20vh){
+    padding: $margin-top 0 $margin-bottom 0;
 }
 
 @mixin flex-display{
@@ -426,7 +426,8 @@ a:focus{
 
 .buffer-zone-div {
     position: relative;
-    height: 185vh;
+    height: auto;
+    //height: 185vh;
     @include green-gradient-background;
     
     #bufernaya-zona{
@@ -457,8 +458,8 @@ a:focus{
     
     #buffer-zone-paragraph{
         position: relative;
-        top: 45vh;
         @include secondary-font;
+        @include paragraph-margin;
         font-size: 2em;
         color: $white;
         //z-index: 25;
@@ -516,7 +517,7 @@ a:focus{
 
 .inevitable-war-div {
     position: relative;
-    height: 160vh;
+    height: auto;
     background: url("img/ussr-wallpaper.jpg") $nrf center center;
     background-size: cover;
     
@@ -594,6 +595,7 @@ a:focus{
         position: relative;
         top: -10vh;
         @include secondary-font;
+        @include paragraph-margin(0, 10vh);
         font-size: 2em;
         color: $white;
         
@@ -605,7 +607,7 @@ a:focus{
 
 .outnumbered-div {
     position: relative;
-    height: 170vh;
+    height: auto;
     background: url("img/tanks-red-army.jpg") $nrf center center;
     background-size: cover;
     
@@ -637,7 +639,7 @@ a:focus{
     
     #outnumbered-paragraph{
         position: relative;
-        top: 40vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -650,7 +652,7 @@ a:focus{
 
 .home-field-advantage-div {
     position: relative;
-    height: 190vh;
+    height: auto;
     background: url("img/forest-1.jpg") $nrf center 100%;
     background-size: cover;
     
@@ -682,7 +684,7 @@ a:focus{
     
     #home-field-advantage-paragraph{
         position: relative;
-        top: 40vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -735,7 +737,7 @@ a:focus{
 
 .it-begins-div {
     position: relative;
-    height: 160vh;
+    height: auto;
     @include green-gradient-background;
     
     #nachinayetsya{
@@ -807,6 +809,7 @@ a:focus{
     #it-begins-paragraph{
         position: relative;
         top: -10vh;
+        @include paragraph-margin(0, 10vh);
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -819,7 +822,7 @@ a:focus{
 
 .the-winter-freeze-div {
     position: relative;
-    height: 160vh;
+    height: auto;
     background: url("img/forest-2.jpg") $nrf 100% 100%;
     background-size: cover;
     
@@ -851,7 +854,7 @@ a:focus{
     
     #the-winter-freeze-paragraph{
         position: relative;
-        top: 40vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -860,7 +863,7 @@ a:focus{
 
 .the-white-death-div {
     position: relative;
-    height: 210vh;
+    height: auto;
     background: url("img/sniper.jpg") $nrf center center;
     background-size: cover;
     
@@ -892,7 +895,7 @@ a:focus{
     
     #the-white-death-paragraph{
         position: relative;
-        top: 45vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -945,7 +948,7 @@ a:focus{
 
 .perseverance-div {
     position: relative;
-    height: 200vh;
+    height: auto;
     background: url("img/northern-lights.jpg") $nrf center 0%;
     background-size: cover;
     
@@ -1022,6 +1025,7 @@ a:focus{
     #perseverance-paragraph{
         position: relative;
         top: -10vh;
+        @include paragraph-margin(0, 10vh);
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -1034,7 +1038,7 @@ a:focus{
 
 .the-beginning-of-the-end-div {
     position: relative;
-    height: 215vh;
+    height: auto;
     @include green-gradient-background;
     
     #nachalo-kontsa{
@@ -1065,7 +1069,7 @@ a:focus{
     
     #the-beginning-of-the-end-paragraph{
         position: relative;
-        top: 40vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -1074,8 +1078,8 @@ a:focus{
 
 .the-treaty-of-moscow-div {
     position: relative;
-    height: 240vh;
-    background: url("img/paper.jpeg") $nrf center center;
+    height: auto;
+    background: url("img/paper.jpg") $nrf center center;
     background-size: cover;
     
     #dogovor-moskvy{
@@ -1106,7 +1110,7 @@ a:focus{
     
     #the-treaty-of-moscow-paragraph{
         position: relative;
-        top: 45vh;
+        @include paragraph-margin;
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -1155,7 +1159,7 @@ a:focus{
 
 .aftermath-div {
     position: relative;
-    height: 155vh;
+    height: auto;
     background: url("img/luftwaffe.jpg") $nrf center 30%;
     background-size: cover;
     
@@ -1228,6 +1232,7 @@ a:focus{
     #aftermath-paragraph{
         position: relative;
         top: -10vh;
+        @include paragraph-margin(0, 10vh);
         @include secondary-font;
         font-size: 2em;
         color: $white;
@@ -1240,7 +1245,7 @@ a:focus{
 
 .footer-div{
     position: relative;
-    height: 85vh;
+    height: auto;
     @include green-gradient-background;
     
     #lisaa-linkkeja{
@@ -1271,7 +1276,8 @@ a:focus{
     
     ul{
         position: relative;
-        top: 35vh;
+        //top: 35vh;
+        @include paragraph-margin(35vh, 10vh);
         
         li:first-child{
             color: $white;
@@ -1386,24 +1392,18 @@ a:focus{
     }
 
     .buffer-zone-div {
-        position: relative;
-        height: 190vh;
-        @include green-gradient-background;
-
         #bufernaya-zona, #buffer-zone{
             top: 10vh;
             font-size: 3.5em;
         }
 
         #buffer-zone-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);            
             font-size: 1.5em;
         }
     }
 
     .inevitable-war-div {
-        position: relative;
-        height: 160vh;
         background: url("img/ussr-wallpaper-mini.jpg") $nrf center center;
         background-size: cover;
 
@@ -1413,34 +1413,27 @@ a:focus{
         }
 
         #inevitable-war-paragraph{
-            top: 25vh;
+            @include paragraph-margin(35vh, 0);
             font-size: 1.5em;
         }
     }
 
     .outnumbered-div {
-        position: relative;
-        height: 220vh;
         background: url("img/tanks-red-army-mini.jpg") $nrf 80% center;
         background-size: cover;
 
         #alakynnessa, #outnumbered{
             top: 10vh;
             font-size: 3.5em;
-            //display: none;
         }
 
         #outnumbered-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
-            //marign-top: 10vh;
-            //margin-bottom: 10vh;
         }
     }
 
     .home-field-advantage-div {
-        position: relative;
-        height: 180vh;
         background: url("img/forest-1-mini.jpg") $nrf 70% 100%;
         background-size: cover;
 
@@ -1450,30 +1443,24 @@ a:focus{
         }
 
         #home-field-advantage-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
         }
     }
 
     .it-begins-div {
-        position: relative;
-        height: 150vh;
-        @include green-gradient-background;
-
         #nachinayetsya, #it-begins{
             top: 10vh;
             font-size: 3.5em;
         }
 
         #it-begins-paragraph{
-            top: 25vh;
+            @include paragraph-margin(35vh, 0);
             font-size: 1.5em;
         }
     }
 
     .the-winter-freeze-div {
-        position: relative;
-        height: 235vh;
         background: url("img/forest-2-mini.jpg") $nrf 100% 100%;
         background-size: cover;
 
@@ -1483,14 +1470,12 @@ a:focus{
         }
 
         #the-winter-freeze-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
         }
     }
 
     .the-white-death-div {
-        position: relative;
-        height: 220vh;
         background: url("img/sniper-mini.jpg") $nrf 60% center;
         background-size: cover;
 
@@ -1500,14 +1485,12 @@ a:focus{
         }
         
         #the-white-death-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
         }
     }
 
     .perseverance-div {
-        position: relative;
-        height: 200vh;
         background: url("img/northern-lights-mini.jpg") $nrf 60% 0%;
         background-size: cover;
 
@@ -1517,30 +1500,24 @@ a:focus{
         }
 
         #perseverance-paragraph{
-            top: 25vh;
+            @include paragraph-margin(35vh, 0);
             font-size: 1.5em;
         }
     }
 
     .the-beginning-of-the-end-div {
-        position: relative;
-        height: 325vh;
-        @include green-gradient-background;
-
         #nachalo-kontsa, #the-beginning-of-the-end{
             top: 10vh;
             font-size: 3.5em;
         }
         
         #the-beginning-of-the-end-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
         }
     }
 
     .the-treaty-of-moscow-div {
-        position: relative;
-        height: 250vh;
         background: url("img/paper-mini.jpg") $nrf 40% center;
         background-size: cover;
 
@@ -1550,14 +1527,12 @@ a:focus{
         }
 
         #the-treaty-of-moscow-paragraph{
-            top: 25vh;
+            @include paragraph-margin(25vh, 10vh);
             font-size: 1.5em;
         }
     }
 
     .aftermath-div {
-        position: relative;
-        height: 150vh;
         background: url("img/luftwaffe-mini.jpg") $nrf center 30%;
         background-size: cover;
 
@@ -1567,16 +1542,12 @@ a:focus{
         }
 
         #aftermath-paragraph{
-            top: 25vh;
+            @include paragraph-margin(35vh, 0);
             font-size: 1.5em;
         }
     }
 
     .footer-div{
-        position: relative;
-        height: 120vh;
-        @include green-gradient-background;
-
         #lisaa-linkkeja{
             top: 10vh;
             font-size: 3.5em;
@@ -1586,13 +1557,16 @@ a:focus{
             top: 10vh;
             font-size: 3.5em;
         }
+        /*
+        #videos-list{
+                @include paragraph-margin(25vh, 10vh);
+            }*/
 
         ul{
-            position: relative;
-            top: 25vh;
-
+            
             li:first-child{
                 font-size: 3em;
+                
             }
 
             li:nth-child(n+2){
@@ -1625,6 +1599,18 @@ a:focus{
                     text-decoration: none;
                 }
             }
+        }
+        
+        #videos-list{
+            @include paragraph-margin(25vh, 0);
+        }
+            
+        #details-list{
+            @include paragraph-margin(10vh, 0);
+        }
+        
+        #images-list{
+            @include paragraph-margin(10vh, 10vh);
         }
     }
 
