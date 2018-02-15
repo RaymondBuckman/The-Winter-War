@@ -2,7 +2,45 @@ import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import newspaperImage from '../../img/newspaper.jpg';
 
+var styles = {
+    normal: {
+        filter: 'brightness(100%)'
+    },
+    darken: {
+        filter: 'brightness(30%)'
+    },
+    invisible: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+};
+
+
 export default class TheTreatyOfMoscow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        };
+    }
+    
+    darken() {
+        this.setState({
+            img_state: 'darken',
+            img_text_state: 'visible'
+        });
+    }
+    
+    lighten() {
+        this.setState({
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        });
+    }    
+        
     render() {
         return(
         <div>
@@ -20,10 +58,10 @@ export default class TheTreatyOfMoscow extends Component {
             
                             The March 1st deadline passed but the Finnish government was assured that the terms still stood and that the deadline had been extended. On March 6th, a Finnish delegation left for Moscow. Talks opened on March 8th. The U.S.S.R., led by Molotov, now demanded more land than their earlier terms. The Finns were outraged but could do little about this because of their poor military situation. On March 12th, the Finnish government gave its permission for the delegation to accept the terms. On March 13th, the Treaty of Moscow was signed and hostilities ceased at 11 a.m.
                         </p>
-                        <div id="the-treaty-of-moscow-image" className="col-lg-4 col-lg-offset-8 hidden-xs">
-                            <img id="newspaper" src={newspaperImage} alt="A newspaper reporting on the Winter War"></img>
+                        <div id="the-treaty-of-moscow-image" className="col-lg-4 col-lg-offset-8 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                            <img id="newspaper" src={newspaperImage} alt="A newspaper reporting on the Winter War" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
-                                <p>The Treaty of Moscow makes the front page in the local paper</p>
+                                <p style={styles[this.state.img_text_state]}>The Treaty of Moscow makes the front page in the local paper</p>
                             </span>
                         </div>
                     </div>
