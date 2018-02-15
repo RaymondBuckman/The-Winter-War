@@ -3,13 +3,13 @@ import {findDOMNode} from 'react-dom';
 import $ from "jquery";
 
 export default class Navbar extends Component {
-    render() {
-        function closeNavigation(e){
-                e.preventDefault();
-                $('.navbar').removeClass('navbar-displayed');
-                //$('#menu, #menu-clone').removeClass('fade-out');
-        }
-        
+    closeNavigation(e){
+        e.preventDefault();
+        $('.navbar').removeClass('navbar-displayed');
+        //$('#menu, #menu-clone').removeClass('fade-out');
+    }
+    
+    render() {        
         return(
         <div>
             <nav className="navbar navbar-default visible-lg" role="navigation">
@@ -27,8 +27,8 @@ export default class Navbar extends Component {
                         <li><a href="#the-treaty-of-moscow-div">The Treaty of Moscow</a></li>
                         <li><a href="#aftermath-div">Aftermath</a></li>
                     </ul>
-                    <img id="up-arrow" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" tabIndex="0" alt="closes navigation" onClick={closeNavigation}></img>   
-                    <img id="up-arrow-clone" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" alt="closes navigation" onClick={closeNavigation}></img>
+                    <img id="up-arrow" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" tabIndex="0" alt="closes navigation" onClick={this.closeNavigation}></img>   
+                    <img id="up-arrow-clone" src="https://png.icons8.com/ios/50/30472e/up.png" height="35px" width="35px" alt="closes navigation" onClick={this.closeNavigation}></img>
                 </div>
             </nav>
         </div>

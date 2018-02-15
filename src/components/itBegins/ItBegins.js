@@ -3,7 +3,44 @@ import {findDOMNode} from 'react-dom';
 import Particles from 'react-particles-js';
 import sovietTanksImage from '../../img/soviet-tanks.jpg';
 
+var styles = {
+    normal: {
+        filter: 'brightness(100%)'
+    },
+    darken: {
+        filter: 'brightness(30%)'
+    },
+    invisible: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+};
+
 export default class ItBegins extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        };
+    }
+    
+    darken() {
+        this.setState({
+            img_state: 'darken',
+            img_text_state: 'visible'
+        });
+    }
+    
+    lighten() {
+        this.setState({
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        });
+    }    
+        
     render() {
         return(
         <div>
@@ -57,10 +94,10 @@ export default class ItBegins extends Component {
                         <h1 id="it-begins" className="text-center" tabIndex="0">It Begins</h1>
                     </div>
                     <div className="row">
-                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0 hidden-xs">
-                            <img id="soviet-tanks" src={sovietTanksImage} alt="Military green Soviet tanks struggling with the Finnish terrain"></img>
+                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                            <img id="soviet-tanks" src={sovietTanksImage} alt="Military green Soviet tanks struggling with the Finnish terrain" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
-                                <p>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
+                                <p style={styles[this.state.img_text_state]}>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
                             </span>
                         </div>
                         <p id="it-begins-paragraph" className="col-xs-10 col-xs-offset-1 col-lg-7 col-lg-offset-5 text-right affix-top">

@@ -3,7 +3,44 @@ import {findDOMNode} from 'react-dom';
 import Particles from 'react-particles-js';
 import KareliaImage from '../../img/karelia.png';
 
-export default class BufferZone extends Component {
+var styles = {
+    normal: {
+        filter: 'brightness(100%)'
+    },
+    darken: {
+        filter: 'brightness(30%)'
+    },
+    invisible: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+};
+
+export default class BufferZone extends Component {   
+    constructor(props) {
+        super(props);
+        this.state = {
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        };
+    }
+    
+    darken() {
+        this.setState({
+            img_state: 'darken',
+            img_text_state: 'visible'
+        });
+    }
+    
+    lighten() {
+        this.setState({
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        });
+    }    
+        
     render() {
         return(
         <div>
@@ -88,10 +125,10 @@ export default class BufferZone extends Component {
                             To defend a possible approach to Leningrad by the Nazis, Stalin wanted Karelia as well as several Finnish islands in the Gulf of Finland as a buffer zone. Throughout its history, Russia has always had a problem defending its western cities from invasion & has used conquered areas as buffer zones <a href="https://www.youtube.com/watch?v=HE6rSljTwdU" target="_blank">(view more on Russia's historical need of buffer zones...)</a>.  He also wanted to lease Hanko as a military base and to establish a garrison of 5,000 men there and he demanded more Finnish land on the Soviet border to be ceded to the U.S.S.R. In return, Stalin offered Finland land in Soviet Karelia and the right for Finland to fortify the Aaland Islands.<br/><br/>    
                             Finland was highly suspicious of anything required by Stalin. Relations between Russia and Finland had been fraught for many decades and nearly everyone in Finland saw Stalin’s demands as an attempt by Russia to re-establish her authority over Finland once again. 
                         </p>
-                        <div id="buffer-zone-image" className="col-lg-4 col-lg-offset-8 hidden-xs" >
-                            <img id="karelia-map" src={KareliaImage} alt="Map of Soviet-Finnish border region"></img>
+                        <div id="buffer-zone-image" className="col-lg-4 col-lg-offset-8 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}> 
+                            <img id="karelia-map" src={KareliaImage} alt="Map of Soviet-Finnish border region" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
-                                <p>Map of Karelia & its proximity to Leningrad <a href="http://helyla.onego.ru/history_eng.html" target="_blank">(read more on the history of Karelia...)</a></p>
+                                <p style={styles[this.state.img_text_state]}>Map of Karelia & its proximity to Leningrad <a href="http://helyla.onego.ru/history_eng.html" target="_blank">(read more on the history of Karelia...)</a></p>
                             </span>
                         </div>
                     </div> 
