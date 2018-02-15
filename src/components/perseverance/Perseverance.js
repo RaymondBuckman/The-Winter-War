@@ -2,7 +2,45 @@ import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import finnishFlagImage from '../../img/finn-flag.jpg';
 
+var styles = {
+    normal: {
+        filter: 'brightness(100%)'
+    },
+    darken: {
+        filter: 'brightness(30%)'
+    },
+    invisible: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+};
+
+
 export default class Perseverance extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        };
+    }
+    
+    darken() {
+        this.setState({
+            img_state: 'darken',
+            img_text_state: 'visible'
+        });
+    }
+    
+    lighten() {
+        this.setState({
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        });
+    }    
+        
     render() {
         return(
         <div>
@@ -13,10 +51,10 @@ export default class Perseverance extends Component {
                         <h1 id="perseverance" className="text-center" tabIndex="0">Perseverance & Guts</h1>
                     </div>
                     <div className="row">
-                        <div id="perseverance-image" className="col-lg-4 col-lg-offset-0 hidden-xs">
-                            <img id="finnish-flag" src={finnishFlagImage} alt="Image of soldiers holding up the Finnish flag"></img>
+                        <div id="perseverance-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                            <img id="finnish-flag" src={finnishFlagImage} alt="Image of soldiers holding up the Finnish flag" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
-                                <p>Soldiers raising the Finnish Flag <a href="https://finland.fi/facts-stats-and-info/the-finnish-flag/" target="_blank">(read more about the Finnish flag...)</a></p>
+                                <p style={styles[this.state.img_text_state]}>Soldiers raising the Finnish Flag <a href="https://finland.fi/facts-stats-and-info/the-finnish-flag/" target="_blank">(read more about the Finnish flag...)</a></p>
                             </span>
                         </div>
                         <p id="perseverance-paragraph" className="col-xs-10 col-xs-offset-1 col-lg-7 col-lg-offset-5 text-right">
