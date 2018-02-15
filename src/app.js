@@ -8,6 +8,7 @@ import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugin
 import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Menu from './components/menu/Menu';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import BufferZone from './components/bufferZone/BufferZone';
@@ -25,21 +26,13 @@ import Footer from './components/footer/Footer'
 
 import $ from "jquery";
 
-function openNavigation(e){
-        e.preventDefault();
-        $('.navbar').addClass('navbar-displayed');
-        $(this).addClass('fade-out');
-}
-
 function closeNavigation(){
-        //e.preventDefault();
         $('.navbar').removeClass('navbar-displayed');
 }
 
 ReactDOM.render(
     <div className="App">
-        <img id="menu" className="hidden-xs" src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" tabIndex="0" alt="opens navigation" onClick={openNavigation}></img>
-        <img id="menu-clone" className="hidden-xs"src="https://png.icons8.com/ios/50/ffffff/menu.png" height="35px" width="35px" alt="opens navigation" onClick={openNavigation}></img>
+        <Menu />
         <Navbar/>
         <div className="main-content" role="main" onClick={closeNavigation}>
             <Intro />
@@ -98,6 +91,7 @@ $(document).ready(function(){
     
     var controller = new ScrollMagic.Controller();
     
+    //var heightOfBufferZone =  $('.buffer-zone-div').outerHeight();
     var heightOfBufferZone = $('.inevitable-war-div').offset().top - $('.buffer-zone-div').offset().top;
     var heightOfInevitableWar = $('.outnumbered-div').offset().top - $('.inevitable-war-div').offset().top;
     var heightOfOutnumbered = $('.home-field-advantage-div').offset().top - $('.outnumbered-div').offset().top;
@@ -109,6 +103,8 @@ $(document).ready(function(){
     var heightOfTheBeginningOfTheEnd = $('.the-treaty-of-moscow-div').offset().top - $('.the-beginning-of-the-end-div').offset().top;
     var heightOfTheTreatyOfMoscow = $('.aftermath-div').offset().top - $('.the-treaty-of-moscow-div').offset().top;
     var heightOfAftermath = $('.footer-div').offset().top - $('.aftermath-div').offset().top;
+    
+    console.log(heightOfBufferZone);
     
     
     /*
