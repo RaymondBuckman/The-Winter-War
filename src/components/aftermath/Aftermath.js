@@ -2,7 +2,44 @@ import React, { Component } from 'react';
 import {findDOMNode} from 'react-dom';
 import vyborgImage from '../../img/vyborg.jpg';
 
+var styles = {
+    normal: {
+        filter: 'brightness(100%)'
+    },
+    darken: {
+        filter: 'brightness(30%)'
+    },
+    invisible: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+};
+
 export default class Aftermath extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        };
+    }
+    
+    darken() {
+        this.setState({
+            img_state: 'darken',
+            img_text_state: 'visible'
+        });
+    }
+    
+    lighten() {
+        this.setState({
+            img_state: 'normal',
+            img_text_state: 'invisible'
+        });
+    }    
+        
     render() {
         return(
         <div>
@@ -13,10 +50,10 @@ export default class Aftermath extends Component {
                         <h1 id="aftermath" className="text-center" tabIndex="0">Aftermath</h1>
                     </div>
                     <div className="row">
-                        <div id="aftermath-image" className="col-lg-4 col-lg-offset-0 hidden-xs">
-                            <img id="vyborg" src={vyborgImage} alt="Current image of Vyborg, Russia (formerly Viipuri, Finland)"></img>
+                        <div id="aftermath-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                            <img id="vyborg" src={vyborgImage} alt="Current image of Vyborg, Russia (formerly Viipuri, Finland)" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
-                                <p>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia</p>
+                                <p style={styles[this.state.img_text_state]}>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia</p>
                             </span>
                         </div>
                         <p id="aftermath-paragraph" className="col-xs-10 col-xs-offset-1 col-lg-7 col-lg-offset-5 text-right">
