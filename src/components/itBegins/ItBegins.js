@@ -94,7 +94,7 @@ export default class ItBegins extends Component {
                         <h1 id="it-begins" className="text-center" tabIndex="0">It Begins</h1>
                     </div>
                     <div className="row">
-                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                        <div id="it-begins-image" className="col-lg-4 col-lg-offset-0 hidden-xs hidden-sm" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
                             <img id="soviet-tanks" src={sovietTanksImage} alt="Military green Soviet tanks struggling with the Finnish terrain" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
                                 <p style={styles[this.state.img_text_state]}>Soviet tanks, while powerful from a distance, struggled with the terrain & were vulnurable to Molotov cocktail attacks</p>
