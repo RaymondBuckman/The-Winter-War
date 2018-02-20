@@ -50,7 +50,7 @@ export default class InevitableWar extends Component {
                         <h1 id="inevitable-war" className="text-center" tabIndex="0">Inevitable War</h1>
                     </div>
                     <div className="row">
-                        <div id="inevitable-war-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                        <div id="inevitable-war-image" className="col-lg-4 col-lg-offset-0  hidden-xs hidden-sm" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
                             <img id="stalin" src={stalinImage} alt="Grayscale portrait of Joseph Stalin" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
                                 <p style={styles[this.state.img_text_state]}>Joseph Stalin, General Secretary of the Communist Party of the Soviet Union from 1922-1952 <a href="http://www.history.com/topics/joseph-stalin" target="_blank">(read more on Stalin...)</a></p>
