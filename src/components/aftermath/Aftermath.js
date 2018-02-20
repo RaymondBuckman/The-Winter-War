@@ -50,7 +50,7 @@ export default class Aftermath extends Component {
                         <h1 id="aftermath" className="text-center" tabIndex="0">Aftermath</h1>
                     </div>
                     <div className="row">
-                        <div id="aftermath-image" className="col-lg-4 col-lg-offset-0 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                        <div id="aftermath-image" className="col-lg-4 col-lg-offset-0 hidden-xs hidden-sm" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
                             <img id="vyborg" src={vyborgImage} alt="Current image of Vyborg, Russia (formerly Viipuri, Finland)" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
                                 <p style={styles[this.state.img_text_state]}>Vyborg (formerly Viipuri, Finland), located in Leningrad Oblast, Russia</p>

@@ -1287,7 +1287,7 @@ a:focus{
     .intro-div {
         position: relative;
         top: 0vh;
-        height: 47vh;
+        height: 44vh;
         background: none;
         background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
         //@include occasional-brightness;
@@ -1330,7 +1330,6 @@ a:focus{
         }
 
         #down-arrow{
-            position: absolute;
             bottom: 5vh;
             @include main-font;
             font-size: 1.5em;
@@ -1338,12 +1337,7 @@ a:focus{
             left: 0;
             right: 0;
             width: 30px;
-            margin: auto;
-            cursor: pointer;
             line-height: 15px;
-            text-shadow: 2px 2px $green;
-            animation: down-arrow-animation 3s infinite;
-            z-index: 99;
         }
     }
 
@@ -1468,7 +1462,7 @@ a:focus{
         }
         
         #the-beginning-of-the-end-paragraph{
-            @include paragraph-margin(25vh, 10vh);
+            @include paragraph-margin(35vh, 10vh);
             font-size: 1.5em;
         }
     }
@@ -1504,15 +1498,11 @@ a:focus{
     }
 
     .footer-div{
-        #lisaa-linkkeja{
+        #lisaa-linkkeja, #more-links{
             top: 10vh;
             font-size: 3.5em;
         }
-
-        #more-links{
-            top: 10vh;
-            font-size: 3.5em;
-        }
+        
         /*
         #videos-list{
                 @include paragraph-margin(25vh, 10vh);
@@ -1579,6 +1569,863 @@ a:focus{
     }
 }
 
+@include for-small-tablet-portrait{
+    .intro-div {
+        position: relative;
+        top: 0vh;
+        height: 60vh;
+        background: none;
+        background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
+        //@include occasional-brightness;
+        //@include global-padding;
+        z-index: 50;    
+
+        #intro-video {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 150%; 
+            animation: none;
+            filter: contrast(110%);
+        }
+
+        .text-container{
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #the-winter-war{
+            position: absolute;
+            top: 20vh;
+            @include main-font;
+            font-size: 8em;
+            color: $white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 1;
+            text-shadow: 2px 2px $green;
+            transition: opacity 0.2s ease-in;
+        }
+
+        #the-story{
+            top: 35vh;
+            font-size: 2em;
+            width: 80%;
+        }
+
+        #down-arrow{
+            bottom: 5vh;
+            @include main-font;
+            font-size: 3em;
+            color: $white;
+            left: 0;
+            right: 0;
+            width: 30px;
+            line-height: 30px;
+        }
+    }
+
+    .buffer-zone-div {
+        #bufernaya-zona, #buffer-zone{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #buffer-zone-paragraph{
+            @include paragraph-margin(25vh, 10vh);            
+            font-size: 2em;
+        }
+    }
+
+    .inevitable-war-div {
+        background: url("img/ussr-wallpaper-mini.jpg") $nrf center center;
+        background-size: cover;
+
+        #neizbezhnaya-voyna, #inevitable-war{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #inevitable-war-paragraph{
+            @include paragraph-margin(35vh, 0);
+            font-size: 2em;
+        }
+    }
+
+    .outnumbered-div {
+        background: url("img/tanks-red-army-mini.jpg") $nrf 80% center;
+        background-size: cover;
+
+        #alakynnessa, #outnumbered{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #outnumbered-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .home-field-advantage-div {
+        background: url("img/forest-1-mini.jpg") $nrf 70% 100%;
+        background-size: cover;
+
+        #kotikenttaetu, #home-field-advantage{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #home-field-advantage-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .it-begins-div {
+        #nachinayetsya, #it-begins{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #it-begins-paragraph{
+            @include paragraph-margin(35vh, 0);
+            font-size: 2em;
+        }
+    }
+
+    .the-winter-freeze-div {
+        background: url("img/forest-2-mini.jpg") $nrf 100% 100%;
+        background-size: cover;
+
+        #zimniye-zamorazhivaniye, #the-winter-freeze{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-winter-freeze-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .the-white-death-div {
+        background: url("img/sniper-mini.jpg") $nrf 60% center;
+        background-size: cover;
+
+        #valkoinen-kuolema, #the-white-death{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-white-death-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .perseverance-div {
+        background: url("img/northern-lights-mini.jpg") $nrf 60% 0%;
+        background-size: cover;
+
+        #sisu, #perseverance{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #perseverance-paragraph{
+            @include paragraph-margin(35vh, 0);
+            font-size: 2em;
+        }
+    }
+
+    .the-beginning-of-the-end-div {
+        #nachalo-kontsa, #the-beginning-of-the-end{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-beginning-of-the-end-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .the-treaty-of-moscow-div {
+        background: url("img/paper-mini.jpg") $nrf 40% center;
+        background-size: cover;
+
+        #dogovor-moskvy, #the-treaty-of-moscow{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-treaty-of-moscow-paragraph{
+            @include paragraph-margin(25vh, 10vh);
+            font-size: 2em;
+        }
+    }
+
+    .aftermath-div {
+        background: url("img/luftwaffe-mini.jpg") $nrf center 30%;
+        background-size: cover;
+
+        #jalkiseuraukset, #aftermath{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #aftermath-paragraph{
+            @include paragraph-margin(35vh, 0);
+            font-size: 2em;
+        }
+    }
+
+    .footer-div{
+        #lisaa-linkkeja, #more-links{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        /*
+        #videos-list{
+                @include paragraph-margin(25vh, 10vh);
+            }*/
+
+        ul{
+            
+            li:first-child{
+                font-size: 4em;
+                
+            }
+
+            li:nth-child(n+2){
+                list-style-type: none;
+                text-decoration: none;
+
+
+                a{
+                    color: $white;
+                    transition: color 0.2s ease-in;
+                    display: block;
+                    padding: 10px; 
+                    margin: 5px 0;
+                    @include secondary-font;
+                    font-size: 2em;
+                    border-radius: 10px;
+                    transition: all 0.2s ease-in;
+
+                    &:hover{
+                        color: $green;
+                        background: $white;
+                        animation: blinking-text-green 2s infinite;
+                    }
+                }
+
+                a:hover,
+                a:active,
+                a:visited,
+                a:link{
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        #videos-list{
+            @include paragraph-margin(25vh, 0);
+        }
+            
+        #details-list{
+            @include paragraph-margin(10vh, 0);
+        }
+        
+        #images-list{
+            @include paragraph-margin(10vh, 10vh);
+        }
+    }
+
+    .snow-background canvas{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background: transparent;
+        display: none;
+    }
+}
+
+@include for-phone-landscape{
+    .intro-div {
+        position: relative;
+        top: 0vh;
+        height: 100vh;
+        background: none;
+        background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
+        //@include occasional-brightness;
+        //@include global-padding;
+        z-index: 50;    
+
+        #intro-video {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%; 
+            animation: none;
+            filter: contrast(110%);
+        }
+
+        .text-container{
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #the-winter-war{
+            position: absolute;
+            top: 20vh;
+            @include main-font;
+            font-size: 7em;
+            color: $white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 1;
+            text-shadow: 2px 2px $green;
+            transition: opacity 0.2s ease-in;
+        }
+
+        #the-story{
+            top: 55vh;
+            font-size: 1.5em;
+            width: 80%;
+        }
+
+        #down-arrow{
+            bottom: 12vh;
+            @include main-font;
+            font-size: 2em;
+            color: $white;
+            left: 0;
+            right: 0;
+            width: 30px;
+            line-height: 20px;
+        }
+    }
+
+    .buffer-zone-div {
+        #bufernaya-zona, #buffer-zone{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #buffer-zone-paragraph{
+            @include paragraph-margin(45vh, 15vh);            
+            font-size: 1.5em;
+        }
+    }
+
+    .inevitable-war-div {
+        background: url("img/ussr-wallpaper-mini.jpg") $nrf center center;
+        background-size: cover;
+
+        #neizbezhnaya-voyna, #inevitable-war{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #inevitable-war-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .outnumbered-div {
+        background: url("img/tanks-red-army-mini.jpg") $nrf 80% center;
+        background-size: cover;
+
+        #alakynnessa, #outnumbered{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #outnumbered-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .home-field-advantage-div {
+        background: url("img/forest-1-mini.jpg") $nrf 70% 100%;
+        background-size: cover;
+
+        #kotikenttaetu, #home-field-advantage{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #home-field-advantage-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .it-begins-div {
+        #nachinayetsya, #it-begins{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #it-begins-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-winter-freeze-div {
+        background: url("img/forest-2-mini.jpg") $nrf 100% 100%;
+        background-size: cover;
+
+        #zimniye-zamorazhivaniye, #the-winter-freeze{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-winter-freeze-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-white-death-div {
+        background: url("img/sniper-mini.jpg") $nrf 60% center;
+        background-size: cover;
+
+        #valkoinen-kuolema, #the-white-death{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-white-death-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .perseverance-div {
+        background: url("img/northern-lights-mini.jpg") $nrf 60% 0%;
+        background-size: cover;
+
+        #sisu, #perseverance{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #perseverance-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-beginning-of-the-end-div {
+        #nachalo-kontsa, #the-beginning-of-the-end{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-beginning-of-the-end-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-treaty-of-moscow-div {
+        background: url("img/paper-mini.jpg") $nrf 40% center;
+        background-size: cover;
+
+        #dogovor-moskvy, #the-treaty-of-moscow{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-treaty-of-moscow-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .aftermath-div {
+        background: url("img/luftwaffe-mini.jpg") $nrf center 30%;
+        background-size: cover;
+
+        #jalkiseuraukset, #aftermath{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #aftermath-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .footer-div{
+        #lisaa-linkkeja, #more-links{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        /*
+        #videos-list{
+                @include paragraph-margin(25vh, 10vh);
+            }*/
+
+        ul{
+            
+            li:first-child{
+                font-size: 4em;
+                
+            }
+
+            li:nth-child(n+2){
+                list-style-type: none;
+                text-decoration: none;
+
+
+                a{
+                    color: $white;
+                    transition: color 0.2s ease-in;
+                    display: block;
+                    padding: 10px; 
+                    margin: 5px 0;
+                    @include secondary-font;
+                    font-size: 1.5em;
+                    border-radius: 10px;
+                    transition: all 0.2s ease-in;
+
+                    &:hover{
+                        color: $green;
+                        background: $white;
+                        animation: blinking-text-green 2s infinite;
+                    }
+                }
+
+                a:hover,
+                a:active,
+                a:visited,
+                a:link{
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        #videos-list{
+            @include paragraph-margin(45vh, 0);
+        }
+            
+        #details-list{
+            @include paragraph-margin(10vh, 0);
+        }
+        
+        #images-list{
+            @include paragraph-margin(10vh, 10vh);
+        }
+    }
+
+    .snow-background canvas{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background: transparent;
+        display: none;
+    }
+}
+
+@mixin for-large-tablet-portrait {
+    .intro-div {
+        position: relative;
+        top: 0vh;
+        height: auto;
+        background: none;
+        background-size: 100vw $intro-1-height; //replacement for "cover" property makes parallax background scrolling possible 
+        //@include occasional-brightness;
+        //@include global-padding;
+        z-index: 50;    
+
+        #intro-video {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%; 
+            animation: none;
+            filter: contrast(110%);
+        }
+
+        .text-container{
+            height: 100%;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #the-winter-war{
+            position: absolute;
+            top: 20vh;
+            @include main-font;
+            font-size: 88em;
+            color: $white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 1;
+            text-shadow: 2px 2px $green;
+            transition: opacity 0.2s ease-in;
+        }
+
+        #the-story{
+            top: 55vh;
+            font-size: 4em;
+            width: 80%;
+        }
+
+        #down-arrow{
+            bottom: 12vh;
+            @include main-font;
+            font-size: 2em;
+            color: $white;
+            left: 0;
+            right: 0;
+            width: 30px;
+            line-height: 20px;
+        }
+    }
+
+    .buffer-zone-div {
+        #bufernaya-zona, #buffer-zone{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #buffer-zone-paragraph{
+            @include paragraph-margin(45vh, 15vh);            
+            font-size: 1.5em;
+        }
+    }
+
+    .inevitable-war-div {
+        background: url("img/ussr-wallpaper-mini.jpg") $nrf center center;
+        background-size: cover;
+
+        #neizbezhnaya-voyna, #inevitable-war{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #inevitable-war-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .outnumbered-div {
+        background: url("img/tanks-red-army-mini.jpg") $nrf 80% center;
+        background-size: cover;
+
+        #alakynnessa, #outnumbered{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #outnumbered-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .home-field-advantage-div {
+        background: url("img/forest-1-mini.jpg") $nrf 70% 100%;
+        background-size: cover;
+
+        #kotikenttaetu, #home-field-advantage{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #home-field-advantage-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .it-begins-div {
+        #nachinayetsya, #it-begins{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #it-begins-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-winter-freeze-div {
+        background: url("img/forest-2-mini.jpg") $nrf 100% 100%;
+        background-size: cover;
+
+        #zimniye-zamorazhivaniye, #the-winter-freeze{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-winter-freeze-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-white-death-div {
+        background: url("img/sniper-mini.jpg") $nrf 60% center;
+        background-size: cover;
+
+        #valkoinen-kuolema, #the-white-death{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-white-death-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .perseverance-div {
+        background: url("img/northern-lights-mini.jpg") $nrf 60% 0%;
+        background-size: cover;
+
+        #sisu, #perseverance{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #perseverance-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-beginning-of-the-end-div {
+        #nachalo-kontsa, #the-beginning-of-the-end{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        #the-beginning-of-the-end-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .the-treaty-of-moscow-div {
+        background: url("img/paper-mini.jpg") $nrf 40% center;
+        background-size: cover;
+
+        #dogovor-moskvy, #the-treaty-of-moscow{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #the-treaty-of-moscow-paragraph{
+            @include paragraph-margin(45vh, 15vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .aftermath-div {
+        background: url("img/luftwaffe-mini.jpg") $nrf center 30%;
+        background-size: cover;
+
+        #jalkiseuraukset, #aftermath{
+            top: 10vh;
+            font-size: 5em;
+        }
+
+        #aftermath-paragraph{
+            @include paragraph-margin(55vh, 5vh);
+            font-size: 1.5em;
+        }
+    }
+
+    .footer-div{
+        #lisaa-linkkeja, #more-links{
+            top: 10vh;
+            font-size: 5em;
+        }
+        
+        /*
+        #videos-list{
+                @include paragraph-margin(25vh, 10vh);
+            }*/
+
+        ul{
+            
+            li:first-child{
+                font-size: 4em;
+                
+            }
+
+            li:nth-child(n+2){
+                list-style-type: none;
+                text-decoration: none;
+
+
+                a{
+                    color: $white;
+                    transition: color 0.2s ease-in;
+                    display: block;
+                    padding: 10px; 
+                    margin: 5px 0;
+                    @include secondary-font;
+                    font-size: 1.5em;
+                    border-radius: 10px;
+                    transition: all 0.2s ease-in;
+
+                    &:hover{
+                        color: $green;
+                        background: $white;
+                        animation: blinking-text-green 2s infinite;
+                    }
+                }
+
+                a:hover,
+                a:active,
+                a:visited,
+                a:link{
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        #videos-list{
+            @include paragraph-margin(45vh, 0);
+        }
+            
+        #details-list{
+            @include paragraph-margin(10vh, 0);
+        }
+        
+        #images-list{
+            @include paragraph-margin(10vh, 10vh);
+        }
+    }
+
+    .snow-background canvas{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        background: transparent;
+        display: none;
+    }
+}
 
 
 

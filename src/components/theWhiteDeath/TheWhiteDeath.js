@@ -57,7 +57,7 @@ export default class TheWhiteDeath extends Component {
             
                             Häyhä was given numerous awards, and was also promoted from corporal to second lieutenant, a jump in the ranks that had never been seen in Finland’s history. Despite being slightly disfigured, he recovered from his injury, and went on to live until the age of 96.
                         </p>
-                        <div id="the-white-death-image" className="col-lg-4 col-lg-offset-8 hidden-xs" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
+                        <div id="the-white-death-image" className="col-lg-4 col-lg-offset-8 hidden-xs hidden-sm" onMouseEnter={this.darken.bind(this)} onMouseLeave={this.lighten.bind(this)}>
                             <img id="simo-hayha" src={simoHayhaImage} alt="Grayscale portrait of Simo Hayha" style={styles[this.state.img_state]}></img>
                             <span className="text-container">
                                 <p style={styles[this.state.img_text_state]}>Simo Häyhä, widely considered to be the greatest sniper of all time <a href="https://www.youtube.com/watch?v=pkKVhqsYva4" target="_blank">(view more on Simo Häyhä...)</a></p>
